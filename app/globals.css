@@ -1,0 +1,202 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light dark;
+  --bg: 255 255 255;
+  --panel: 248 250 252;
+  --panel-2: 241 245 249;
+  --border: 226 232 240;
+  --text: 15 23 42;
+  --muted: 100 116 139;
+  --accent: 37 99 235;
+  --accent-2: 96 165 250;
+  
+  --glow-color: rgba(37, 99, 235, 0.15);
+}
+
+.dark {
+  --bg: 12 18 34;
+  --panel: 17 27 48;
+  --panel-2: 24 38 68;
+  --border: 53 77 118;
+  --text: 255 255 255;
+  --muted: 167 183 212;
+  --accent: 59 130 246;
+  --accent-2: 125 211 252;
+  
+  --glow-color: rgba(37, 99, 235, 0.22);
+}
+
+/* Fallback to prefers-color-scheme if no theme class is explicitly set */
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    --bg: 12 18 34;
+    --panel: 17 27 48;
+    --panel-2: 24 38 68;
+    --border: 53 77 118;
+    --text: 255 255 255;
+    --muted: 167 183 212;
+    --accent: 59 130 246;
+    --accent-2: 125 211 252;
+    
+    --glow-color: rgba(37, 99, 235, 0.22);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.15s ease;
+}
+
+html {
+  background: rgb(var(--bg));
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: rgb(var(--text));
+  font-family: var(--font-sans), sans-serif;
+  background-color: rgb(var(--bg));
+  background-image: 
+    radial-gradient(circle at 50% 0%, var(--glow-color) 0%, transparent 45%),
+    linear-gradient(rgba(130, 146, 179, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(130, 146, 179, 0.025) 1px, transparent 1px);
+  background-size: 100% 100%, 48px 48px, 48px 48px;
+  background-position: center top;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(var(--bg));
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--border));
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--muted));
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(var(--accent), 0.25);
+  color: #fff;
+}
+
+/* Keyframe Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.12), 0 0 15px rgba(59, 130, 246, 0.1); }
+  50% { box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.3), 0 0 25px rgba(59, 130, 246, 0.2); }
+}
+
+@keyframes pulse-border {
+  0%, 100% { border-color: rgb(var(--border)); }
+  50% { border-color: rgb(var(--accent) / 0.4); }
+}
+
+@keyframes enter-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+.animate-panel {
+  animation: enter-up 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-border {
+  animation: pulse-border 4s ease-in-out infinite;
+}
+
+/* Overriding class systems to enforce theme variables smoothly */
+.pr-theme .text-white,
+.pr-theme .text-slate-100,
+.pr-theme .text-slate-200 {
+  color: rgb(var(--text)) !important;
+}
+
+.pr-theme .text-slate-300,
+.pr-theme .text-slate-400,
+.pr-theme .text-slate-500 {
+  color: rgb(var(--muted)) !important;
+}
+
+.pr-theme .text-green-500,
+.pr-theme .text-green-600,
+.pr-theme .text-green-700 {
+  color: rgb(34 197 94) !important;
+}
+
+.pr-theme .bg-white\/\[0\.03\],
+.pr-theme .bg-white\/\[0\.04\],
+.pr-theme .bg-white\/\[0\.05\],
+.pr-theme .bg-white\/\[0\.08\],
+.pr-theme .bg-white\/\[0\.10\],
+.pr-theme .bg-white\/\[0\.12\] {
+  background-color: rgb(var(--panel)) !important;
+}
+
+.pr-theme .bg-slate-50,
+.pr-theme .bg-slate-100 {
+  background-color: rgb(var(--bg)) !important;
+}
+
+.pr-theme .bg-slate-900,
+.pr-theme .bg-slate-950,
+.pr-theme .bg-zinc-900,
+.pr-theme .bg-zinc-950 {
+  background-color: rgb(var(--panel)) !important;
+}
+
+.pr-theme .border-white\/8,
+.pr-theme .border-white\/10,
+.pr-theme .border-white\/15,
+.pr-theme .border-white\/20 {
+  border-color: rgb(var(--border)) !important;
+}
+
+.pr-theme .divide-white\/8 > :not([hidden]) ~ :not([hidden]) {
+  border-color: rgb(var(--border)) !important;
+}
+
+.pr-theme .placeholder\:text-slate-500::placeholder {
+  color: rgb(var(--muted)) !important;
+}
+
+.pr-theme .shadow-sm {
+  box-shadow: 0 10px 30px rgba(10, 20, 40, 0.16) !important;
+}
+
+.pr-theme .shadow-md {
+  box-shadow: 0 18px 42px rgba(10, 20, 40, 0.2) !important;
+}
+
+.pr-theme .shadow-lg,
+.pr-theme .shadow-xl,
+.pr-theme .shadow-2xl {
+  box-shadow: 0 24px 60px rgba(10, 20, 40, 0.28) !important;
+}

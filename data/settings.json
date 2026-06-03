@@ -1,0 +1,45 @@
+{
+  "title": "PatchRadar",
+  "description": "PatchRadar tracks live game bugs, patch changes, community fixes, and AI generated issue summaries built for long term search visibility.",
+  "keywords": [
+    "game bugs",
+    "patch notes",
+    "PUBG crash fix",
+    "GTA 5 issues",
+    "gaming community",
+    "game fix guides",
+    "AI issue tracking"
+  ],
+  "games": [
+    "PUBG",
+    "GTA 5",
+    "Cyberpunk 2077",
+    "FIFA 25",
+    "Fortnite",
+    "Valorant",
+    "Apex Legends",
+    "takken8"
+  ],
+  "scheduledSlots": [
+    {
+      "id": "4185f606-d409-42ac-9047-9841062c83c7",
+      "time": "16:00 PKT",
+      "games": [
+        "takken8"
+      ],
+      "title": "takken8 slot update"
+    }
+  ],
+  "canonicalUrl": "https://patchradar.gg",
+  "ogImage": "/og-image.jpg",
+  "favicon": "/favicon.ico",
+  "smtpEnabled": true,
+  "otpRequired": true,
+  "smtpHost": "smtp.resend.net",
+  "smtpPort": "587",
+  "smtpSender": "noreply@patchradar.gg",
+  "adminReceivers": [
+    "admin@patchradar.gg",
+    "ops@patchradar.gg"
+  ]
+}
