@@ -124,16 +124,6 @@ export default function IssuePage({ params }: Readonly<{ params: { slug: string 
             </div>
           </GlassPanel>
 
-          <GlassPanel>
-            <h4 className="text-xs uppercase font-bold tracking-wider text-muted border-b border-border pb-3 mb-4">
-              SEO keywords
-            </h4>
-            <div className="flex flex-wrap gap-1.5">
-              {issue.keywords.map((keyword) => (
-                <StatusBadge key={keyword} label={keyword} tone="blue" />
-              ))}
-            </div>
-          </GlassPanel>
         </aside>
       </div>
     </SiteShell>
