@@ -32,7 +32,7 @@ export default function PostPage({ params }: Readonly<{ params: { slug: string }
   const settings = getStoredSettings()
 
   return (
-    <SiteShell title={post.title} subtitle="A free fix brief for players who want the issue summary, the likely cause, and the latest workaround in one place.">
+    <SiteShell title={post.title} subtitle="A free bug report for players who want the summary, likely cause, and current workaround in one place.">
       <div className="grid gap-4 xl:grid-cols-[1.4fr_0.8fr]">
         <GlassPanel className="border-blue-500/20 p-6 shadow-[0_18px_40px_rgba(15,30,60,0.12)]">
           <div className="flex flex-wrap gap-2">
@@ -41,7 +41,7 @@ export default function PostPage({ params }: Readonly<{ params: { slug: string }
             ))}
             <StatusBadge label={post.slotTime} tone="emerald" />
           </div>
-          <SectionHeading eyebrow="Published Post" title={post.title} detail={post.summary} />
+          <SectionHeading eyebrow="Live Bug Report" title={post.title} detail={post.summary} />
           <div className="mt-6 space-y-4">
             {post.content.map((paragraph) => (
               <p key={paragraph} className="text-sm leading-7 text-muted">
@@ -52,7 +52,7 @@ export default function PostPage({ params }: Readonly<{ params: { slug: string }
         </GlassPanel>
 
         <GlassPanel className="border-emerald-500/20 p-6 shadow-[0_18px_40px_rgba(15,30,60,0.12)]">
-          <SectionHeading eyebrow="Search value" title="Helpful for players" detail="This page stays discoverable, easy to read, and useful for anyone searching for the same issue later." />
+          <SectionHeading eyebrow="Player value" title="Helpful for players" detail="This report stays easy to scan and useful for anyone trying to reproduce the bug or share a workaround." />
           <div className="mt-4 flex flex-wrap gap-2">
             {settings.keywords.map((keyword) => (
               <StatusBadge key={keyword} label={keyword} tone="violet" />

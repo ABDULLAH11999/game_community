@@ -13,13 +13,20 @@ export default function Home({
   const settings = getStoredSettings()
   const selectedGame = searchParams?.game?.trim() || ''
   const query = searchParams?.q?.trim().toLowerCase() || ''
+  const posts = getPosts()
 
   const filteredIssues = issues.filter((issue) => {
     const matchesGame = !selectedGame || issue.game.toLowerCase() === selectedGame.toLowerCase()
     const haystack = `${issue.title} ${issue.summary} ${issue.keywords.join(' ')}`.toLowerCase()
     return matchesGame && (!query || haystack.includes(query))
   })
-  const posts = getPosts()
+
+  const filteredPosts = posts.filter((post) => {
+    const matchesGame =
+      !selectedGame || post.games.some((game) => game.toLowerCase() === selectedGame.toLowerCase())
+    const haystack = `${post.title} ${post.summary} ${post.keywords.join(' ')} ${post.content.join(' ')} ${post.games.join(' ')}`.toLowerCase()
+    return matchesGame && (!query || haystack.includes(query))
+  })
 
   return (
     <SiteShell
@@ -32,98 +39,176 @@ export default function Home({
             <div>
               <p className="text-[10px] uppercase font-bold tracking-[0.2em] text-accent">FEED</p>
               <h3 className="text-xl font-extrabold tracking-tight text-text">
-                {selectedGame ? `#${selectedGame} Issues` : 'Active community reports'}
+                {selectedGame ? `#${selectedGame} Live reports` : 'Active community reports'}
               </h3>
             </div>
             <div className="flex items-center gap-2 text-xs font-semibold text-muted">
               <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-              {filteredIssues.length} issues tracked
+              {filteredIssues.length + filteredPosts.length} issues tracked
             </div>
           </div>
 
           <div className="flex flex-col gap-3">
-            {filteredIssues.length ? (
-              filteredIssues.map((issue) => (
-                <article
-                  key={issue.id}
-                  className={`group relative rounded-2xl border bg-panel p-5 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_32px_rgba(15,30,60,0.16)] ${
-                    issue.severity === 'Critical'
-                      ? 'border-rose-500/35 hover:border-rose-400/60'
-                      : issue.severity === 'High'
-                        ? 'border-amber-500/30 hover:border-amber-400/50'
-                        : issue.severity === 'Medium'
-                          ? 'border-blue-500/30 hover:border-blue-400/50'
-                          : 'border-emerald-500/30 hover:border-emerald-400/50'
-                  }`}
-                >
-                  <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-                    <div className="min-w-0 flex-1">
-                      <div className="flex flex-wrap items-center gap-2 text-[10px] uppercase font-bold tracking-wider text-muted">
-                        <span className="text-accent">#{issue.game}</span>
-                        <span>·</span>
-                        <span>{issue.patch}</span>
-                        <span>·</span>
-                        <StatusBadge
-                          label={issue.severity}
-                          tone={
-                            issue.severity === 'Critical'
-                              ? 'rose'
-                              : issue.severity === 'High'
-                                ? 'amber'
-                                : 'blue'
-                          }
-                        />
-                      </div>
-
-                      <Link
-                        href={`/issues/${issue.slug}`}
-                        className="mt-2 block text-lg font-bold leading-snug text-text transition-colors hover:text-accent"
-                      >
-                        {issue.title}
-                      </Link>
-
-                      <p className="mt-2 text-sm leading-6 text-muted line-clamp-2">
-                        {issue.summary}
-                      </p>
-                    </div>
-
-                    <div className="flex shrink-0 flex-wrap gap-1.5 text-xs font-medium text-muted sm:flex-col sm:items-end">
-                      <span className="rounded-lg bg-panel-2 px-2.5 py-1">
-                        {issue.affected.toLocaleString()} affected
-                      </span>
-                      <span className="rounded-lg bg-panel-2 px-2.5 py-1">
-                        {issue.reportedAgo}
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="mt-4 flex flex-wrap items-center justify-between border-t border-border/60 pt-4 text-xs font-semibold text-muted">
-                    <div className="flex items-center gap-4">
-                      <span className="inline-flex items-center gap-1.5 text-blue-500 dark:text-blue-300">
-                        <Sparkles className="h-4 w-4" />
-                        Free AI summary
-                      </span>
-                      <span className="inline-flex items-center gap-1.5">
-                        <Users className="h-4 w-4" />
-                        {issue.fixes} notes
-                      </span>
+            {filteredIssues.map((issue) => (
+              <article
+                key={issue.id}
+                className={`group relative rounded-2xl border bg-panel p-5 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_32px_rgba(15,30,60,0.16)] ${
+                  issue.severity === 'Critical'
+                    ? 'border-rose-500/35 hover:border-rose-400/60'
+                    : issue.severity === 'High'
+                      ? 'border-amber-500/30 hover:border-amber-400/50'
+                      : issue.severity === 'Medium'
+                        ? 'border-blue-500/30 hover:border-blue-400/50'
+                        : 'border-emerald-500/30 hover:border-emerald-400/50'
+                }`}
+              >
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                  <div className="min-w-0 flex-1">
+                    <div className="flex flex-wrap items-center gap-2 text-[10px] uppercase font-bold tracking-wider text-muted">
+                      <span className="text-accent">#{issue.game}</span>
+                      <span>·</span>
+                      <span>{issue.patch}</span>
+                      <span>·</span>
+                      <StatusBadge
+                        label={issue.severity}
+                        tone={
+                          issue.severity === 'Critical'
+                            ? 'rose'
+                            : issue.severity === 'High'
+                              ? 'amber'
+                              : 'blue'
+                        }
+                      />
                     </div>
 
                     <Link
                       href={`/issues/${issue.slug}`}
-                      className="inline-flex items-center gap-1 text-blue-500 transition-colors hover:text-blue-600 dark:text-blue-300 dark:hover:text-blue-200 group-hover:translate-x-1 duration-200"
+                      className="mt-2 block text-lg font-bold leading-snug text-text transition-colors hover:text-accent"
                     >
-                      Open issue
-                      <ArrowRight className="h-3.5 w-3.5" />
+                      {issue.title}
                     </Link>
+
+                    <p className="mt-2 text-sm leading-6 text-muted line-clamp-2">
+                      {issue.summary}
+                    </p>
                   </div>
-                </article>
-              ))
-            ) : (
+
+                  <div className="flex shrink-0 flex-wrap gap-1.5 text-xs font-medium text-muted sm:flex-col sm:items-end">
+                    <span className="rounded-lg bg-panel-2 px-2.5 py-1">
+                      {issue.affected.toLocaleString()} affected
+                    </span>
+                    <span className="rounded-lg bg-panel-2 px-2.5 py-1">
+                      {issue.reportedAgo}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="mt-4 flex flex-wrap items-center justify-between border-t border-border/60 pt-4 text-xs font-semibold text-muted">
+                  <div className="flex items-center gap-4">
+                    <span className="inline-flex items-center gap-1.5 text-blue-500 dark:text-blue-300">
+                      <Sparkles className="h-4 w-4" />
+                      Free AI summary
+                    </span>
+                    <span className="inline-flex items-center gap-1.5">
+                      <Users className="h-4 w-4" />
+                      {issue.fixes} notes
+                    </span>
+                  </div>
+
+                  <Link
+                    href={`/issues/${issue.slug}`}
+                    className="inline-flex items-center gap-1 text-blue-500 transition-colors hover:text-blue-600 dark:text-blue-300 dark:hover:text-blue-200 group-hover:translate-x-1 duration-200"
+                  >
+                    Open issue
+                    <ArrowRight className="h-3.5 w-3.5" />
+                  </Link>
+                </div>
+              </article>
+            ))}
+
+            {filteredPosts.length ? (
+              <div className="pt-2">
+                <div className="mb-3 flex items-center justify-between border-b border-border pb-3">
+                  <div>
+                    <p className="text-[10px] uppercase font-bold tracking-[0.2em] text-accent">LIVE REPORTS</p>
+                    <h4 className="text-lg font-extrabold tracking-tight text-text">
+                      {selectedGame ? `#${selectedGame} live reports` : 'Published live reports'}
+                    </h4>
+                  </div>
+                  <span className="text-xs font-semibold text-muted">
+                    {filteredPosts.length} published
+                  </span>
+                </div>
+
+                <div className="flex flex-col gap-3">
+                  {filteredPosts.map((post) => (
+                    <article
+                      key={post.id}
+                      className="group relative rounded-2xl border border-emerald-500/25 bg-panel p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-emerald-400/40 hover:shadow-[0_12px_32px_rgba(15,30,60,0.16)]"
+                    >
+                      <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                        <div className="min-w-0 flex-1">
+                          <div className="flex flex-wrap items-center gap-2 text-[10px] uppercase font-bold tracking-wider text-muted">
+                            <span className="text-accent">#Bug report</span>
+                            <span>·</span>
+                            <span>{post.slotTime}</span>
+                            <span>·</span>
+                            <StatusBadge label="Published" tone="emerald" />
+                          </div>
+
+                          <Link
+                            href={`/posts/${post.slug}`}
+                            className="mt-2 block text-lg font-bold leading-snug text-text transition-colors hover:text-accent"
+                          >
+                            {post.title}
+                          </Link>
+
+                          <p className="mt-2 text-sm leading-6 text-muted line-clamp-2">
+                            {post.summary}
+                          </p>
+                        </div>
+
+                        <div className="flex shrink-0 flex-wrap gap-1.5 text-xs font-medium text-muted sm:flex-col sm:items-end">
+                          <span className="rounded-lg bg-panel-2 px-2.5 py-1">
+                            {post.games.join(', ')}
+                          </span>
+                          <span className="rounded-lg bg-panel-2 px-2.5 py-1">
+                            Bug report
+                          </span>
+                        </div>
+                      </div>
+
+                      <div className="mt-4 flex flex-wrap items-center justify-between border-t border-border/60 pt-4 text-xs font-semibold text-muted">
+                        <div className="flex items-center gap-4">
+                          <span className="inline-flex items-center gap-1.5 text-emerald-500 dark:text-emerald-300">
+                            <Sparkles className="h-4 w-4" />
+                            Bug report post
+                          </span>
+                          <span className="inline-flex items-center gap-1.5">
+                            <Users className="h-4 w-4" />
+                            Player notes
+                          </span>
+                        </div>
+
+                        <Link
+                          href={`/posts/${post.slug}`}
+                          className="inline-flex items-center gap-1 text-emerald-500 transition-colors hover:text-emerald-600 dark:text-emerald-300 dark:hover:text-emerald-200 group-hover:translate-x-1 duration-200"
+                        >
+                          Open live report
+                          <ArrowRight className="h-3.5 w-3.5" />
+                        </Link>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </div>
+            ) : null}
+
+            {!filteredIssues.length && !filteredPosts.length ? (
               <div className="rounded-2xl border border-border bg-panel px-6 py-12 text-center text-sm text-muted shadow-sm">
                 No issues matched your search. Try adjusting tags or keyword parameters.
               </div>
-            )}
+            ) : null}
           </div>
         </section>
 
@@ -145,31 +230,6 @@ export default function Home({
               ))}
             </div>
           </section>
-
-          {posts.length ? (
-            <section className="rounded-2xl border border-emerald-500/20 bg-panel p-5 shadow-[0_18px_40px_rgba(15,30,60,0.12)]">
-              <div className="border-b border-border pb-3 text-xs uppercase font-bold tracking-wider text-muted">
-                Published posts
-              </div>
-              <div className="mt-4 space-y-3">
-                {posts.slice(0, 3).map((post) => (
-                  <Link
-                    key={post.id}
-                    href={`/posts/${post.slug}`}
-                    className="block rounded-xl border border-border bg-panel-2/20 p-3 transition hover:border-accent/30"
-                  >
-                    <div className="flex items-center justify-between gap-2">
-                      <p className="text-xs font-bold text-text">{post.title}</p>
-                      <span className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2 py-1 text-[10px] font-bold text-emerald-600 dark:text-emerald-300">
-                        {post.slotTime}
-                      </span>
-                    </div>
-                    <p className="mt-1 text-[11px] leading-5 text-muted">{post.summary}</p>
-                  </Link>
-                ))}
-              </div>
-            </section>
-          ) : null}
 
           <section className="rounded-2xl border border-rose-500/20 bg-panel p-5 shadow-[0_18px_40px_rgba(15,30,60,0.12)]">
             <div className="border-b border-border pb-3 text-xs uppercase font-bold tracking-wider text-muted">

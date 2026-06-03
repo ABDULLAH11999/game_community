@@ -1,6 +1,6 @@
 import crypto from 'crypto'
 import { NextResponse } from 'next/server'
-import { getStoredSettings, getPosts, savePosts, saveStoredSettings } from '@/lib/db'
+import { getPosts, savePosts } from '@/lib/db'
 import { issues } from '@/lib/site-data'
 import type { PostRecord } from '@/lib/types'
 
@@ -11,52 +11,97 @@ function slugify(value: string) {
     .replace(/^-+|-+$/g, '')
 }
 
+type ReportTemplate = {
+  title: string
+  summary: string
+  content: string[]
+  keywords: string[]
+}
+
+function buildFallbackReport(games: string[], publishNow: boolean, normalizedTime: string): ReportTemplate {
+  const primaryGame = games[0] || 'Game'
+  const key = primaryGame.toLowerCase()
+
+  const templates: Record<string, ReportTemplate> = {
+    takken8: {
+      title: 'Takken8 infinite loading after ranked rematch',
+      summary:
+        'Players report the rematch screen freezing at 100% after online matches. Restarting the client or clearing cache temporarily gets around the hang.',
+      content: [
+        publishNow
+          ? 'This bug report was published immediately after multiple live player reports for Takken8.'
+          : `This bug report is queued for ${normalizedTime} PKT after repeated player reports for Takken8.`,
+        'Players describe the game locking on the rematch loading screen after ranked matches, especially when re-entering a lobby without closing the client.',
+        'Current workarounds include restarting the game between matches, clearing the local cache, and avoiding back-to-back rematches until the next patch lands.',
+      ],
+      keywords: ['Takken8 loading bug', 'Takken8 rematch freeze', 'Takken8 ranked match bug'],
+    },
+  }
+
+  if (templates[key]) {
+    return templates[key]
+  }
+
+  return {
+    title: `${primaryGame} bug report: post-match loading freeze`,
+    summary:
+      `Players are reporting a loading freeze after recent matches in ${primaryGame}. Restarting the client and rejoining fresh sessions currently helps some players recover.`,
+    content: [
+      publishNow
+        ? `This bug report was published immediately for ${primaryGame} after new live reports came in.`
+        : `This bug report is queued for ${normalizedTime} PKT after repeated live reports for ${primaryGame}.`,
+      `Players say ${primaryGame} is hanging on the post-match loading screen, usually after a rematch or quick lobby transition.`,
+      'Until a proper patch lands, the safest workaround is to restart between sessions and avoid rapid back-to-back queueing.',
+    ],
+    keywords: [
+      `${primaryGame} bug report`,
+      `${primaryGame} loading freeze`,
+      `${primaryGame} post match bug`,
+    ],
+  }
+}
+
 export async function POST(request: Request) {
   const { time, games, title, postNow } = await request.json()
   const selectedGames = Array.isArray(games) ? games.map((item) => String(item).trim()).filter(Boolean) : []
   const publishNow = Boolean(postNow)
   const normalizedTime = String(time || '').trim()
   if (!selectedGames.length || (!publishNow && !normalizedTime)) {
-    return NextResponse.json({ error: 'Please choose games and a slot time, or enable post now.' }, { status: 400 })
+    return NextResponse.json({ error: 'Please choose games and a time, or enable post now.' }, { status: 400 })
   }
 
   const matchedIssues = issues.filter((issue) => selectedGames.includes(issue.game))
   const issueTitles = matchedIssues.map((issue) => issue.title).slice(0, 3)
-  const summary =
-    matchedIssues[0]?.summary ||
-    `AI suggestions are preparing a fresh issue post for ${selectedGames.join(', ')}.`
+  const fallbackReport = buildFallbackReport(selectedGames, publishNow, normalizedTime)
+  const summary = matchedIssues[0]?.summary || fallbackReport.summary
   const slotTime = publishNow ? 'Published now' : normalizedTime
+  const postTitle = String(title || matchedIssues[0]?.title || fallbackReport.title)
   const content = matchedIssues.length
     ? [
         publishNow
-          ? `This post was published immediately for ${selectedGames.join(', ')}.`
-          : `This slot is scheduled for ${normalizedTime} PKT and targets ${selectedGames.join(', ')}.`,
-        `AI suggestions reviewed ${issueTitles.join('; ')} and summarized the most relevant community fixes for publication.`,
-        'The post is structured for search indexing so players can discover the latest issue summary from search engines.',
+          ? `This bug report was published immediately for ${selectedGames.join(', ')}.`
+          : `This bug report is scheduled for ${normalizedTime} PKT and targets ${selectedGames.join(', ')}.`,
+        `AI suggestions reviewed ${issueTitles.join('; ')} and merged the most relevant player fixes into one readable report.`,
+        'This report is written for players who want the bug summary, current workaround, and the latest status in one place.',
       ]
-    : [
-        publishNow
-          ? `This post was published immediately for ${selectedGames.join(', ')}.`
-          : `This slot is scheduled for ${normalizedTime} PKT and targets ${selectedGames.join(', ')}.`,
-        'AI suggestions are preparing a fresh game issue post for the selected game slot.',
-        'The post is structured for search indexing so players can discover the latest issue summary from search engines.',
-      ]
+    : fallbackReport.content
 
   const record: PostRecord = {
     id: crypto.randomUUID(),
-    slug: slugify(title || `${selectedGames.join('-')}-${slotTime.replace(':', '-')}`),
+    slug: slugify(postTitle || `${selectedGames.join('-')}-${slotTime.replace(':', '-')}`),
     games: selectedGames,
     slotTime,
-    title: String(title || `${selectedGames.join(', ')} slot update`),
+    title: postTitle,
     summary,
     content,
     keywords: Array.from(
       new Set([
-        ...selectedGames.flatMap((game) => [game, `${game} issue`, `${game} patch`]),
+        ...selectedGames.flatMap((game) => [game, `${game} bug report`, `${game} loading bug`]),
         ...matchedIssues.flatMap((issue) => issue.keywords),
+        ...fallbackReport.keywords,
       ]),
     ),
-    metaTitle: String(title || `${selectedGames.join(', ')} issue update`),
+    metaTitle: postTitle,
     metaDescription: summary,
     publishedAt: new Date().toISOString(),
     status: 'published',
@@ -65,16 +110,5 @@ export async function POST(request: Request) {
   const posts = getPosts()
   savePosts([record, ...posts])
 
-  const settings = getStoredSettings()
-  settings.scheduledSlots = [
-    {
-      id: record.id,
-      time: slotTime,
-      games: selectedGames,
-      title: record.title,
-    },
-    ...settings.scheduledSlots,
-  ]
-  saveStoredSettings(settings)
   return NextResponse.json({ success: true, post: record })
 }

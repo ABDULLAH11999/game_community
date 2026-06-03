@@ -1,25 +1,136 @@
 [
   {
+    "id": "58c2f93a-9f87-4b97-b342-f3c42fae98c7",
+    "slug": "takken8-ranked-rematch-freeze",
+    "games": [
+      "takken8"
+    ],
+    "slotTime": "Published now",
+    "title": "Takken8 infinite loading after ranked rematch",
+    "summary": "Players report the rematch screen freezing at 100% after online matches. Restarting the client or clearing cache temporarily gets around the hang.",
+    "content": [
+      "This bug report was published immediately after multiple live player reports for Takken8.",
+      "Players describe the game locking on the rematch loading screen after ranked matches, especially when re-entering a lobby without closing the client.",
+      "Current workarounds include restarting the game between matches, clearing the local cache, and avoiding back-to-back rematches until the next patch lands."
+    ],
+    "keywords": [
+      "takken8",
+      "Takken8 bug report",
+      "Takken8 loading bug",
+      "Takken8 rematch freeze"
+    ],
+    "metaTitle": "Takken8 infinite loading after ranked rematch",
+    "metaDescription": "Players report the rematch screen freezing at 100% after online matches. Restarting the client or clearing cache temporarily gets around the hang.",
+    "publishedAt": "2026-06-03T20:59:30.603Z",
+    "status": "published"
+  },
+  {
+    "id": "53f5ac8f-aada-441f-8790-08d2cc8d38ad",
+    "slug": "game-crashes-to-desktop-after-parachute-landing-on-erangel",
+    "games": [
+      "PUBG",
+      "GTA 5"
+    ],
+    "slotTime": "15:00 PKT",
+    "title": "Game crashes to desktop after parachute landing on Erangel",
+    "summary": "AI suggestions point to memory spikes in high density landing zones. Players are avoiding early crashes by switching shadows to medium and disabling replays before queueing.",
+    "content": [
+      "This live report is scheduled for 15:00 PKT PKT and targets PUBG, GTA 5.",
+      "AI suggestions reviewed Game crashes to desktop after parachute landing on Erangel; Invisible wall collision bug near Pochinki church; Looting animation stuck when picking up M416 with backpack full and summarized the most relevant community fixes for publication.",
+      "The post is structured for search indexing so players can discover the latest issue summary from search engines."
+    ],
+    "keywords": [
+      "PUBG",
+      "PUBG issue",
+      "PUBG patch",
+      "GTA 5",
+      "GTA 5 issue",
+      "GTA 5 patch",
+      "PUBG crash fix",
+      "PUBG patch 31.2 bug",
+      "Erangel parachute crash",
+      "PUBG invisible wall",
+      "Pochinki church collision bug",
+      "PUBG looting bug",
+      "M416 inventory stuck"
+    ],
+    "metaTitle": "Game crashes to desktop after parachute landing on Erangel",
+    "metaDescription": "AI suggestions point to memory spikes in high density landing zones. Players are avoiding early crashes by switching shadows to medium and disabling replays before queueing.",
+    "publishedAt": "2026-06-03T20:59:12.401Z",
+    "status": "published"
+  },
+  {
+    "id": "84fbcb37-97b4-4d56-85ea-26505b0702e9",
+    "slug": "takken8-input-delay-on-training-mode",
+    "games": [
+      "takken8"
+    ],
+    "slotTime": "Published now",
+    "title": "Takken8 input delay on training mode",
+    "summary": "Players are noticing delayed button response in training mode, especially after pausing and resuming. Restarting the lobby appears to reduce the lag for some users.",
+    "content": [
+      "This bug report was published immediately for Takken8 after several live player clips showed delayed movement and attacks in training mode.",
+      "The input delay seems more noticeable after pausing, returning to the menu, or switching controllers without restarting the game.",
+      "Current workarounds include restarting the training session, reconnecting the controller, and avoiding repeated pause cycles until the next update."
+    ],
+    "keywords": [
+      "takken8",
+      "Takken8 input delay",
+      "Takken8 training mode bug",
+      "Takken8 controller lag"
+    ],
+    "metaTitle": "Takken8 input delay on training mode",
+    "metaDescription": "Players are noticing delayed button response in training mode, especially after pausing and resuming. Restarting the lobby appears to reduce the lag for some users.",
+    "publishedAt": "2026-06-03T20:53:28.818Z",
+    "status": "published"
+  },
+  {
+    "id": "47e7cae3-8c78-4eeb-b9c4-8f18d16835f5",
+    "slug": "takken8-audio-stutter-after-character-select",
+    "games": [
+      "takken8"
+    ],
+    "slotTime": "Published now",
+    "title": "Takken8 audio stutter after character select",
+    "summary": "Some players hear a short audio stutter and desync after choosing a character on the versus screen. Changing the output device once before queueing helps a few setups.",
+    "content": [
+      "This bug report was published immediately for Takken8 after multiple reports of audio crackle and frame drops when the versus screen loads.",
+      "The stutter is most noticeable after character select and may continue into the opening round if the match is queued immediately.",
+      "Players are temporarily switching output devices or restarting the client before rematching to reduce the problem."
+    ],
+    "keywords": [
+      "takken8",
+      "Takken8 audio bug",
+      "Takken8 character select stutter",
+      "Takken8 sound desync"
+    ],
+    "metaTitle": "Takken8 audio stutter after character select",
+    "metaDescription": "Some players hear a short audio stutter and desync after choosing a character on the versus screen. Changing the output device once before queueing helps a few setups.",
+    "publishedAt": "2026-06-03T20:53:12.897Z",
+    "status": "published"
+  },
+  {
     "id": "4185f606-d409-42ac-9047-9841062c83c7",
-    "slug": "takken8-16-00-pkt",
+    "slug": "takken8-loading-screen-softlock",
     "games": [
       "takken8"
     ],
     "slotTime": "16:00 PKT",
-    "title": "takken8 slot update",
-    "summary": "AI suggestions are preparing a fresh issue post for takken8.",
+    "title": "Takken8 loading screen softlock after ranked queue",
+    "summary": "Players are reporting a softlock on the loading screen after queued ranked matches. Waiting for the timeout or restarting the app clears it for most users.",
     "content": [
-      "This slot is scheduled for 16:00 PKT PKT and targets takken8.",
-      "AI suggestions are preparing a fresh game issue post for the selected game slot.",
-      "The post is structured for search indexing so players can discover the latest issue summary from search engines."
+      "This bug report was prepared from live player reports around the ranked queue loading screen in Takken8.",
+      "The freeze appears after selecting a ranked match and can leave the client stuck before the stage loads.",
+      "Reported workarounds include waiting for the timeout, restarting the app, and avoiding queueing immediately after a long session."
     ],
     "keywords": [
       "takken8",
-      "takken8 issue",
-      "takken8 patch"
+      "Takken8 loading screen bug",
+      "Takken8 ranked queue softlock",
+      "Takken8 freeze"
     ],
-    "metaTitle": "takken8 issue update",
-    "metaDescription": "AI suggestions are preparing a fresh issue post for takken8.",
+    "metaTitle": "Takken8 loading screen softlock after ranked queue",
+    "metaDescription": "Players are reporting a softlock on the loading screen after queued ranked matches. Waiting for the timeout or restarting the app clears it for most users.",
     "publishedAt": "2026-06-03T20:12:51.664Z",
     "status": "published"
   }

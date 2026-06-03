@@ -1,16 +1,13 @@
 'use client'
 
 import { useMemo, useState } from 'react'
-import { Plus, X } from 'lucide-react'
+import { Plus } from 'lucide-react'
 
 export function GameSlotManager({
   availableGames,
-  initialSlots,
 }: Readonly<{
   availableGames: string[]
-  initialSlots: { id: string; time: string; games: string[]; title?: string }[]
 }>) {
-  const [slots, setSlots] = useState(initialSlots)
   const [time, setTime] = useState('15:00')
   const [selectedGames, setSelectedGames] = useState<string[]>(availableGames.slice(0, 2))
   const [title, setTitle] = useState('')
@@ -24,7 +21,7 @@ export function GameSlotManager({
 
   async function addSlot() {
     if (!selectedGames.length) return
-    setStatus('Publishing slot...')
+    setStatus('Publishing live report...')
     const response = await fetch('/api/admin/posts/generate', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -37,20 +34,12 @@ export function GameSlotManager({
     })
     const data = await response.json()
     if (!response.ok) {
-      setStatus(data.error || 'Failed to create slot.')
+      setStatus(data.error || 'Failed to publish live report.')
       return
     }
-    setSlots((current) => [
-      {
-        id: data.post.id,
-        time: data.post.slotTime,
-        games: data.post.games,
-        title: data.post.title,
-      },
-      ...current,
-    ])
     setTitle('')
-    setStatus('Slot published to post.json')
+    setPostNow(true)
+    setStatus('Live report published to post.json')
   }
 
   return (
@@ -119,23 +108,9 @@ export function GameSlotManager({
           className="inline-flex w-fit items-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 px-4 py-2.5 text-xs font-bold text-white"
         >
           <Plus className="h-4 w-4" />
-          {postNow ? 'Publish now' : `Publish slot for ${timeLabel}`}
+          {postNow ? 'Publish live report now' : `Publish live report for ${timeLabel}`}
         </button>
         {status ? <p className="text-[10px] font-bold text-emerald-600 dark:text-emerald-300">{status}</p> : null}
-      </div>
-
-      <div className="space-y-2">
-        {slots.map((slot) => (
-          <div key={slot.id} className="flex items-center justify-between rounded-xl border border-border bg-panel px-4 py-3">
-            <div>
-              <p className="text-xs font-bold text-text">{slot.time}</p>
-              <p className="text-[10px] text-muted">{slot.games.join(', ')}</p>
-            </div>
-            <button type="button" onClick={() => setSlots((current) => current.filter((item) => item.id !== slot.id))} className="text-muted hover:text-rose-500">
-              <X className="h-4 w-4" />
-            </button>
-          </div>
-        ))}
       </div>
     </div>
   )

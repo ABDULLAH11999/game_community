@@ -11,8 +11,8 @@ export default function AdminGamesPage() {
       <GlassPanel>
         <SectionHeading
           eyebrow="Games"
-          title="Game tags and schedule slots"
-          detail="Manage game tags, then assign time slots so the admin publishing workflow can queue the next AI-supported post."
+          title="Game tags and live report publishing"
+          detail="Manage game tags, then publish live issue reports with SEO-ready titles, descriptions, and keywords."
         />
       </GlassPanel>
 
@@ -23,8 +23,8 @@ export default function AdminGamesPage() {
         </GlassPanel>
 
         <GlassPanel>
-          <h3 className="mb-4 border-b border-border pb-3 font-display text-lg font-bold text-text">Slot Planner</h3>
-          <GameSlotManager availableGames={settings.games} initialSlots={settings.scheduledSlots} />
+          <h3 className="mb-4 border-b border-border pb-3 font-display text-lg font-bold text-text">Live Report Publisher</h3>
+          <GameSlotManager availableGames={settings.games} />
         </GlassPanel>
       </div>
     </div>
