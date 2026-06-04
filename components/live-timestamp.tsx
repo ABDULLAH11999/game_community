@@ -11,7 +11,7 @@ export function LiveTimestamp({
 }>) {
   return (
     <span
-      className={`badge-light-text inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-emerald-800 dark:border-emerald-500/25 dark:text-emerald-300 dark:shadow-none ${className}`}
+      className={`badge-light-text inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-emerald-800 dark:border-emerald-400/60 dark:bg-emerald-400/25 dark:text-emerald-100 dark:shadow-[0_0_0_1px_rgba(74,222,128,0.18)] ${className}`}
     >
       <span className="relative flex h-2.5 w-2.5 shrink-0">
         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400/40" />

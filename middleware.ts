@@ -1,6 +1,6 @@
 import { NextFetchEvent, NextRequest, NextResponse } from 'next/server'
 
-const adminSessionCookie = 'patchradar_admin_session'
+const adminSessionCookie = 'livepatch_admin_session'
 
 function shouldTrackVisitor(request: NextRequest) {
   const { pathname } = request.nextUrl
