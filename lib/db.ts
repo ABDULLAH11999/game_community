@@ -23,6 +23,7 @@ type DataSnapshot = {
   contactMessages: ContactMessage[]
   posts: PostRecord[]
   issueComments: Record<string, IssueComment[]>
+  postComments: Record<string, IssueComment[]>
   visitors: VisitorRecord[]
   settings: SiteSettings
 }
@@ -76,6 +77,7 @@ function loadLocalSnapshot(): DataSnapshot {
     contactMessages: readJson<ContactMessage[]>('contact-messages.json', []),
     posts: readJson<PostRecord[]>('post.json', []),
     issueComments: readJson<Record<string, IssueComment[]>>('issue-comments.json', {}),
+    postComments: readJson<Record<string, IssueComment[]>>('post-comments.json', {}),
     visitors: readJson<VisitorRecord[]>('visitors.json', []),
     settings: mergeSettings(readJson<Partial<SiteSettings>>('settings.json', {})),
   }
@@ -88,6 +90,7 @@ function writeLocalSnapshot(nextSnapshot: DataSnapshot) {
   writeJson('contact-messages.json', nextSnapshot.contactMessages)
   writeJson('post.json', nextSnapshot.posts)
   writeJson('issue-comments.json', nextSnapshot.issueComments)
+  writeJson('post-comments.json', nextSnapshot.postComments)
   writeJson('visitors.json', nextSnapshot.visitors)
   writeJson('settings.json', nextSnapshot.settings)
 }
@@ -145,6 +148,11 @@ async function ensureSchema() {
 
         CREATE TABLE IF NOT EXISTS issue_comments (
           issue_slug text PRIMARY KEY,
+          data jsonb NOT NULL
+        );
+
+        CREATE TABLE IF NOT EXISTS post_comments (
+          post_slug text PRIMARY KEY,
           data jsonb NOT NULL
         );
 
@@ -215,6 +223,7 @@ async function loadSnapshotFromDb(): Promise<DataSnapshot> {
     visitorsResult,
     postsResult,
     issueCommentsResult,
+    postCommentsResult,
     settingsResult,
   ] = await Promise.all([
     db.query('SELECT data FROM users ORDER BY data->>\'createdAt\' ASC, id ASC'),
@@ -224,6 +233,7 @@ async function loadSnapshotFromDb(): Promise<DataSnapshot> {
     db.query('SELECT data FROM visitors ORDER BY data->>\'timestamp\' DESC, id DESC'),
     db.query('SELECT data FROM posts ORDER BY data->>\'publishedAt\' DESC, id DESC'),
     db.query('SELECT issue_slug, data FROM issue_comments ORDER BY issue_slug ASC'),
+    db.query('SELECT post_slug, data FROM post_comments ORDER BY post_slug ASC'),
     db.query("SELECT data FROM site_settings WHERE id = 'default' LIMIT 1"),
   ])
 
@@ -231,6 +241,12 @@ async function loadSnapshotFromDb(): Promise<DataSnapshot> {
   for (const row of issueCommentsResult.rows) {
     const issueSlug = String((row as { issue_slug: string }).issue_slug)
     issueComments[issueSlug] = row.data as IssueComment[]
+  }
+
+  const postComments: Record<string, IssueComment[]> = {}
+  for (const row of postCommentsResult.rows) {
+    const postSlug = String((row as { post_slug: string }).post_slug)
+    postComments[postSlug] = row.data as IssueComment[]
   }
 
   return {
@@ -241,6 +257,7 @@ async function loadSnapshotFromDb(): Promise<DataSnapshot> {
     visitors: visitorsResult.rows.map((row) => row.data as VisitorRecord),
     posts: postsResult.rows.map((row) => row.data as PostRecord),
     issueComments,
+    postComments,
     settings: mergeSettings((settingsResult.rows[0]?.data as Partial<SiteSettings>) || {}),
   }
 }
@@ -287,6 +304,14 @@ async function seedFromLocalIfEmpty() {
     )
   }
 
+  if ((await countRows('post_comments')) === 0 && Object.keys(snapshot.postComments).length) {
+    await upsertKeyedRows(
+      'post_comments',
+      'post_slug',
+      Object.entries(snapshot.postComments)
+    )
+  }
+
   if ((await countRows('site_settings')) === 0) {
     await upsertKeyedRows('site_settings', 'id', [['default', snapshot.settings]])
   }
@@ -310,6 +335,7 @@ async function mirrorSnapshotToDb() {
       upsertRows('visitors', snapshot.visitors),
       upsertRows('posts', snapshot.posts),
       upsertKeyedRows('issue_comments', 'issue_slug', Object.entries(snapshot.issueComments)),
+      upsertKeyedRows('post_comments', 'post_slug', Object.entries(snapshot.postComments)),
       upsertKeyedRows('site_settings', 'id', [['default', snapshot.settings]]),
     ])
   } catch (error) {
@@ -407,6 +433,16 @@ export function getIssueComments() {
 export async function saveIssueComments(comments: Record<string, IssueComment[]>) {
   snapshot.issueComments = comments
   writeJson('issue-comments.json', comments)
+  await mirrorSnapshotToDb()
+}
+
+export function getPostComments() {
+  return snapshot.postComments
+}
+
+export async function savePostComments(comments: Record<string, IssueComment[]>) {
+  snapshot.postComments = comments
+  writeJson('post-comments.json', comments)
   await mirrorSnapshotToDb()
 }
 

@@ -1,7 +1,7 @@
 import crypto from 'crypto'
 import { NextResponse } from 'next/server'
 import { getCurrentUser } from '@/lib/auth'
-import { getIssueComments, saveIssueComments } from '@/lib/db'
+import { getPostComments, savePostComments } from '@/lib/db'
 
 export async function POST(
   request: Request,
@@ -11,7 +11,6 @@ export async function POST(
   const body = await request.json().catch(() => ({}))
   const normalizedMessage = String(body?.message || '').trim()
   const normalizedAuthor = String(body?.author || user?.name || '').trim()
-  const accountType = String(body?.accountType || 'google').toLowerCase()
 
   if (!normalizedMessage) {
     return NextResponse.json({ error: 'Comment message is required.' }, { status: 400 })
@@ -21,27 +20,19 @@ export async function POST(
     return NextResponse.json({ error: 'A display name is required.' }, { status: 400 })
   }
 
-  const comments = getIssueComments()
+  const comments = getPostComments()
   const current = comments[params.slug] || []
   comments[params.slug] = [
     ...current,
     {
       id: crypto.randomUUID(),
       author: normalizedAuthor,
-      role: user
-        ? user.role === 'admin'
-          ? 'Admin'
-          : user.role === 'moderator'
-            ? 'Moderator'
-            : 'Player'
-        : accountType === 'google'
-          ? 'Google'
-          : 'Guest',
+      role: user ? (user.role === 'admin' ? 'Admin' : user.role === 'moderator' ? 'Moderator' : 'Player') : 'Guest',
       message: normalizedMessage,
       createdAt: 'Just now',
     },
   ]
 
-  await saveIssueComments(comments)
+  await savePostComments(comments)
   return NextResponse.json({ success: true })
 }

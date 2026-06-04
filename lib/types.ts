@@ -1,4 +1,5 @@
 export type Severity = 'Critical' | 'High' | 'Medium' | 'Low'
+export type CommentRole = 'Player' | 'Moderator' | 'Admin' | 'Guest' | 'Google'
 
 export interface GameTag {
   id: string
@@ -9,7 +10,7 @@ export interface GameTag {
 export interface IssueComment {
   id: string
   author: string
-  role: 'Player' | 'Moderator' | 'Admin'
+  role: CommentRole
   message: string
   createdAt: string
 }
@@ -26,6 +27,7 @@ export interface IssueRecord {
   affected: number
   fixes: number
   reportedAgo: string
+  reportedAt: string
   aiSource: string
   keywords: string[]
   metaTitle: string

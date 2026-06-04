@@ -84,6 +84,11 @@ async function ensureSchema(pool) {
       data jsonb NOT NULL
     );
 
+    CREATE TABLE IF NOT EXISTS post_comments (
+      post_slug text PRIMARY KEY,
+      data jsonb NOT NULL
+    );
+
     CREATE TABLE IF NOT EXISTS site_settings (
       id text PRIMARY KEY,
       data jsonb NOT NULL
@@ -103,12 +108,23 @@ async function upsertRows(pool, table, rows, keyField) {
   }
 }
 
-async function upsertComments(pool, comments) {
+async function upsertIssueComments(pool, comments) {
   for (const [slug, rows] of Object.entries(comments)) {
     await pool.query(
       `INSERT INTO issue_comments (issue_slug, data)
        VALUES ($1, $2::jsonb)
        ON CONFLICT (issue_slug) DO UPDATE SET data = EXCLUDED.data`,
+      [slug, JSON.stringify(rows)]
+    )
+  }
+}
+
+async function upsertPostComments(pool, comments) {
+  for (const [slug, rows] of Object.entries(comments)) {
+    await pool.query(
+      `INSERT INTO post_comments (post_slug, data)
+       VALUES ($1, $2::jsonb)
+       ON CONFLICT (post_slug) DO UPDATE SET data = EXCLUDED.data`,
       [slug, JSON.stringify(rows)]
     )
   }
@@ -137,7 +153,7 @@ async function main() {
   })
 
   try {
-    const [users, pendingSignups, sessions, contactMessages, visitors, posts, issueComments, settings] =
+    const [users, pendingSignups, sessions, contactMessages, visitors, posts, issueComments, postComments, settings] =
       await Promise.all([
         readJson('users.json', []),
         readJson('pending-signups.json', []),
@@ -146,6 +162,7 @@ async function main() {
         readJson('visitors.json', []),
         readJson('post.json', []),
         readJson('issue-comments.json', {}),
+        readJson('post-comments.json', {}),
         readJson('settings.json', {}),
       ])
 
@@ -157,7 +174,8 @@ async function main() {
       upsertRows(pool, 'contact_messages', contactMessages, 'id'),
       upsertRows(pool, 'visitors', visitors, 'id'),
       upsertRows(pool, 'posts', posts, 'id'),
-      upsertComments(pool, issueComments),
+      upsertIssueComments(pool, issueComments),
+      upsertPostComments(pool, postComments),
       upsertSettings(pool, settings),
     ])
 
