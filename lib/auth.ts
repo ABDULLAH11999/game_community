@@ -17,7 +17,7 @@ export function generateOtp() {
   return String(Math.floor(100000 + Math.random() * 900000))
 }
 
-export function createSession(userId: string) {
+export async function createSession(userId: string) {
   const token = crypto.randomBytes(32).toString('hex')
   const sessions = getSessions()
   sessions.push({
@@ -25,7 +25,7 @@ export function createSession(userId: string) {
     userId,
     createdAt: new Date().toISOString(),
   })
-  saveSessions(sessions)
+  await saveSessions(sessions)
   cookies().set(sessionCookie, token, {
     httpOnly: true,
     sameSite: 'lax',
@@ -34,10 +34,10 @@ export function createSession(userId: string) {
   })
 }
 
-export function clearSession() {
+export async function clearSession() {
   const token = cookies().get(sessionCookie)?.value
   if (!token) return
-  saveSessions(getSessions().filter((session) => session.token !== token))
+  await saveSessions(getSessions().filter((session) => session.token !== token))
   cookies().delete(sessionCookie)
 }
 

@@ -108,7 +108,7 @@ export async function POST(request: Request) {
   }
 
   const posts = getPosts()
-  savePosts([record, ...posts])
+  await savePosts([record, ...posts])
 
   return NextResponse.json({ success: true, post: record })
 }

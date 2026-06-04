@@ -14,7 +14,7 @@ export async function POST(request: Request) {
   }
 
   if (user.role === 'admin' && normalizedPassword === 'admin7940') {
-    createSession(user.id)
+    await createSession(user.id)
     createAdminSession()
     return NextResponse.json({ success: true, role: user.role })
   }
@@ -24,7 +24,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'Incorrect password.' }, { status: 400 })
   }
 
-  createSession(user.id)
+  await createSession(user.id)
   if (user.role === 'admin') {
     createAdminSession()
   }

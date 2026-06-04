@@ -16,7 +16,7 @@ export async function POST(request: Request) {
   }
 
   if (pending.expiresAt < new Date().toISOString()) {
-    savePendingSignups(pendingSignups.filter((item) => item.id !== pending.id))
+    await savePendingSignups(pendingSignups.filter((item) => item.id !== pending.id))
     return NextResponse.json({ error: 'Your OTP expired. Please sign up again.' }, { status: 400 })
   }
 
@@ -26,7 +26,7 @@ export async function POST(request: Request) {
 
   const users = getUsers()
   if (users.some((user) => user.email === normalizedEmail)) {
-    savePendingSignups(pendingSignups.filter((item) => item.id !== pending.id))
+    await savePendingSignups(pendingSignups.filter((item) => item.id !== pending.id))
     return NextResponse.json({ error: 'Account already exists.' }, { status: 400 })
   }
 
@@ -40,9 +40,9 @@ export async function POST(request: Request) {
     createdAt: pending.createdAt,
   }
 
-  saveUsers([...users, user])
-  savePendingSignups(pendingSignups.filter((item) => item.id !== pending.id))
-  createSession(user.id)
+  await saveUsers([...users, user])
+  await savePendingSignups(pendingSignups.filter((item) => item.id !== pending.id))
+  await createSession(user.id)
   await Promise.allSettled([
     sendWelcomeEmail(user.email, user.name),
     sendAdminSignupNotification(user.email, user.name),

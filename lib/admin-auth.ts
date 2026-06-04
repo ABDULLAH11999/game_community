@@ -20,7 +20,7 @@ function ensureAdminUser() {
       verified: true,
       createdAt: new Date().toISOString(),
     })
-    saveUsers(users)
+    void saveUsers(users)
   }
 }
 

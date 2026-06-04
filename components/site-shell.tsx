@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { CarFront, Castle, Crosshair, Flame, Gamepad2, Search, Shield, Trophy, Zap } from 'lucide-react'
+import { CarFront, Castle, Crosshair, Gamepad2, Search, Shield, Trophy, Zap } from 'lucide-react'
 import { ChatbotButton } from '@/components/chatbot-button'
 import { SignoutButton } from '@/components/auth/signout-button'
 import { getCurrentUser } from '@/lib/auth'
@@ -17,6 +17,27 @@ function GamingLogo() {
       className="h-10 w-10 object-contain"
       priority
     />
+  )
+}
+
+function FireMark() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-4 w-4 shrink-0" aria-hidden="true">
+      <defs>
+        <linearGradient id="fire-mark-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#ff4d2d" />
+          <stop offset="52%" stopColor="#ff8a00" />
+          <stop offset="100%" stopColor="#ffd84d" />
+        </linearGradient>
+      </defs>
+      <path
+        d="M13.5 2.5c.4 2.1 1.7 3.6 3 5 1.4 1.5 2.9 3.1 2.9 5.8 0 4-3.2 7.2-7.4 7.2S4.5 17.7 4.5 13.6c0-2.3 1-4.2 2.6-5.8.4 1.8 1.2 3.1 2.1 4.1.8.9 1.7 1.7 1.7 3.1 0 1.2-.8 2.1-1.8 2.5.4.2.9.3 1.4.3 2.1 0 3.8-1.6 3.8-3.9 0-1.7-.9-2.9-1.8-4.2-1-1.4-2.1-2.9-1.5-5.1Z"
+        fill="url(#fire-mark-gradient)"
+        stroke="#c73a00"
+        strokeWidth="0.8"
+        strokeLinejoin="round"
+      />
+    </svg>
   )
 }
 
@@ -47,7 +68,7 @@ export async function SiteShell({
   subtitle,
 }: Readonly<{
   children: React.ReactNode
-  title?: string
+  title?: React.ReactNode
   subtitle?: string
 }>) {
   const user = getCurrentUser()
@@ -143,7 +164,7 @@ export async function SiteShell({
         {title ? (
           <div className="flex flex-col gap-2 py-4">
             <div className="flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-accent font-bold">
-              <Flame className="h-4 w-4" />
+              <FireMark />
               Player issue hub
             </div>
             <h1 className="font-display text-3xl font-extrabold tracking-tight text-text sm:text-5xl">{title}</h1>

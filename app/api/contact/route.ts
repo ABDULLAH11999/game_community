@@ -25,7 +25,7 @@ export async function POST(request: Request) {
     status: 'Unread' as const,
   }
 
-  saveContactMessages([record, ...messages])
+  await saveContactMessages([record, ...messages])
   await sendContactNotification(normalizedName, normalizedEmail, normalizedTopic, normalizedMessage)
 
   return NextResponse.json({ success: true })

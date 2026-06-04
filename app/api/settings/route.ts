@@ -22,6 +22,6 @@ export async function POST(request: Request) {
     otpRequired: hasKey('otpRequired') ? Boolean(body.otpRequired) : current.otpRequired,
   }
 
-  saveStoredSettings(nextSettings)
+  await saveStoredSettings(nextSettings)
   return NextResponse.json({ success: true })
 }

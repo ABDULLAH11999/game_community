@@ -42,13 +42,23 @@ export function StatusBadge({
   tone?: 'violet' | 'blue' | 'emerald' | 'rose' | 'amber' | 'yellow'
 }>) {
   const tones = {
-    violet: 'border-violet-500/25 bg-violet-500/10 text-violet-600 dark:text-violet-300',
-    blue: 'border-blue-500/25 bg-blue-500/10 text-blue-600 dark:text-blue-300',
-    emerald: 'border-emerald-500/25 bg-emerald-500/10 text-emerald-600 dark:text-emerald-300',
-    rose: 'border-rose-500/25 bg-rose-500/10 text-rose-600 dark:text-rose-300',
-    amber: 'border-amber-500/25 bg-amber-500/10 text-amber-600 dark:text-amber-300',
-    yellow: 'border-yellow-500/25 bg-yellow-500/10 text-yellow-600 dark:text-yellow-300',
+    violet:
+      'border-black/20 bg-violet-500/15 text-black shadow-[0_0_0_1px_rgba(0,0,0,0.08)] dark:border-violet-500/25 dark:text-violet-300 dark:shadow-none',
+    blue:
+      'border-black/20 bg-blue-500/15 text-black shadow-[0_0_0_1px_rgba(0,0,0,0.08)] dark:border-blue-500/25 dark:text-blue-300 dark:shadow-none',
+    emerald:
+      'border-black/20 bg-emerald-500/15 text-black shadow-[0_0_0_1px_rgba(0,0,0,0.08)] dark:border-emerald-500/25 dark:text-emerald-300 dark:shadow-none',
+    rose:
+      'border-black/20 bg-rose-500/15 text-black shadow-[0_0_0_1px_rgba(0,0,0,0.08)] dark:border-rose-500/25 dark:text-rose-300 dark:shadow-none',
+    amber:
+      'border-black/20 bg-amber-500/15 text-black shadow-[0_0_0_1px_rgba(0,0,0,0.08)] dark:border-amber-500/25 dark:text-amber-300 dark:shadow-none',
+    yellow:
+      'border-black/20 bg-yellow-500/15 text-black shadow-[0_0_0_1px_rgba(0,0,0,0.08)] dark:border-yellow-500/25 dark:text-yellow-300 dark:shadow-none',
   }
 
-  return <span className={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-[10px] font-semibold tracking-wide ${tones[tone]}`}>{label}</span>
+  return (
+    <span className={`badge-light-text inline-flex items-center rounded-full border px-2.5 py-0.5 text-[10px] font-semibold tracking-wide ${tones[tone]}`}>
+      {label}
+    </span>
+  )
 }

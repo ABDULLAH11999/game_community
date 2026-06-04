@@ -34,7 +34,7 @@ export async function POST(request: Request) {
       createdAt: new Date().toISOString(),
       expiresAt: new Date(Date.now() + 10 * 60 * 1000).toISOString(),
     })
-    savePendingSignups(pending)
+    await savePendingSignups(pending)
     await sendOtpEmail(normalizedEmail, normalizedName, otpCode)
     return NextResponse.json({ otpRequired: true })
   }
@@ -48,8 +48,8 @@ export async function POST(request: Request) {
     verified: true,
     createdAt: new Date().toISOString(),
   }
-  saveUsers([...users, user])
-  createSession(user.id)
+  await saveUsers([...users, user])
+  await createSession(user.id)
   await Promise.allSettled([
     sendWelcomeEmail(user.email, user.name),
     sendAdminSignupNotification(user.email, user.name),

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { Manrope, Space_Grotesk } from 'next/font/google'
+import { primeDatabaseSnapshot } from '@/lib/db'
 import { siteSettings } from '@/lib/site-data'
 
 const display = Space_Grotesk({ subsets: ['latin'], variable: '--font-display' })
@@ -32,7 +33,9 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  await primeDatabaseSnapshot()
+
   return (
     <html lang="en" className={`${display.variable} ${sans.variable}`}>
       <head>
@@ -42,7 +45,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               (function() {
                 try {
                   var t = localStorage.getItem('theme');
-                  if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                  if (t === 'dark') {
                     document.documentElement.classList.add('dark');
                   } else {
                     document.documentElement.classList.add('light');

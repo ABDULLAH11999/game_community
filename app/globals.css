@@ -200,3 +200,11 @@ a {
 .pr-theme .shadow-2xl {
   box-shadow: 0 24px 60px rgba(10, 20, 40, 0.28) !important;
 }
+
+.light .pr-theme .badge-light-text {
+  color: rgb(0 0 0) !important;
+}
+
+.dark .pr-theme .badge-light-text {
+  color: inherit !important;
+}

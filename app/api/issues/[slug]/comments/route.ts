@@ -31,6 +31,6 @@ export async function POST(
     },
   ]
 
-  saveIssueComments(comments)
+  await saveIssueComments(comments)
   return NextResponse.json({ success: true })
 }
