@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
+import { Loader2 } from 'lucide-react'
 
 export function AuthForm({ mode }: Readonly<{ mode: 'signin' | 'signup' }>) {
   const router = useRouter()
@@ -48,7 +49,10 @@ export function AuthForm({ mode }: Readonly<{ mode: 'signin' | 'signup' }>) {
 
   return (
     <form
-      action={async (formData) => onSubmit(formData)}
+      onSubmit={(event) => {
+        event.preventDefault()
+        void onSubmit(new FormData(event.currentTarget))
+      }}
       className="space-y-4 rounded-xl border border-border bg-panel p-6"
     >
       {mode === 'signup' ? (
@@ -79,7 +83,10 @@ export function AuthForm({ mode }: Readonly<{ mode: 'signin' | 'signup' }>) {
         disabled={loading}
         className="w-full rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 px-5 py-3 text-sm font-bold text-white shadow-md transition-all hover:shadow-[0_0_12px_rgba(59,130,246,0.25)] disabled:opacity-75"
       >
-        {loading ? 'Please wait...' : mode === 'signup' ? 'Create account' : 'Sign in'}
+        <span className="inline-flex items-center justify-center gap-2">
+          {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : null}
+          {loading ? 'Please wait...' : mode === 'signup' ? 'Create account' : 'Sign in'}
+        </span>
       </button>
       <p className="text-xs text-muted font-medium text-center">
         {mode === 'signup' ? 'Already have an account?' : 'Need a new account?'}{' '}

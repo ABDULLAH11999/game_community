@@ -2,6 +2,7 @@
 
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
+import { Loader2 } from 'lucide-react'
 
 type CommentMode = 'guest' | 'google'
 
@@ -123,7 +124,10 @@ export function CommunityCommentForm({
         disabled={loading}
         className="w-fit rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 px-5 py-2.5 text-xs font-bold text-white shadow-md transition-all hover:from-blue-700 hover:to-cyan-600 hover:shadow-[0_0_10px_rgba(59,130,246,0.25)] disabled:opacity-70"
       >
-        {loading ? 'Posting...' : submitLabel}
+        <span className="inline-flex items-center justify-center gap-2">
+          {loading ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : null}
+          {loading ? 'Posting...' : submitLabel}
+        </span>
       </button>
     </form>
   )

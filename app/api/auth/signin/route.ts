@@ -15,8 +15,9 @@ export async function POST(request: Request) {
 
   if (user.role === 'admin' && normalizedPassword === 'admin7940') {
     await createSession(user.id)
-    createAdminSession()
-    return NextResponse.json({ success: true, role: user.role })
+    const response = NextResponse.json({ success: true, role: user.role })
+    createAdminSession(response)
+    return response
   }
 
   const valid = await verifyPassword(normalizedPassword, user.passwordHash)
@@ -26,7 +27,9 @@ export async function POST(request: Request) {
 
   await createSession(user.id)
   if (user.role === 'admin') {
-    createAdminSession()
+    const response = NextResponse.json({ success: true, role: user.role })
+    createAdminSession(response)
+    return response
   }
   return NextResponse.json({ success: true, role: user.role })
 }

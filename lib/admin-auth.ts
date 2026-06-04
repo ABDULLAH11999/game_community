@@ -1,6 +1,7 @@
 import crypto from 'crypto'
 import bcrypt from 'bcryptjs'
 import { cookies } from 'next/headers'
+import { NextResponse } from 'next/server'
 import { getUsers, saveUsers } from '@/lib/db'
 
 const adminCookie = 'livepatch_admin_session'
@@ -46,9 +47,9 @@ export async function verifyAdminCredentials(username: string, password: string)
   return bcrypt.compare(password, admin.passwordHash)
 }
 
-export function createAdminSession() {
+export function createAdminSession(response: NextResponse) {
   const token = crypto.randomBytes(32).toString('hex')
-  cookies().set(adminCookie, token, {
+  response.cookies.set(adminCookie, token, {
     httpOnly: true,
     sameSite: 'lax',
     path: '/',
@@ -56,8 +57,13 @@ export function createAdminSession() {
   })
 }
 
-export function clearAdminSession() {
-  cookies().delete(adminCookie)
+export function clearAdminSession(response: NextResponse) {
+  response.cookies.set(adminCookie, '', {
+    httpOnly: true,
+    sameSite: 'lax',
+    path: '/',
+    maxAge: 0,
+  })
 }
 
 export function getCurrentAdmin() {

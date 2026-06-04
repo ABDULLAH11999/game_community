@@ -13,6 +13,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'Invalid admin credentials.' }, { status: 401 })
   }
 
-  createAdminSession()
-  return NextResponse.json({ success: true })
+  const response = NextResponse.json({ success: true })
+  createAdminSession(response)
+  return response
 }

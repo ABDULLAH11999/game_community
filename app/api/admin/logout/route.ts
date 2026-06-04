@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server'
 import { clearAdminSession } from '@/lib/admin-auth'
 
 export async function POST() {
-  clearAdminSession()
-  return NextResponse.json({ success: true })
+  const response = NextResponse.json({ success: true })
+  clearAdminSession(response)
+  return response
 }
