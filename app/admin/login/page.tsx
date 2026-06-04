@@ -18,7 +18,7 @@ export default function AdminLoginPage() {
         </div>
 
         <GlassPanel>
-          <SectionHeading eyebrow="Protected Access" title="Admin sign in" detail="Use your admin username or email. Default password: admin7940." />
+          <SectionHeading eyebrow="Protected Access" title="Admin sign in" detail="Use your admin username or email and the admin password for this site." />
           <AdminLoginForm />
           <div className="mt-5 text-center text-[11px] text-muted">
             <Link href="/" className="font-semibold text-accent hover:underline">
