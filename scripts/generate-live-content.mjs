@@ -3,52 +3,7 @@ import path from 'path'
 
 const rootDir = process.cwd()
 const dataDir = path.join(rootDir, 'data')
-
-const games = [
-  'Call of Duty: Warzone',
-  'Counter-Strike 2',
-  'Apex Legends',
-  'PUBG: Battlegrounds',
-  'Valorant',
-  'Garena Free Fire',
-  "Tom Clancy's Rainbow Six Siege",
-  'Overwatch 2',
-  'Fortnite',
-  'Roblox',
-  'Minecraft',
-  'Ark: Survival Ascended',
-  'Rust',
-  'Dead by Daylight',
-  'Palworld',
-  "No Man's Sky",
-  'EA Sports FC',
-  'Grand Theft Auto Online',
-  'Rocket League',
-  'The Sims 4',
-  'NBA 2K',
-  'Forza Horizon 5',
-  'Destiny 2',
-  'World of Warcraft',
-  'Warframe',
-  'Genshin Impact',
-  'Honkai: Star Rail',
-  'Elden Ring',
-  'The Elder Scrolls Online',
-  'Fallout 76',
-  'Helldivers 2',
-  'Cyberpunk 2077',
-  'League of Legends',
-  'Dota 2',
-  'Mobile Legends: Bang Bang',
-  'Diablo IV',
-  'Path of Exile',
-  "Baldur's Gate 3",
-  'Lost Ark',
-  'Teamfight Tactics',
-  'Tekken 8',
-]
-
-const slotLabels = ['Published now', '11 min ago', '24 min ago', '42 min ago', '1 hour ago', '3 hours ago']
+const gameCatalogFile = path.join(dataDir, 'game-catalog.json')
 const issueTypes = [
   {
     slugPart: 'matchmaking-queue-stalls-after-update',
@@ -76,6 +31,17 @@ const issueTypes = [
   },
 ]
 
+const startMinutesFromMidnight = 9 * 60
+const slotGapMinutes = 30
+
+function formatSlotTime(index) {
+  const totalMinutes = startMinutesFromMidnight + index * slotGapMinutes
+  const wrappedMinutes = ((totalMinutes % (24 * 60)) + 24 * 60) % (24 * 60)
+  const hours = String(Math.floor(wrappedMinutes / 60)).padStart(2, '0')
+  const minutes = String(wrappedMinutes % 60).padStart(2, '0')
+  return `${hours}:${minutes} PKT`
+}
+
 function slugify(value) {
   return value
     .toLowerCase()
@@ -98,12 +64,17 @@ async function writeJson(name, value) {
   await fs.writeFile(target, `${JSON.stringify(value, null, 2)}\n`, 'utf8')
 }
 
+async function readGameCatalog() {
+  const raw = await fs.readFile(gameCatalogFile, 'utf8')
+  return JSON.parse(raw)
+}
+
 function buildPost(game, issueType, index) {
   const title = `${game} ${issueType.titlePart}`
   const slug = slugify(title)
   const summary = `${game} ${issueType.summaryPart}`
-  const slotTime = slotLabels[index % slotLabels.length]
-  const publishedAt = new Date(Date.UTC(2026, 5, 4, 12, 0, 0) - index * 6 * 60 * 1000).toISOString()
+  const slotTime = formatSlotTime(index)
+  const publishedAt = new Date(Date.UTC(2026, 5, 4, 4, 0, 0) - index * slotGapMinutes * 60 * 1000).toISOString()
 
   return {
     id: `post-${slug}`,
@@ -135,28 +106,26 @@ function buildPost(game, issueType, index) {
   }
 }
 
+function buildSlot(game, index) {
+  return {
+    id: `slot-${String(index + 1).padStart(3, '0')}`,
+    time: formatSlotTime(index),
+    games: [game],
+    title: `${game} slot update`,
+  }
+}
+
 async function main() {
+  const games = await readGameCatalog()
   const existingSettings = await readJson('settings.json', {})
 
-  const nextPosts = games.flatMap((game, gameIndex) =>
-    issueTypes.map((issueType, issueIndex) => buildPost(game, issueType, gameIndex * issueTypes.length + issueIndex)),
-  )
+  const nextPosts = games.map((game, index) => buildPost(game, issueTypes[index % issueTypes.length], index))
 
   const nextSettings = {
     ...existingSettings,
     games,
     canonicalUrl: 'https://livepatch.online',
-    scheduledSlots: Array.isArray(existingSettings.scheduledSlots)
-      ? existingSettings.scheduledSlots.map((slot) => ({
-          ...slot,
-          games: Array.isArray(slot.games)
-            ? slot.games.map((game) => (game.toLowerCase() === 'takken8' ? 'Tekken 8' : game))
-            : slot.games,
-          title: typeof slot.title === 'string' && slot.title.toLowerCase().includes('takken8')
-            ? slot.title.replace(/takken8/gi, 'Tekken 8')
-            : slot.title,
-        }))
-      : [],
+    scheduledSlots: games.map((game, index) => buildSlot(game, index)),
   }
 
   await writeJson('settings.json', nextSettings)
