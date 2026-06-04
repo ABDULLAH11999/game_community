@@ -1,17 +1,18 @@
 import { Activity, BarChart3, Mail, Users } from 'lucide-react'
 import { GlassPanel, SectionHeading, StatusBadge } from '@/components/ui/glass'
-import { getContactMessages, getUsers } from '@/lib/db'
-import { issues, visitors } from '@/lib/site-data'
+import { getContactMessages, getUsers, getVisitors } from '@/lib/db'
+import { issues } from '@/lib/site-data'
 
 export default function AdminDashboardPage() {
   const users = getUsers()
   const contactMessages = getContactMessages()
+  const trackedVisitors = getVisitors()
 
   const stats = [
     { label: 'Users', value: users.length, icon: Users, tone: 'blue' as const },
     { label: 'Issues', value: issues.length, icon: Activity, tone: 'violet' as const },
     { label: 'Contacts', value: contactMessages.length, icon: Mail, tone: 'emerald' as const },
-    { label: 'Visitors', value: visitors.length, icon: BarChart3, tone: 'amber' as const },
+    { label: 'Visitors', value: trackedVisitors.length, icon: BarChart3, tone: 'amber' as const },
   ]
 
   return (

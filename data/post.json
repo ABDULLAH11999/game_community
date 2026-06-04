@@ -1,28 +1,2652 @@
 [
   {
+    "id": "post-call-of-duty-warzone-matchmaking-queue-stalls-after-update",
+    "slug": "call-of-duty-warzone-matchmaking-queue-stalls-after-update",
+    "games": [
+      "Call of Duty: Warzone"
+    ],
+    "title": "Call of Duty: Warzone matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for Call of Duty: Warzone after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "Call of Duty: Warzone Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "Call of Duty: Warzone",
+      "Call of Duty: Warzone bug report",
+      "Call of Duty: Warzone live report",
+      "Call of Duty: Warzone issue",
+      "Call of Duty: Warzone fix",
+      "Call of Duty: Warzone matchmaking bug",
+      "Call of Duty: Warzone queue stall",
+      "Call of Duty: Warzone lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "Published now",
+    "metaTitle": "Call of Duty: Warzone matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T12:00:00.000Z",
+    "metaDescription": "Call of Duty: Warzone Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-call-of-duty-warzone-frame-pacing-stutter-after-long-session",
+    "slug": "call-of-duty-warzone-frame-pacing-stutter-after-long-session",
+    "games": [
+      "Call of Duty: Warzone"
+    ],
+    "title": "Call of Duty: Warzone frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for Call of Duty: Warzone after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "Call of Duty: Warzone Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "Call of Duty: Warzone",
+      "Call of Duty: Warzone bug report",
+      "Call of Duty: Warzone live report",
+      "Call of Duty: Warzone issue",
+      "Call of Duty: Warzone fix",
+      "Call of Duty: Warzone performance stutter",
+      "Call of Duty: Warzone frame pacing",
+      "Call of Duty: Warzone low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "11 min ago",
+    "metaTitle": "Call of Duty: Warzone frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T11:54:00.000Z",
+    "metaDescription": "Call of Duty: Warzone Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-counter-strike-2-matchmaking-queue-stalls-after-update",
+    "slug": "counter-strike-2-matchmaking-queue-stalls-after-update",
+    "games": [
+      "Counter-Strike 2"
+    ],
+    "title": "Counter-Strike 2 matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for Counter-Strike 2 after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "Counter-Strike 2 Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "Counter-Strike 2",
+      "Counter-Strike 2 bug report",
+      "Counter-Strike 2 live report",
+      "Counter-Strike 2 issue",
+      "Counter-Strike 2 fix",
+      "Counter-Strike 2 matchmaking bug",
+      "Counter-Strike 2 queue stall",
+      "Counter-Strike 2 lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "24 min ago",
+    "metaTitle": "Counter-Strike 2 matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T11:48:00.000Z",
+    "metaDescription": "Counter-Strike 2 Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-counter-strike-2-frame-pacing-stutter-after-long-session",
+    "slug": "counter-strike-2-frame-pacing-stutter-after-long-session",
+    "games": [
+      "Counter-Strike 2"
+    ],
+    "title": "Counter-Strike 2 frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for Counter-Strike 2 after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "Counter-Strike 2 Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "Counter-Strike 2",
+      "Counter-Strike 2 bug report",
+      "Counter-Strike 2 live report",
+      "Counter-Strike 2 issue",
+      "Counter-Strike 2 fix",
+      "Counter-Strike 2 performance stutter",
+      "Counter-Strike 2 frame pacing",
+      "Counter-Strike 2 low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "42 min ago",
+    "metaTitle": "Counter-Strike 2 frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T11:42:00.000Z",
+    "metaDescription": "Counter-Strike 2 Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-apex-legends-matchmaking-queue-stalls-after-update",
+    "slug": "apex-legends-matchmaking-queue-stalls-after-update",
+    "games": [
+      "Apex Legends"
+    ],
+    "title": "Apex Legends matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for Apex Legends after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "Apex Legends Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "Apex Legends",
+      "Apex Legends bug report",
+      "Apex Legends live report",
+      "Apex Legends issue",
+      "Apex Legends fix",
+      "Apex Legends matchmaking bug",
+      "Apex Legends queue stall",
+      "Apex Legends lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "1 hour ago",
+    "metaTitle": "Apex Legends matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T11:36:00.000Z",
+    "metaDescription": "Apex Legends Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-apex-legends-frame-pacing-stutter-after-long-session",
+    "slug": "apex-legends-frame-pacing-stutter-after-long-session",
+    "games": [
+      "Apex Legends"
+    ],
+    "title": "Apex Legends frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for Apex Legends after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "Apex Legends Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "Apex Legends",
+      "Apex Legends bug report",
+      "Apex Legends live report",
+      "Apex Legends issue",
+      "Apex Legends fix",
+      "Apex Legends performance stutter",
+      "Apex Legends frame pacing",
+      "Apex Legends low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "3 hours ago",
+    "metaTitle": "Apex Legends frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T11:30:00.000Z",
+    "metaDescription": "Apex Legends Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-pubg-battlegrounds-matchmaking-queue-stalls-after-update",
+    "slug": "pubg-battlegrounds-matchmaking-queue-stalls-after-update",
+    "games": [
+      "PUBG: Battlegrounds"
+    ],
+    "title": "PUBG: Battlegrounds matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for PUBG: Battlegrounds after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "PUBG: Battlegrounds Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "PUBG: Battlegrounds",
+      "PUBG: Battlegrounds bug report",
+      "PUBG: Battlegrounds live report",
+      "PUBG: Battlegrounds issue",
+      "PUBG: Battlegrounds fix",
+      "PUBG: Battlegrounds matchmaking bug",
+      "PUBG: Battlegrounds queue stall",
+      "PUBG: Battlegrounds lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "Published now",
+    "metaTitle": "PUBG: Battlegrounds matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T11:24:00.000Z",
+    "metaDescription": "PUBG: Battlegrounds Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-pubg-battlegrounds-frame-pacing-stutter-after-long-session",
+    "slug": "pubg-battlegrounds-frame-pacing-stutter-after-long-session",
+    "games": [
+      "PUBG: Battlegrounds"
+    ],
+    "title": "PUBG: Battlegrounds frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for PUBG: Battlegrounds after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "PUBG: Battlegrounds Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "PUBG: Battlegrounds",
+      "PUBG: Battlegrounds bug report",
+      "PUBG: Battlegrounds live report",
+      "PUBG: Battlegrounds issue",
+      "PUBG: Battlegrounds fix",
+      "PUBG: Battlegrounds performance stutter",
+      "PUBG: Battlegrounds frame pacing",
+      "PUBG: Battlegrounds low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "11 min ago",
+    "metaTitle": "PUBG: Battlegrounds frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T11:18:00.000Z",
+    "metaDescription": "PUBG: Battlegrounds Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-valorant-matchmaking-queue-stalls-after-update",
+    "slug": "valorant-matchmaking-queue-stalls-after-update",
+    "games": [
+      "Valorant"
+    ],
+    "title": "Valorant matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for Valorant after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "Valorant Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "Valorant",
+      "Valorant bug report",
+      "Valorant live report",
+      "Valorant issue",
+      "Valorant fix",
+      "Valorant matchmaking bug",
+      "Valorant queue stall",
+      "Valorant lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "24 min ago",
+    "metaTitle": "Valorant matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T11:12:00.000Z",
+    "metaDescription": "Valorant Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-valorant-frame-pacing-stutter-after-long-session",
+    "slug": "valorant-frame-pacing-stutter-after-long-session",
+    "games": [
+      "Valorant"
+    ],
+    "title": "Valorant frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for Valorant after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "Valorant Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "Valorant",
+      "Valorant bug report",
+      "Valorant live report",
+      "Valorant issue",
+      "Valorant fix",
+      "Valorant performance stutter",
+      "Valorant frame pacing",
+      "Valorant low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "42 min ago",
+    "metaTitle": "Valorant frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T11:06:00.000Z",
+    "metaDescription": "Valorant Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-garena-free-fire-matchmaking-queue-stalls-after-update",
+    "slug": "garena-free-fire-matchmaking-queue-stalls-after-update",
+    "games": [
+      "Garena Free Fire"
+    ],
+    "title": "Garena Free Fire matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for Garena Free Fire after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "Garena Free Fire Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "Garena Free Fire",
+      "Garena Free Fire bug report",
+      "Garena Free Fire live report",
+      "Garena Free Fire issue",
+      "Garena Free Fire fix",
+      "Garena Free Fire matchmaking bug",
+      "Garena Free Fire queue stall",
+      "Garena Free Fire lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "1 hour ago",
+    "metaTitle": "Garena Free Fire matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T11:00:00.000Z",
+    "metaDescription": "Garena Free Fire Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-garena-free-fire-frame-pacing-stutter-after-long-session",
+    "slug": "garena-free-fire-frame-pacing-stutter-after-long-session",
+    "games": [
+      "Garena Free Fire"
+    ],
+    "title": "Garena Free Fire frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for Garena Free Fire after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "Garena Free Fire Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "Garena Free Fire",
+      "Garena Free Fire bug report",
+      "Garena Free Fire live report",
+      "Garena Free Fire issue",
+      "Garena Free Fire fix",
+      "Garena Free Fire performance stutter",
+      "Garena Free Fire frame pacing",
+      "Garena Free Fire low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "3 hours ago",
+    "metaTitle": "Garena Free Fire frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T10:54:00.000Z",
+    "metaDescription": "Garena Free Fire Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-tom-clancy-s-rainbow-six-siege-matchmaking-queue-stalls-after-update",
+    "slug": "tom-clancy-s-rainbow-six-siege-matchmaking-queue-stalls-after-update",
+    "games": [
+      "Tom Clancy's Rainbow Six Siege"
+    ],
+    "title": "Tom Clancy's Rainbow Six Siege matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for Tom Clancy's Rainbow Six Siege after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "Tom Clancy's Rainbow Six Siege Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "Tom Clancy's Rainbow Six Siege",
+      "Tom Clancy's Rainbow Six Siege bug report",
+      "Tom Clancy's Rainbow Six Siege live report",
+      "Tom Clancy's Rainbow Six Siege issue",
+      "Tom Clancy's Rainbow Six Siege fix",
+      "Tom Clancy's Rainbow Six Siege matchmaking bug",
+      "Tom Clancy's Rainbow Six Siege queue stall",
+      "Tom Clancy's Rainbow Six Siege lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "Published now",
+    "metaTitle": "Tom Clancy's Rainbow Six Siege matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T10:48:00.000Z",
+    "metaDescription": "Tom Clancy's Rainbow Six Siege Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-tom-clancy-s-rainbow-six-siege-frame-pacing-stutter-after-long-session",
+    "slug": "tom-clancy-s-rainbow-six-siege-frame-pacing-stutter-after-long-session",
+    "games": [
+      "Tom Clancy's Rainbow Six Siege"
+    ],
+    "title": "Tom Clancy's Rainbow Six Siege frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for Tom Clancy's Rainbow Six Siege after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "Tom Clancy's Rainbow Six Siege Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "Tom Clancy's Rainbow Six Siege",
+      "Tom Clancy's Rainbow Six Siege bug report",
+      "Tom Clancy's Rainbow Six Siege live report",
+      "Tom Clancy's Rainbow Six Siege issue",
+      "Tom Clancy's Rainbow Six Siege fix",
+      "Tom Clancy's Rainbow Six Siege performance stutter",
+      "Tom Clancy's Rainbow Six Siege frame pacing",
+      "Tom Clancy's Rainbow Six Siege low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "11 min ago",
+    "metaTitle": "Tom Clancy's Rainbow Six Siege frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T10:42:00.000Z",
+    "metaDescription": "Tom Clancy's Rainbow Six Siege Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-overwatch-2-matchmaking-queue-stalls-after-update",
+    "slug": "overwatch-2-matchmaking-queue-stalls-after-update",
+    "games": [
+      "Overwatch 2"
+    ],
+    "title": "Overwatch 2 matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for Overwatch 2 after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "Overwatch 2 Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "Overwatch 2",
+      "Overwatch 2 bug report",
+      "Overwatch 2 live report",
+      "Overwatch 2 issue",
+      "Overwatch 2 fix",
+      "Overwatch 2 matchmaking bug",
+      "Overwatch 2 queue stall",
+      "Overwatch 2 lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "24 min ago",
+    "metaTitle": "Overwatch 2 matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T10:36:00.000Z",
+    "metaDescription": "Overwatch 2 Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-overwatch-2-frame-pacing-stutter-after-long-session",
+    "slug": "overwatch-2-frame-pacing-stutter-after-long-session",
+    "games": [
+      "Overwatch 2"
+    ],
+    "title": "Overwatch 2 frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for Overwatch 2 after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "Overwatch 2 Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "Overwatch 2",
+      "Overwatch 2 bug report",
+      "Overwatch 2 live report",
+      "Overwatch 2 issue",
+      "Overwatch 2 fix",
+      "Overwatch 2 performance stutter",
+      "Overwatch 2 frame pacing",
+      "Overwatch 2 low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "42 min ago",
+    "metaTitle": "Overwatch 2 frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T10:30:00.000Z",
+    "metaDescription": "Overwatch 2 Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-fortnite-matchmaking-queue-stalls-after-update",
+    "slug": "fortnite-matchmaking-queue-stalls-after-update",
+    "games": [
+      "Fortnite"
+    ],
+    "title": "Fortnite matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for Fortnite after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "Fortnite Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "Fortnite",
+      "Fortnite bug report",
+      "Fortnite live report",
+      "Fortnite issue",
+      "Fortnite fix",
+      "Fortnite matchmaking bug",
+      "Fortnite queue stall",
+      "Fortnite lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "1 hour ago",
+    "metaTitle": "Fortnite matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T10:24:00.000Z",
+    "metaDescription": "Fortnite Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-fortnite-frame-pacing-stutter-after-long-session",
+    "slug": "fortnite-frame-pacing-stutter-after-long-session",
+    "games": [
+      "Fortnite"
+    ],
+    "title": "Fortnite frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for Fortnite after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "Fortnite Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "Fortnite",
+      "Fortnite bug report",
+      "Fortnite live report",
+      "Fortnite issue",
+      "Fortnite fix",
+      "Fortnite performance stutter",
+      "Fortnite frame pacing",
+      "Fortnite low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "3 hours ago",
+    "metaTitle": "Fortnite frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T10:18:00.000Z",
+    "metaDescription": "Fortnite Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-roblox-matchmaking-queue-stalls-after-update",
+    "slug": "roblox-matchmaking-queue-stalls-after-update",
+    "games": [
+      "Roblox"
+    ],
+    "title": "Roblox matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for Roblox after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "Roblox Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "Roblox",
+      "Roblox bug report",
+      "Roblox live report",
+      "Roblox issue",
+      "Roblox fix",
+      "Roblox matchmaking bug",
+      "Roblox queue stall",
+      "Roblox lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "Published now",
+    "metaTitle": "Roblox matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T10:12:00.000Z",
+    "metaDescription": "Roblox Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-roblox-frame-pacing-stutter-after-long-session",
+    "slug": "roblox-frame-pacing-stutter-after-long-session",
+    "games": [
+      "Roblox"
+    ],
+    "title": "Roblox frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for Roblox after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "Roblox Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "Roblox",
+      "Roblox bug report",
+      "Roblox live report",
+      "Roblox issue",
+      "Roblox fix",
+      "Roblox performance stutter",
+      "Roblox frame pacing",
+      "Roblox low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "11 min ago",
+    "metaTitle": "Roblox frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T10:06:00.000Z",
+    "metaDescription": "Roblox Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-minecraft-matchmaking-queue-stalls-after-update",
+    "slug": "minecraft-matchmaking-queue-stalls-after-update",
+    "games": [
+      "Minecraft"
+    ],
+    "title": "Minecraft matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for Minecraft after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "Minecraft Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "Minecraft",
+      "Minecraft bug report",
+      "Minecraft live report",
+      "Minecraft issue",
+      "Minecraft fix",
+      "Minecraft matchmaking bug",
+      "Minecraft queue stall",
+      "Minecraft lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "24 min ago",
+    "metaTitle": "Minecraft matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T10:00:00.000Z",
+    "metaDescription": "Minecraft Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-minecraft-frame-pacing-stutter-after-long-session",
+    "slug": "minecraft-frame-pacing-stutter-after-long-session",
+    "games": [
+      "Minecraft"
+    ],
+    "title": "Minecraft frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for Minecraft after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "Minecraft Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "Minecraft",
+      "Minecraft bug report",
+      "Minecraft live report",
+      "Minecraft issue",
+      "Minecraft fix",
+      "Minecraft performance stutter",
+      "Minecraft frame pacing",
+      "Minecraft low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "42 min ago",
+    "metaTitle": "Minecraft frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T09:54:00.000Z",
+    "metaDescription": "Minecraft Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-ark-survival-ascended-matchmaking-queue-stalls-after-update",
+    "slug": "ark-survival-ascended-matchmaking-queue-stalls-after-update",
+    "games": [
+      "Ark: Survival Ascended"
+    ],
+    "title": "Ark: Survival Ascended matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for Ark: Survival Ascended after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "Ark: Survival Ascended Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "Ark: Survival Ascended",
+      "Ark: Survival Ascended bug report",
+      "Ark: Survival Ascended live report",
+      "Ark: Survival Ascended issue",
+      "Ark: Survival Ascended fix",
+      "Ark: Survival Ascended matchmaking bug",
+      "Ark: Survival Ascended queue stall",
+      "Ark: Survival Ascended lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "1 hour ago",
+    "metaTitle": "Ark: Survival Ascended matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T09:48:00.000Z",
+    "metaDescription": "Ark: Survival Ascended Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-ark-survival-ascended-frame-pacing-stutter-after-long-session",
+    "slug": "ark-survival-ascended-frame-pacing-stutter-after-long-session",
+    "games": [
+      "Ark: Survival Ascended"
+    ],
+    "title": "Ark: Survival Ascended frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for Ark: Survival Ascended after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "Ark: Survival Ascended Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "Ark: Survival Ascended",
+      "Ark: Survival Ascended bug report",
+      "Ark: Survival Ascended live report",
+      "Ark: Survival Ascended issue",
+      "Ark: Survival Ascended fix",
+      "Ark: Survival Ascended performance stutter",
+      "Ark: Survival Ascended frame pacing",
+      "Ark: Survival Ascended low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "3 hours ago",
+    "metaTitle": "Ark: Survival Ascended frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T09:42:00.000Z",
+    "metaDescription": "Ark: Survival Ascended Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-rust-matchmaking-queue-stalls-after-update",
+    "slug": "rust-matchmaking-queue-stalls-after-update",
+    "games": [
+      "Rust"
+    ],
+    "title": "Rust matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for Rust after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "Rust Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "Rust",
+      "Rust bug report",
+      "Rust live report",
+      "Rust issue",
+      "Rust fix",
+      "Rust matchmaking bug",
+      "Rust queue stall",
+      "Rust lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "Published now",
+    "metaTitle": "Rust matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T09:36:00.000Z",
+    "metaDescription": "Rust Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-rust-frame-pacing-stutter-after-long-session",
+    "slug": "rust-frame-pacing-stutter-after-long-session",
+    "games": [
+      "Rust"
+    ],
+    "title": "Rust frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for Rust after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "Rust Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "Rust",
+      "Rust bug report",
+      "Rust live report",
+      "Rust issue",
+      "Rust fix",
+      "Rust performance stutter",
+      "Rust frame pacing",
+      "Rust low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "11 min ago",
+    "metaTitle": "Rust frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T09:30:00.000Z",
+    "metaDescription": "Rust Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-dead-by-daylight-matchmaking-queue-stalls-after-update",
+    "slug": "dead-by-daylight-matchmaking-queue-stalls-after-update",
+    "games": [
+      "Dead by Daylight"
+    ],
+    "title": "Dead by Daylight matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for Dead by Daylight after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "Dead by Daylight Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "Dead by Daylight",
+      "Dead by Daylight bug report",
+      "Dead by Daylight live report",
+      "Dead by Daylight issue",
+      "Dead by Daylight fix",
+      "Dead by Daylight matchmaking bug",
+      "Dead by Daylight queue stall",
+      "Dead by Daylight lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "24 min ago",
+    "metaTitle": "Dead by Daylight matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T09:24:00.000Z",
+    "metaDescription": "Dead by Daylight Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-dead-by-daylight-frame-pacing-stutter-after-long-session",
+    "slug": "dead-by-daylight-frame-pacing-stutter-after-long-session",
+    "games": [
+      "Dead by Daylight"
+    ],
+    "title": "Dead by Daylight frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for Dead by Daylight after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "Dead by Daylight Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "Dead by Daylight",
+      "Dead by Daylight bug report",
+      "Dead by Daylight live report",
+      "Dead by Daylight issue",
+      "Dead by Daylight fix",
+      "Dead by Daylight performance stutter",
+      "Dead by Daylight frame pacing",
+      "Dead by Daylight low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "42 min ago",
+    "metaTitle": "Dead by Daylight frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T09:18:00.000Z",
+    "metaDescription": "Dead by Daylight Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-palworld-matchmaking-queue-stalls-after-update",
+    "slug": "palworld-matchmaking-queue-stalls-after-update",
+    "games": [
+      "Palworld"
+    ],
+    "title": "Palworld matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for Palworld after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "Palworld Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "Palworld",
+      "Palworld bug report",
+      "Palworld live report",
+      "Palworld issue",
+      "Palworld fix",
+      "Palworld matchmaking bug",
+      "Palworld queue stall",
+      "Palworld lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "1 hour ago",
+    "metaTitle": "Palworld matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T09:12:00.000Z",
+    "metaDescription": "Palworld Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-palworld-frame-pacing-stutter-after-long-session",
+    "slug": "palworld-frame-pacing-stutter-after-long-session",
+    "games": [
+      "Palworld"
+    ],
+    "title": "Palworld frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for Palworld after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "Palworld Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "Palworld",
+      "Palworld bug report",
+      "Palworld live report",
+      "Palworld issue",
+      "Palworld fix",
+      "Palworld performance stutter",
+      "Palworld frame pacing",
+      "Palworld low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "3 hours ago",
+    "metaTitle": "Palworld frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T09:06:00.000Z",
+    "metaDescription": "Palworld Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-no-man-s-sky-matchmaking-queue-stalls-after-update",
+    "slug": "no-man-s-sky-matchmaking-queue-stalls-after-update",
+    "games": [
+      "No Man's Sky"
+    ],
+    "title": "No Man's Sky matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for No Man's Sky after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "No Man's Sky Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "No Man's Sky",
+      "No Man's Sky bug report",
+      "No Man's Sky live report",
+      "No Man's Sky issue",
+      "No Man's Sky fix",
+      "No Man's Sky matchmaking bug",
+      "No Man's Sky queue stall",
+      "No Man's Sky lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "Published now",
+    "metaTitle": "No Man's Sky matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T09:00:00.000Z",
+    "metaDescription": "No Man's Sky Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-no-man-s-sky-frame-pacing-stutter-after-long-session",
+    "slug": "no-man-s-sky-frame-pacing-stutter-after-long-session",
+    "games": [
+      "No Man's Sky"
+    ],
+    "title": "No Man's Sky frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for No Man's Sky after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "No Man's Sky Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "No Man's Sky",
+      "No Man's Sky bug report",
+      "No Man's Sky live report",
+      "No Man's Sky issue",
+      "No Man's Sky fix",
+      "No Man's Sky performance stutter",
+      "No Man's Sky frame pacing",
+      "No Man's Sky low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "11 min ago",
+    "metaTitle": "No Man's Sky frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T08:54:00.000Z",
+    "metaDescription": "No Man's Sky Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-ea-sports-fc-matchmaking-queue-stalls-after-update",
+    "slug": "ea-sports-fc-matchmaking-queue-stalls-after-update",
+    "games": [
+      "EA Sports FC"
+    ],
+    "title": "EA Sports FC matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for EA Sports FC after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "EA Sports FC Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "EA Sports FC",
+      "EA Sports FC bug report",
+      "EA Sports FC live report",
+      "EA Sports FC issue",
+      "EA Sports FC fix",
+      "EA Sports FC matchmaking bug",
+      "EA Sports FC queue stall",
+      "EA Sports FC lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "24 min ago",
+    "metaTitle": "EA Sports FC matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T08:48:00.000Z",
+    "metaDescription": "EA Sports FC Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-ea-sports-fc-frame-pacing-stutter-after-long-session",
+    "slug": "ea-sports-fc-frame-pacing-stutter-after-long-session",
+    "games": [
+      "EA Sports FC"
+    ],
+    "title": "EA Sports FC frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for EA Sports FC after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "EA Sports FC Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "EA Sports FC",
+      "EA Sports FC bug report",
+      "EA Sports FC live report",
+      "EA Sports FC issue",
+      "EA Sports FC fix",
+      "EA Sports FC performance stutter",
+      "EA Sports FC frame pacing",
+      "EA Sports FC low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "42 min ago",
+    "metaTitle": "EA Sports FC frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T08:42:00.000Z",
+    "metaDescription": "EA Sports FC Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-grand-theft-auto-online-matchmaking-queue-stalls-after-update",
+    "slug": "grand-theft-auto-online-matchmaking-queue-stalls-after-update",
+    "games": [
+      "Grand Theft Auto Online"
+    ],
+    "title": "Grand Theft Auto Online matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for Grand Theft Auto Online after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "Grand Theft Auto Online Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "Grand Theft Auto Online",
+      "Grand Theft Auto Online bug report",
+      "Grand Theft Auto Online live report",
+      "Grand Theft Auto Online issue",
+      "Grand Theft Auto Online fix",
+      "Grand Theft Auto Online matchmaking bug",
+      "Grand Theft Auto Online queue stall",
+      "Grand Theft Auto Online lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "1 hour ago",
+    "metaTitle": "Grand Theft Auto Online matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T08:36:00.000Z",
+    "metaDescription": "Grand Theft Auto Online Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-grand-theft-auto-online-frame-pacing-stutter-after-long-session",
+    "slug": "grand-theft-auto-online-frame-pacing-stutter-after-long-session",
+    "games": [
+      "Grand Theft Auto Online"
+    ],
+    "title": "Grand Theft Auto Online frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for Grand Theft Auto Online after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "Grand Theft Auto Online Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "Grand Theft Auto Online",
+      "Grand Theft Auto Online bug report",
+      "Grand Theft Auto Online live report",
+      "Grand Theft Auto Online issue",
+      "Grand Theft Auto Online fix",
+      "Grand Theft Auto Online performance stutter",
+      "Grand Theft Auto Online frame pacing",
+      "Grand Theft Auto Online low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "3 hours ago",
+    "metaTitle": "Grand Theft Auto Online frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T08:30:00.000Z",
+    "metaDescription": "Grand Theft Auto Online Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-rocket-league-matchmaking-queue-stalls-after-update",
+    "slug": "rocket-league-matchmaking-queue-stalls-after-update",
+    "games": [
+      "Rocket League"
+    ],
+    "title": "Rocket League matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for Rocket League after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "Rocket League Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "Rocket League",
+      "Rocket League bug report",
+      "Rocket League live report",
+      "Rocket League issue",
+      "Rocket League fix",
+      "Rocket League matchmaking bug",
+      "Rocket League queue stall",
+      "Rocket League lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "Published now",
+    "metaTitle": "Rocket League matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T08:24:00.000Z",
+    "metaDescription": "Rocket League Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-rocket-league-frame-pacing-stutter-after-long-session",
+    "slug": "rocket-league-frame-pacing-stutter-after-long-session",
+    "games": [
+      "Rocket League"
+    ],
+    "title": "Rocket League frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for Rocket League after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "Rocket League Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "Rocket League",
+      "Rocket League bug report",
+      "Rocket League live report",
+      "Rocket League issue",
+      "Rocket League fix",
+      "Rocket League performance stutter",
+      "Rocket League frame pacing",
+      "Rocket League low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "11 min ago",
+    "metaTitle": "Rocket League frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T08:18:00.000Z",
+    "metaDescription": "Rocket League Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-the-sims-4-matchmaking-queue-stalls-after-update",
+    "slug": "the-sims-4-matchmaking-queue-stalls-after-update",
+    "games": [
+      "The Sims 4"
+    ],
+    "title": "The Sims 4 matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for The Sims 4 after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "The Sims 4 Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "The Sims 4",
+      "The Sims 4 bug report",
+      "The Sims 4 live report",
+      "The Sims 4 issue",
+      "The Sims 4 fix",
+      "The Sims 4 matchmaking bug",
+      "The Sims 4 queue stall",
+      "The Sims 4 lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "24 min ago",
+    "metaTitle": "The Sims 4 matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T08:12:00.000Z",
+    "metaDescription": "The Sims 4 Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-the-sims-4-frame-pacing-stutter-after-long-session",
+    "slug": "the-sims-4-frame-pacing-stutter-after-long-session",
+    "games": [
+      "The Sims 4"
+    ],
+    "title": "The Sims 4 frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for The Sims 4 after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "The Sims 4 Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "The Sims 4",
+      "The Sims 4 bug report",
+      "The Sims 4 live report",
+      "The Sims 4 issue",
+      "The Sims 4 fix",
+      "The Sims 4 performance stutter",
+      "The Sims 4 frame pacing",
+      "The Sims 4 low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "42 min ago",
+    "metaTitle": "The Sims 4 frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T08:06:00.000Z",
+    "metaDescription": "The Sims 4 Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-nba-2k-matchmaking-queue-stalls-after-update",
+    "slug": "nba-2k-matchmaking-queue-stalls-after-update",
+    "games": [
+      "NBA 2K"
+    ],
+    "title": "NBA 2K matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for NBA 2K after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "NBA 2K Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "NBA 2K",
+      "NBA 2K bug report",
+      "NBA 2K live report",
+      "NBA 2K issue",
+      "NBA 2K fix",
+      "NBA 2K matchmaking bug",
+      "NBA 2K queue stall",
+      "NBA 2K lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "1 hour ago",
+    "metaTitle": "NBA 2K matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T08:00:00.000Z",
+    "metaDescription": "NBA 2K Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-nba-2k-frame-pacing-stutter-after-long-session",
+    "slug": "nba-2k-frame-pacing-stutter-after-long-session",
+    "games": [
+      "NBA 2K"
+    ],
+    "title": "NBA 2K frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for NBA 2K after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "NBA 2K Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "NBA 2K",
+      "NBA 2K bug report",
+      "NBA 2K live report",
+      "NBA 2K issue",
+      "NBA 2K fix",
+      "NBA 2K performance stutter",
+      "NBA 2K frame pacing",
+      "NBA 2K low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "3 hours ago",
+    "metaTitle": "NBA 2K frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T07:54:00.000Z",
+    "metaDescription": "NBA 2K Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-forza-horizon-5-matchmaking-queue-stalls-after-update",
+    "slug": "forza-horizon-5-matchmaking-queue-stalls-after-update",
+    "games": [
+      "Forza Horizon 5"
+    ],
+    "title": "Forza Horizon 5 matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for Forza Horizon 5 after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "Forza Horizon 5 Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "Forza Horizon 5",
+      "Forza Horizon 5 bug report",
+      "Forza Horizon 5 live report",
+      "Forza Horizon 5 issue",
+      "Forza Horizon 5 fix",
+      "Forza Horizon 5 matchmaking bug",
+      "Forza Horizon 5 queue stall",
+      "Forza Horizon 5 lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "Published now",
+    "metaTitle": "Forza Horizon 5 matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T07:48:00.000Z",
+    "metaDescription": "Forza Horizon 5 Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-forza-horizon-5-frame-pacing-stutter-after-long-session",
+    "slug": "forza-horizon-5-frame-pacing-stutter-after-long-session",
+    "games": [
+      "Forza Horizon 5"
+    ],
+    "title": "Forza Horizon 5 frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for Forza Horizon 5 after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "Forza Horizon 5 Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "Forza Horizon 5",
+      "Forza Horizon 5 bug report",
+      "Forza Horizon 5 live report",
+      "Forza Horizon 5 issue",
+      "Forza Horizon 5 fix",
+      "Forza Horizon 5 performance stutter",
+      "Forza Horizon 5 frame pacing",
+      "Forza Horizon 5 low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "11 min ago",
+    "metaTitle": "Forza Horizon 5 frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T07:42:00.000Z",
+    "metaDescription": "Forza Horizon 5 Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-destiny-2-matchmaking-queue-stalls-after-update",
+    "slug": "destiny-2-matchmaking-queue-stalls-after-update",
+    "games": [
+      "Destiny 2"
+    ],
+    "title": "Destiny 2 matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for Destiny 2 after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "Destiny 2 Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "Destiny 2",
+      "Destiny 2 bug report",
+      "Destiny 2 live report",
+      "Destiny 2 issue",
+      "Destiny 2 fix",
+      "Destiny 2 matchmaking bug",
+      "Destiny 2 queue stall",
+      "Destiny 2 lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "24 min ago",
+    "metaTitle": "Destiny 2 matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T07:36:00.000Z",
+    "metaDescription": "Destiny 2 Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-destiny-2-frame-pacing-stutter-after-long-session",
+    "slug": "destiny-2-frame-pacing-stutter-after-long-session",
+    "games": [
+      "Destiny 2"
+    ],
+    "title": "Destiny 2 frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for Destiny 2 after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "Destiny 2 Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "Destiny 2",
+      "Destiny 2 bug report",
+      "Destiny 2 live report",
+      "Destiny 2 issue",
+      "Destiny 2 fix",
+      "Destiny 2 performance stutter",
+      "Destiny 2 frame pacing",
+      "Destiny 2 low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "42 min ago",
+    "metaTitle": "Destiny 2 frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T07:30:00.000Z",
+    "metaDescription": "Destiny 2 Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-world-of-warcraft-matchmaking-queue-stalls-after-update",
+    "slug": "world-of-warcraft-matchmaking-queue-stalls-after-update",
+    "games": [
+      "World of Warcraft"
+    ],
+    "title": "World of Warcraft matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for World of Warcraft after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "World of Warcraft Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "World of Warcraft",
+      "World of Warcraft bug report",
+      "World of Warcraft live report",
+      "World of Warcraft issue",
+      "World of Warcraft fix",
+      "World of Warcraft matchmaking bug",
+      "World of Warcraft queue stall",
+      "World of Warcraft lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "1 hour ago",
+    "metaTitle": "World of Warcraft matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T07:24:00.000Z",
+    "metaDescription": "World of Warcraft Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-world-of-warcraft-frame-pacing-stutter-after-long-session",
+    "slug": "world-of-warcraft-frame-pacing-stutter-after-long-session",
+    "games": [
+      "World of Warcraft"
+    ],
+    "title": "World of Warcraft frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for World of Warcraft after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "World of Warcraft Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "World of Warcraft",
+      "World of Warcraft bug report",
+      "World of Warcraft live report",
+      "World of Warcraft issue",
+      "World of Warcraft fix",
+      "World of Warcraft performance stutter",
+      "World of Warcraft frame pacing",
+      "World of Warcraft low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "3 hours ago",
+    "metaTitle": "World of Warcraft frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T07:18:00.000Z",
+    "metaDescription": "World of Warcraft Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-warframe-matchmaking-queue-stalls-after-update",
+    "slug": "warframe-matchmaking-queue-stalls-after-update",
+    "games": [
+      "Warframe"
+    ],
+    "title": "Warframe matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for Warframe after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "Warframe Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "Warframe",
+      "Warframe bug report",
+      "Warframe live report",
+      "Warframe issue",
+      "Warframe fix",
+      "Warframe matchmaking bug",
+      "Warframe queue stall",
+      "Warframe lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "Published now",
+    "metaTitle": "Warframe matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T07:12:00.000Z",
+    "metaDescription": "Warframe Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-warframe-frame-pacing-stutter-after-long-session",
+    "slug": "warframe-frame-pacing-stutter-after-long-session",
+    "games": [
+      "Warframe"
+    ],
+    "title": "Warframe frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for Warframe after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "Warframe Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "Warframe",
+      "Warframe bug report",
+      "Warframe live report",
+      "Warframe issue",
+      "Warframe fix",
+      "Warframe performance stutter",
+      "Warframe frame pacing",
+      "Warframe low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "11 min ago",
+    "metaTitle": "Warframe frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T07:06:00.000Z",
+    "metaDescription": "Warframe Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-genshin-impact-matchmaking-queue-stalls-after-update",
+    "slug": "genshin-impact-matchmaking-queue-stalls-after-update",
+    "games": [
+      "Genshin Impact"
+    ],
+    "title": "Genshin Impact matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for Genshin Impact after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "Genshin Impact Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "Genshin Impact",
+      "Genshin Impact bug report",
+      "Genshin Impact live report",
+      "Genshin Impact issue",
+      "Genshin Impact fix",
+      "Genshin Impact matchmaking bug",
+      "Genshin Impact queue stall",
+      "Genshin Impact lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "24 min ago",
+    "metaTitle": "Genshin Impact matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T07:00:00.000Z",
+    "metaDescription": "Genshin Impact Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-genshin-impact-frame-pacing-stutter-after-long-session",
+    "slug": "genshin-impact-frame-pacing-stutter-after-long-session",
+    "games": [
+      "Genshin Impact"
+    ],
+    "title": "Genshin Impact frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for Genshin Impact after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "Genshin Impact Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "Genshin Impact",
+      "Genshin Impact bug report",
+      "Genshin Impact live report",
+      "Genshin Impact issue",
+      "Genshin Impact fix",
+      "Genshin Impact performance stutter",
+      "Genshin Impact frame pacing",
+      "Genshin Impact low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "42 min ago",
+    "metaTitle": "Genshin Impact frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T06:54:00.000Z",
+    "metaDescription": "Genshin Impact Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-honkai-star-rail-matchmaking-queue-stalls-after-update",
+    "slug": "honkai-star-rail-matchmaking-queue-stalls-after-update",
+    "games": [
+      "Honkai: Star Rail"
+    ],
+    "title": "Honkai: Star Rail matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for Honkai: Star Rail after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "Honkai: Star Rail Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "Honkai: Star Rail",
+      "Honkai: Star Rail bug report",
+      "Honkai: Star Rail live report",
+      "Honkai: Star Rail issue",
+      "Honkai: Star Rail fix",
+      "Honkai: Star Rail matchmaking bug",
+      "Honkai: Star Rail queue stall",
+      "Honkai: Star Rail lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "1 hour ago",
+    "metaTitle": "Honkai: Star Rail matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T06:48:00.000Z",
+    "metaDescription": "Honkai: Star Rail Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-honkai-star-rail-frame-pacing-stutter-after-long-session",
+    "slug": "honkai-star-rail-frame-pacing-stutter-after-long-session",
+    "games": [
+      "Honkai: Star Rail"
+    ],
+    "title": "Honkai: Star Rail frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for Honkai: Star Rail after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "Honkai: Star Rail Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "Honkai: Star Rail",
+      "Honkai: Star Rail bug report",
+      "Honkai: Star Rail live report",
+      "Honkai: Star Rail issue",
+      "Honkai: Star Rail fix",
+      "Honkai: Star Rail performance stutter",
+      "Honkai: Star Rail frame pacing",
+      "Honkai: Star Rail low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "3 hours ago",
+    "metaTitle": "Honkai: Star Rail frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T06:42:00.000Z",
+    "metaDescription": "Honkai: Star Rail Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-elden-ring-matchmaking-queue-stalls-after-update",
+    "slug": "elden-ring-matchmaking-queue-stalls-after-update",
+    "games": [
+      "Elden Ring"
+    ],
+    "title": "Elden Ring matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for Elden Ring after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "Elden Ring Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "Elden Ring",
+      "Elden Ring bug report",
+      "Elden Ring live report",
+      "Elden Ring issue",
+      "Elden Ring fix",
+      "Elden Ring matchmaking bug",
+      "Elden Ring queue stall",
+      "Elden Ring lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "Published now",
+    "metaTitle": "Elden Ring matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T06:36:00.000Z",
+    "metaDescription": "Elden Ring Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-elden-ring-frame-pacing-stutter-after-long-session",
+    "slug": "elden-ring-frame-pacing-stutter-after-long-session",
+    "games": [
+      "Elden Ring"
+    ],
+    "title": "Elden Ring frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for Elden Ring after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "Elden Ring Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "Elden Ring",
+      "Elden Ring bug report",
+      "Elden Ring live report",
+      "Elden Ring issue",
+      "Elden Ring fix",
+      "Elden Ring performance stutter",
+      "Elden Ring frame pacing",
+      "Elden Ring low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "11 min ago",
+    "metaTitle": "Elden Ring frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T06:30:00.000Z",
+    "metaDescription": "Elden Ring Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-the-elder-scrolls-online-matchmaking-queue-stalls-after-update",
+    "slug": "the-elder-scrolls-online-matchmaking-queue-stalls-after-update",
+    "games": [
+      "The Elder Scrolls Online"
+    ],
+    "title": "The Elder Scrolls Online matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for The Elder Scrolls Online after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "The Elder Scrolls Online Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "The Elder Scrolls Online",
+      "The Elder Scrolls Online bug report",
+      "The Elder Scrolls Online live report",
+      "The Elder Scrolls Online issue",
+      "The Elder Scrolls Online fix",
+      "The Elder Scrolls Online matchmaking bug",
+      "The Elder Scrolls Online queue stall",
+      "The Elder Scrolls Online lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "24 min ago",
+    "metaTitle": "The Elder Scrolls Online matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T06:24:00.000Z",
+    "metaDescription": "The Elder Scrolls Online Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-the-elder-scrolls-online-frame-pacing-stutter-after-long-session",
+    "slug": "the-elder-scrolls-online-frame-pacing-stutter-after-long-session",
+    "games": [
+      "The Elder Scrolls Online"
+    ],
+    "title": "The Elder Scrolls Online frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for The Elder Scrolls Online after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "The Elder Scrolls Online Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "The Elder Scrolls Online",
+      "The Elder Scrolls Online bug report",
+      "The Elder Scrolls Online live report",
+      "The Elder Scrolls Online issue",
+      "The Elder Scrolls Online fix",
+      "The Elder Scrolls Online performance stutter",
+      "The Elder Scrolls Online frame pacing",
+      "The Elder Scrolls Online low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "42 min ago",
+    "metaTitle": "The Elder Scrolls Online frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T06:18:00.000Z",
+    "metaDescription": "The Elder Scrolls Online Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-fallout-76-matchmaking-queue-stalls-after-update",
+    "slug": "fallout-76-matchmaking-queue-stalls-after-update",
+    "games": [
+      "Fallout 76"
+    ],
+    "title": "Fallout 76 matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for Fallout 76 after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "Fallout 76 Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "Fallout 76",
+      "Fallout 76 bug report",
+      "Fallout 76 live report",
+      "Fallout 76 issue",
+      "Fallout 76 fix",
+      "Fallout 76 matchmaking bug",
+      "Fallout 76 queue stall",
+      "Fallout 76 lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "1 hour ago",
+    "metaTitle": "Fallout 76 matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T06:12:00.000Z",
+    "metaDescription": "Fallout 76 Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-fallout-76-frame-pacing-stutter-after-long-session",
+    "slug": "fallout-76-frame-pacing-stutter-after-long-session",
+    "games": [
+      "Fallout 76"
+    ],
+    "title": "Fallout 76 frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for Fallout 76 after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "Fallout 76 Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "Fallout 76",
+      "Fallout 76 bug report",
+      "Fallout 76 live report",
+      "Fallout 76 issue",
+      "Fallout 76 fix",
+      "Fallout 76 performance stutter",
+      "Fallout 76 frame pacing",
+      "Fallout 76 low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "3 hours ago",
+    "metaTitle": "Fallout 76 frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T06:06:00.000Z",
+    "metaDescription": "Fallout 76 Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-helldivers-2-matchmaking-queue-stalls-after-update",
+    "slug": "helldivers-2-matchmaking-queue-stalls-after-update",
+    "games": [
+      "Helldivers 2"
+    ],
+    "title": "Helldivers 2 matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for Helldivers 2 after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "Helldivers 2 Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "Helldivers 2",
+      "Helldivers 2 bug report",
+      "Helldivers 2 live report",
+      "Helldivers 2 issue",
+      "Helldivers 2 fix",
+      "Helldivers 2 matchmaking bug",
+      "Helldivers 2 queue stall",
+      "Helldivers 2 lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "Published now",
+    "metaTitle": "Helldivers 2 matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T06:00:00.000Z",
+    "metaDescription": "Helldivers 2 Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-helldivers-2-frame-pacing-stutter-after-long-session",
+    "slug": "helldivers-2-frame-pacing-stutter-after-long-session",
+    "games": [
+      "Helldivers 2"
+    ],
+    "title": "Helldivers 2 frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for Helldivers 2 after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "Helldivers 2 Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "Helldivers 2",
+      "Helldivers 2 bug report",
+      "Helldivers 2 live report",
+      "Helldivers 2 issue",
+      "Helldivers 2 fix",
+      "Helldivers 2 performance stutter",
+      "Helldivers 2 frame pacing",
+      "Helldivers 2 low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "11 min ago",
+    "metaTitle": "Helldivers 2 frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T05:54:00.000Z",
+    "metaDescription": "Helldivers 2 Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-cyberpunk-2077-matchmaking-queue-stalls-after-update",
+    "slug": "cyberpunk-2077-matchmaking-queue-stalls-after-update",
+    "games": [
+      "Cyberpunk 2077"
+    ],
+    "title": "Cyberpunk 2077 matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for Cyberpunk 2077 after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "Cyberpunk 2077 Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "Cyberpunk 2077",
+      "Cyberpunk 2077 bug report",
+      "Cyberpunk 2077 live report",
+      "Cyberpunk 2077 issue",
+      "Cyberpunk 2077 fix",
+      "Cyberpunk 2077 matchmaking bug",
+      "Cyberpunk 2077 queue stall",
+      "Cyberpunk 2077 lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "24 min ago",
+    "metaTitle": "Cyberpunk 2077 matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T05:48:00.000Z",
+    "metaDescription": "Cyberpunk 2077 Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-cyberpunk-2077-frame-pacing-stutter-after-long-session",
+    "slug": "cyberpunk-2077-frame-pacing-stutter-after-long-session",
+    "games": [
+      "Cyberpunk 2077"
+    ],
+    "title": "Cyberpunk 2077 frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for Cyberpunk 2077 after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "Cyberpunk 2077 Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "Cyberpunk 2077",
+      "Cyberpunk 2077 bug report",
+      "Cyberpunk 2077 live report",
+      "Cyberpunk 2077 issue",
+      "Cyberpunk 2077 fix",
+      "Cyberpunk 2077 performance stutter",
+      "Cyberpunk 2077 frame pacing",
+      "Cyberpunk 2077 low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "42 min ago",
+    "metaTitle": "Cyberpunk 2077 frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T05:42:00.000Z",
+    "metaDescription": "Cyberpunk 2077 Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-league-of-legends-matchmaking-queue-stalls-after-update",
+    "slug": "league-of-legends-matchmaking-queue-stalls-after-update",
+    "games": [
+      "League of Legends"
+    ],
+    "title": "League of Legends matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for League of Legends after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "League of Legends Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "League of Legends",
+      "League of Legends bug report",
+      "League of Legends live report",
+      "League of Legends issue",
+      "League of Legends fix",
+      "League of Legends matchmaking bug",
+      "League of Legends queue stall",
+      "League of Legends lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "1 hour ago",
+    "metaTitle": "League of Legends matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T05:36:00.000Z",
+    "metaDescription": "League of Legends Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-league-of-legends-frame-pacing-stutter-after-long-session",
+    "slug": "league-of-legends-frame-pacing-stutter-after-long-session",
+    "games": [
+      "League of Legends"
+    ],
+    "title": "League of Legends frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for League of Legends after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "League of Legends Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "League of Legends",
+      "League of Legends bug report",
+      "League of Legends live report",
+      "League of Legends issue",
+      "League of Legends fix",
+      "League of Legends performance stutter",
+      "League of Legends frame pacing",
+      "League of Legends low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "3 hours ago",
+    "metaTitle": "League of Legends frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T05:30:00.000Z",
+    "metaDescription": "League of Legends Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-dota-2-matchmaking-queue-stalls-after-update",
+    "slug": "dota-2-matchmaking-queue-stalls-after-update",
+    "games": [
+      "Dota 2"
+    ],
+    "title": "Dota 2 matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for Dota 2 after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "Dota 2 Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "Dota 2",
+      "Dota 2 bug report",
+      "Dota 2 live report",
+      "Dota 2 issue",
+      "Dota 2 fix",
+      "Dota 2 matchmaking bug",
+      "Dota 2 queue stall",
+      "Dota 2 lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "Published now",
+    "metaTitle": "Dota 2 matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T05:24:00.000Z",
+    "metaDescription": "Dota 2 Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-dota-2-frame-pacing-stutter-after-long-session",
+    "slug": "dota-2-frame-pacing-stutter-after-long-session",
+    "games": [
+      "Dota 2"
+    ],
+    "title": "Dota 2 frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for Dota 2 after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "Dota 2 Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "Dota 2",
+      "Dota 2 bug report",
+      "Dota 2 live report",
+      "Dota 2 issue",
+      "Dota 2 fix",
+      "Dota 2 performance stutter",
+      "Dota 2 frame pacing",
+      "Dota 2 low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "11 min ago",
+    "metaTitle": "Dota 2 frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T05:18:00.000Z",
+    "metaDescription": "Dota 2 Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-mobile-legends-bang-bang-matchmaking-queue-stalls-after-update",
+    "slug": "mobile-legends-bang-bang-matchmaking-queue-stalls-after-update",
+    "games": [
+      "Mobile Legends: Bang Bang"
+    ],
+    "title": "Mobile Legends: Bang Bang matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for Mobile Legends: Bang Bang after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "Mobile Legends: Bang Bang Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "Mobile Legends: Bang Bang",
+      "Mobile Legends: Bang Bang bug report",
+      "Mobile Legends: Bang Bang live report",
+      "Mobile Legends: Bang Bang issue",
+      "Mobile Legends: Bang Bang fix",
+      "Mobile Legends: Bang Bang matchmaking bug",
+      "Mobile Legends: Bang Bang queue stall",
+      "Mobile Legends: Bang Bang lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "24 min ago",
+    "metaTitle": "Mobile Legends: Bang Bang matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T05:12:00.000Z",
+    "metaDescription": "Mobile Legends: Bang Bang Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-mobile-legends-bang-bang-frame-pacing-stutter-after-long-session",
+    "slug": "mobile-legends-bang-bang-frame-pacing-stutter-after-long-session",
+    "games": [
+      "Mobile Legends: Bang Bang"
+    ],
+    "title": "Mobile Legends: Bang Bang frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for Mobile Legends: Bang Bang after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "Mobile Legends: Bang Bang Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "Mobile Legends: Bang Bang",
+      "Mobile Legends: Bang Bang bug report",
+      "Mobile Legends: Bang Bang live report",
+      "Mobile Legends: Bang Bang issue",
+      "Mobile Legends: Bang Bang fix",
+      "Mobile Legends: Bang Bang performance stutter",
+      "Mobile Legends: Bang Bang frame pacing",
+      "Mobile Legends: Bang Bang low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "42 min ago",
+    "metaTitle": "Mobile Legends: Bang Bang frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T05:06:00.000Z",
+    "metaDescription": "Mobile Legends: Bang Bang Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-diablo-iv-matchmaking-queue-stalls-after-update",
+    "slug": "diablo-iv-matchmaking-queue-stalls-after-update",
+    "games": [
+      "Diablo IV"
+    ],
+    "title": "Diablo IV matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for Diablo IV after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "Diablo IV Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "Diablo IV",
+      "Diablo IV bug report",
+      "Diablo IV live report",
+      "Diablo IV issue",
+      "Diablo IV fix",
+      "Diablo IV matchmaking bug",
+      "Diablo IV queue stall",
+      "Diablo IV lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "1 hour ago",
+    "metaTitle": "Diablo IV matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T05:00:00.000Z",
+    "metaDescription": "Diablo IV Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-diablo-iv-frame-pacing-stutter-after-long-session",
+    "slug": "diablo-iv-frame-pacing-stutter-after-long-session",
+    "games": [
+      "Diablo IV"
+    ],
+    "title": "Diablo IV frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for Diablo IV after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "Diablo IV Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "Diablo IV",
+      "Diablo IV bug report",
+      "Diablo IV live report",
+      "Diablo IV issue",
+      "Diablo IV fix",
+      "Diablo IV performance stutter",
+      "Diablo IV frame pacing",
+      "Diablo IV low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "3 hours ago",
+    "metaTitle": "Diablo IV frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T04:54:00.000Z",
+    "metaDescription": "Diablo IV Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-path-of-exile-matchmaking-queue-stalls-after-update",
+    "slug": "path-of-exile-matchmaking-queue-stalls-after-update",
+    "games": [
+      "Path of Exile"
+    ],
+    "title": "Path of Exile matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for Path of Exile after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "Path of Exile Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "Path of Exile",
+      "Path of Exile bug report",
+      "Path of Exile live report",
+      "Path of Exile issue",
+      "Path of Exile fix",
+      "Path of Exile matchmaking bug",
+      "Path of Exile queue stall",
+      "Path of Exile lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "Published now",
+    "metaTitle": "Path of Exile matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T04:48:00.000Z",
+    "metaDescription": "Path of Exile Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-path-of-exile-frame-pacing-stutter-after-long-session",
+    "slug": "path-of-exile-frame-pacing-stutter-after-long-session",
+    "games": [
+      "Path of Exile"
+    ],
+    "title": "Path of Exile frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for Path of Exile after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "Path of Exile Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "Path of Exile",
+      "Path of Exile bug report",
+      "Path of Exile live report",
+      "Path of Exile issue",
+      "Path of Exile fix",
+      "Path of Exile performance stutter",
+      "Path of Exile frame pacing",
+      "Path of Exile low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "11 min ago",
+    "metaTitle": "Path of Exile frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T04:42:00.000Z",
+    "metaDescription": "Path of Exile Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-baldur-s-gate-3-matchmaking-queue-stalls-after-update",
+    "slug": "baldur-s-gate-3-matchmaking-queue-stalls-after-update",
+    "games": [
+      "Baldur's Gate 3"
+    ],
+    "title": "Baldur's Gate 3 matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for Baldur's Gate 3 after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "Baldur's Gate 3 Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "Baldur's Gate 3",
+      "Baldur's Gate 3 bug report",
+      "Baldur's Gate 3 live report",
+      "Baldur's Gate 3 issue",
+      "Baldur's Gate 3 fix",
+      "Baldur's Gate 3 matchmaking bug",
+      "Baldur's Gate 3 queue stall",
+      "Baldur's Gate 3 lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "24 min ago",
+    "metaTitle": "Baldur's Gate 3 matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T04:36:00.000Z",
+    "metaDescription": "Baldur's Gate 3 Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-baldur-s-gate-3-frame-pacing-stutter-after-long-session",
+    "slug": "baldur-s-gate-3-frame-pacing-stutter-after-long-session",
+    "games": [
+      "Baldur's Gate 3"
+    ],
+    "title": "Baldur's Gate 3 frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for Baldur's Gate 3 after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "Baldur's Gate 3 Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "Baldur's Gate 3",
+      "Baldur's Gate 3 bug report",
+      "Baldur's Gate 3 live report",
+      "Baldur's Gate 3 issue",
+      "Baldur's Gate 3 fix",
+      "Baldur's Gate 3 performance stutter",
+      "Baldur's Gate 3 frame pacing",
+      "Baldur's Gate 3 low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "42 min ago",
+    "metaTitle": "Baldur's Gate 3 frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T04:30:00.000Z",
+    "metaDescription": "Baldur's Gate 3 Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-lost-ark-matchmaking-queue-stalls-after-update",
+    "slug": "lost-ark-matchmaking-queue-stalls-after-update",
+    "games": [
+      "Lost Ark"
+    ],
+    "title": "Lost Ark matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for Lost Ark after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "Lost Ark Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "Lost Ark",
+      "Lost Ark bug report",
+      "Lost Ark live report",
+      "Lost Ark issue",
+      "Lost Ark fix",
+      "Lost Ark matchmaking bug",
+      "Lost Ark queue stall",
+      "Lost Ark lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "1 hour ago",
+    "metaTitle": "Lost Ark matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T04:24:00.000Z",
+    "metaDescription": "Lost Ark Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-lost-ark-frame-pacing-stutter-after-long-session",
+    "slug": "lost-ark-frame-pacing-stutter-after-long-session",
+    "games": [
+      "Lost Ark"
+    ],
+    "title": "Lost Ark frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for Lost Ark after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "Lost Ark Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "Lost Ark",
+      "Lost Ark bug report",
+      "Lost Ark live report",
+      "Lost Ark issue",
+      "Lost Ark fix",
+      "Lost Ark performance stutter",
+      "Lost Ark frame pacing",
+      "Lost Ark low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "3 hours ago",
+    "metaTitle": "Lost Ark frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T04:18:00.000Z",
+    "metaDescription": "Lost Ark Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-teamfight-tactics-matchmaking-queue-stalls-after-update",
+    "slug": "teamfight-tactics-matchmaking-queue-stalls-after-update",
+    "games": [
+      "Teamfight Tactics"
+    ],
+    "title": "Teamfight Tactics matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for Teamfight Tactics after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "Teamfight Tactics Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "Teamfight Tactics",
+      "Teamfight Tactics bug report",
+      "Teamfight Tactics live report",
+      "Teamfight Tactics issue",
+      "Teamfight Tactics fix",
+      "Teamfight Tactics matchmaking bug",
+      "Teamfight Tactics queue stall",
+      "Teamfight Tactics lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "Published now",
+    "metaTitle": "Teamfight Tactics matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T04:12:00.000Z",
+    "metaDescription": "Teamfight Tactics Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-teamfight-tactics-frame-pacing-stutter-after-long-session",
+    "slug": "teamfight-tactics-frame-pacing-stutter-after-long-session",
+    "games": [
+      "Teamfight Tactics"
+    ],
+    "title": "Teamfight Tactics frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for Teamfight Tactics after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "Teamfight Tactics Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "Teamfight Tactics",
+      "Teamfight Tactics bug report",
+      "Teamfight Tactics live report",
+      "Teamfight Tactics issue",
+      "Teamfight Tactics fix",
+      "Teamfight Tactics performance stutter",
+      "Teamfight Tactics frame pacing",
+      "Teamfight Tactics low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "11 min ago",
+    "metaTitle": "Teamfight Tactics frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T04:06:00.000Z",
+    "metaDescription": "Teamfight Tactics Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
+    "id": "post-tekken-8-matchmaking-queue-stalls-after-update",
+    "slug": "tekken-8-matchmaking-queue-stalls-after-update",
+    "games": [
+      "Tekken 8"
+    ],
+    "title": "Tekken 8 matchmaking queue stalls after update",
+    "status": "published",
+    "content": [
+      "This live report is published for Tekken 8 after a spike in player feedback around matchmaking queue stalls after update.",
+      "This live report summarizes repeated player submissions, search trend checks, and community replies around a queue stall that appears after recent game updates.",
+      "The problem usually shows up when players try to queue again after a match or party swap, leaving the lobby stuck while the timer keeps running."
+    ],
+    "summary": "Tekken 8 Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted.",
+    "keywords": [
+      "Tekken 8",
+      "Tekken 8 bug report",
+      "Tekken 8 live report",
+      "Tekken 8 issue",
+      "Tekken 8 fix",
+      "Tekken 8 matchmaking bug",
+      "Tekken 8 queue stall",
+      "Tekken 8 lobby freeze",
+      "matchmaking bug",
+      "queue stall",
+      "lobby freeze"
+    ],
+    "slotTime": "24 min ago",
+    "metaTitle": "Tekken 8 matchmaking queue stalls after update",
+    "publishedAt": "2026-06-04T04:00:00.000Z",
+    "metaDescription": "Tekken 8 Players are reporting that the queue hangs after the latest update and the lobby stops advancing until the client is restarted."
+  },
+  {
+    "id": "post-tekken-8-frame-pacing-stutter-after-long-session",
+    "slug": "tekken-8-frame-pacing-stutter-after-long-session",
+    "games": [
+      "Tekken 8"
+    ],
+    "title": "Tekken 8 frame pacing stutter after long session",
+    "status": "published",
+    "content": [
+      "This live report is published for Tekken 8 after a spike in player feedback around frame pacing stutter after long session.",
+      "This live report captures recurring community feedback about a performance dip that becomes easier to notice after an extended play session.",
+      "Players describe uneven frame pacing, brief audio pops, or a slow recovery after changing menus, alt-tabbing, or loading back into a match."
+    ],
+    "summary": "Tekken 8 Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems.",
+    "keywords": [
+      "Tekken 8",
+      "Tekken 8 bug report",
+      "Tekken 8 live report",
+      "Tekken 8 issue",
+      "Tekken 8 fix",
+      "Tekken 8 performance stutter",
+      "Tekken 8 frame pacing",
+      "Tekken 8 low FPS fix",
+      "performance stutter",
+      "frame pacing",
+      "low FPS fix"
+    ],
+    "slotTime": "42 min ago",
+    "metaTitle": "Tekken 8 frame pacing stutter after long session",
+    "publishedAt": "2026-06-04T03:54:00.000Z",
+    "metaDescription": "Tekken 8 Players are seeing a frame pacing spike after longer sessions, tab changes, or menu loops, with the biggest drops happening on mid-range systems."
+  },
+  {
     "id": "58c2f93a-9f87-4b97-b342-f3c42fae98c7",
     "slug": "takken8-ranked-rematch-freeze",
     "games": [
       "takken8"
     ],
-    "slotTime": "Published now",
     "title": "Takken8 infinite loading after ranked rematch",
-    "summary": "Players report the rematch screen freezing at 100% after online matches. Restarting the client or clearing cache temporarily gets around the hang.",
+    "status": "published",
     "content": [
       "This bug report was published immediately after multiple live player reports for Takken8.",
       "Players describe the game locking on the rematch loading screen after ranked matches, especially when re-entering a lobby without closing the client.",
       "Current workarounds include restarting the game between matches, clearing the local cache, and avoiding back-to-back rematches until the next patch lands."
     ],
+    "summary": "Players report the rematch screen freezing at 100% after online matches. Restarting the client or clearing cache temporarily gets around the hang.",
     "keywords": [
       "takken8",
       "Takken8 bug report",
       "Takken8 loading bug",
       "Takken8 rematch freeze"
     ],
+    "slotTime": "Published now",
     "metaTitle": "Takken8 infinite loading after ranked rematch",
-    "metaDescription": "Players report the rematch screen freezing at 100% after online matches. Restarting the client or clearing cache temporarily gets around the hang.",
     "publishedAt": "2026-06-03T20:59:30.603Z",
-    "status": "published"
+    "metaDescription": "Players report the rematch screen freezing at 100% after online matches. Restarting the client or clearing cache temporarily gets around the hang."
   },
   {
     "id": "53f5ac8f-aada-441f-8790-08d2cc8d38ad",
@@ -31,14 +2655,14 @@
       "PUBG",
       "GTA 5"
     ],
-    "slotTime": "15:00 PKT",
     "title": "Game crashes to desktop after parachute landing on Erangel",
-    "summary": "AI suggestions point to memory spikes in high density landing zones. Players are avoiding early crashes by switching shadows to medium and disabling replays before queueing.",
+    "status": "published",
     "content": [
       "This live report is scheduled for 15:00 PKT PKT and targets PUBG, GTA 5.",
       "AI suggestions reviewed Game crashes to desktop after parachute landing on Erangel; Invisible wall collision bug near Pochinki church; Looting animation stuck when picking up M416 with backpack full and summarized the most relevant community fixes for publication.",
       "The post is structured for search indexing so players can discover the latest issue summary from search engines."
     ],
+    "summary": "AI suggestions point to memory spikes in high density landing zones. Players are avoiding early crashes by switching shadows to medium and disabling replays before queueing.",
     "keywords": [
       "PUBG",
       "PUBG issue",
@@ -54,10 +2678,10 @@
       "PUBG looting bug",
       "M416 inventory stuck"
     ],
+    "slotTime": "15:00 PKT",
     "metaTitle": "Game crashes to desktop after parachute landing on Erangel",
-    "metaDescription": "AI suggestions point to memory spikes in high density landing zones. Players are avoiding early crashes by switching shadows to medium and disabling replays before queueing.",
     "publishedAt": "2026-06-03T20:59:12.401Z",
-    "status": "published"
+    "metaDescription": "AI suggestions point to memory spikes in high density landing zones. Players are avoiding early crashes by switching shadows to medium and disabling replays before queueing."
   },
   {
     "id": "84fbcb37-97b4-4d56-85ea-26505b0702e9",
@@ -65,24 +2689,24 @@
     "games": [
       "takken8"
     ],
-    "slotTime": "Published now",
     "title": "Takken8 input delay on training mode",
-    "summary": "Players are noticing delayed button response in training mode, especially after pausing and resuming. Restarting the lobby appears to reduce the lag for some users.",
+    "status": "published",
     "content": [
       "This bug report was published immediately for Takken8 after several live player clips showed delayed movement and attacks in training mode.",
       "The input delay seems more noticeable after pausing, returning to the menu, or switching controllers without restarting the game.",
       "Current workarounds include restarting the training session, reconnecting the controller, and avoiding repeated pause cycles until the next update."
     ],
+    "summary": "Players are noticing delayed button response in training mode, especially after pausing and resuming. Restarting the lobby appears to reduce the lag for some users.",
     "keywords": [
       "takken8",
       "Takken8 input delay",
       "Takken8 training mode bug",
       "Takken8 controller lag"
     ],
+    "slotTime": "Published now",
     "metaTitle": "Takken8 input delay on training mode",
-    "metaDescription": "Players are noticing delayed button response in training mode, especially after pausing and resuming. Restarting the lobby appears to reduce the lag for some users.",
     "publishedAt": "2026-06-03T20:53:28.818Z",
-    "status": "published"
+    "metaDescription": "Players are noticing delayed button response in training mode, especially after pausing and resuming. Restarting the lobby appears to reduce the lag for some users."
   },
   {
     "id": "47e7cae3-8c78-4eeb-b9c4-8f18d16835f5",
@@ -90,24 +2714,24 @@
     "games": [
       "takken8"
     ],
-    "slotTime": "Published now",
     "title": "Takken8 audio stutter after character select",
-    "summary": "Some players hear a short audio stutter and desync after choosing a character on the versus screen. Changing the output device once before queueing helps a few setups.",
+    "status": "published",
     "content": [
       "This bug report was published immediately for Takken8 after multiple reports of audio crackle and frame drops when the versus screen loads.",
       "The stutter is most noticeable after character select and may continue into the opening round if the match is queued immediately.",
       "Players are temporarily switching output devices or restarting the client before rematching to reduce the problem."
     ],
+    "summary": "Some players hear a short audio stutter and desync after choosing a character on the versus screen. Changing the output device once before queueing helps a few setups.",
     "keywords": [
       "takken8",
       "Takken8 audio bug",
       "Takken8 character select stutter",
       "Takken8 sound desync"
     ],
+    "slotTime": "Published now",
     "metaTitle": "Takken8 audio stutter after character select",
-    "metaDescription": "Some players hear a short audio stutter and desync after choosing a character on the versus screen. Changing the output device once before queueing helps a few setups.",
     "publishedAt": "2026-06-03T20:53:12.897Z",
-    "status": "published"
+    "metaDescription": "Some players hear a short audio stutter and desync after choosing a character on the versus screen. Changing the output device once before queueing helps a few setups."
   },
   {
     "id": "4185f606-d409-42ac-9047-9841062c83c7",
@@ -115,23 +2739,23 @@
     "games": [
       "takken8"
     ],
-    "slotTime": "16:00 PKT",
     "title": "Takken8 loading screen softlock after ranked queue",
-    "summary": "Players are reporting a softlock on the loading screen after queued ranked matches. Waiting for the timeout or restarting the app clears it for most users.",
+    "status": "published",
     "content": [
       "This bug report was prepared from live player reports around the ranked queue loading screen in Takken8.",
       "The freeze appears after selecting a ranked match and can leave the client stuck before the stage loads.",
       "Reported workarounds include waiting for the timeout, restarting the app, and avoiding queueing immediately after a long session."
     ],
+    "summary": "Players are reporting a softlock on the loading screen after queued ranked matches. Waiting for the timeout or restarting the app clears it for most users.",
     "keywords": [
       "takken8",
       "Takken8 loading screen bug",
       "Takken8 ranked queue softlock",
       "Takken8 freeze"
     ],
+    "slotTime": "16:00 PKT",
     "metaTitle": "Takken8 loading screen softlock after ranked queue",
-    "metaDescription": "Players are reporting a softlock on the loading screen after queued ranked matches. Waiting for the timeout or restarting the app clears it for most users.",
     "publishedAt": "2026-06-03T20:12:51.664Z",
-    "status": "published"
+    "metaDescription": "Players are reporting a softlock on the loading screen after queued ranked matches. Waiting for the timeout or restarting the app clears it for most users."
   }
 ]

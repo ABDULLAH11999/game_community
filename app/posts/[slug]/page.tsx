@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation'
 import { SiteShell } from '@/components/site-shell'
 import { GlassPanel, SectionHeading, StatusBadge } from '@/components/ui/glass'
 import { getPosts, getStoredSettings } from '@/lib/db'
-import { siteSettings } from '@/lib/site-data'
+import { canonicalUrl, siteSettings } from '@/lib/site-data'
 
 export function generateStaticParams() {
   return getPosts().map((post) => ({ slug: post.slug }))
@@ -20,7 +20,7 @@ export function generateMetadata({ params }: Readonly<{ params: { slug: string }
     openGraph: {
       title: post.metaTitle,
       description: post.metaDescription,
-      url: `${siteSettings.canonicalUrl}/posts/${post.slug}`,
+      url: canonicalUrl(`/posts/${post.slug}`),
       type: 'article',
     },
   }

@@ -6,7 +6,7 @@ import { SiteShell } from '@/components/site-shell'
 import { GlassPanel, SectionHeading, StatusBadge } from '@/components/ui/glass'
 import { getIssueComments } from '@/lib/db'
 import { getCurrentUser } from '@/lib/auth'
-import { getIssueBySlug, issues, siteSettings } from '@/lib/site-data'
+import { canonicalUrl, getIssueBySlug, issues } from '@/lib/site-data'
 
 export function generateStaticParams() {
   return issues.map((issue) => ({ slug: issue.slug }))
@@ -31,7 +31,7 @@ export function generateMetadata({ params }: Readonly<{ params: { slug: string }
     openGraph: {
       title: issue.metaTitle,
       description: issue.metaDescription,
-      url: `${siteSettings.canonicalUrl}/issues/${issue.slug}`,
+      url: canonicalUrl(`/issues/${issue.slug}`),
       type: 'article',
     },
   }

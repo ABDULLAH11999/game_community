@@ -2,10 +2,10 @@
   {
     "id": "u-admin",
     "name": "Admin User",
-    "email": "admin@admin.com",
-    "passwordHash": "$2a$10$rCjNIGQaVWFwSqF2T1CfH.8gK7EgcvNKCmUNZ4PsX52ih/Z00Vqj.",
     "role": "admin",
+    "email": "admin@admin.com",
     "verified": true,
-    "createdAt": "2026-06-03T18:56:56.584Z"
+    "createdAt": "2026-06-03T18:56:56.584Z",
+    "passwordHash": "$2a$10$rCjNIGQaVWFwSqF2T1CfH.8gK7EgcvNKCmUNZ4PsX52ih/Z00Vqj."
   }
 ]

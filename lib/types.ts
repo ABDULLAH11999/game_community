@@ -61,6 +61,7 @@ export interface VisitorRecord {
   location: string
   page: string
   referrer: string
+  timestamp: string
   visitedAt: string
   session: string
   type: 'New' | 'Return'

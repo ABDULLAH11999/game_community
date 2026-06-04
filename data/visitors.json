@@ -1,0 +1,112 @@
+[
+  {
+    "id": "v-1001",
+    "ip": "103.88.42.11",
+    "page": "/",
+    "type": "New",
+    "session": "sess_4KQ12",
+    "location": "Karachi, PK",
+    "referrer": "google.com",
+    "timestamp": "2026-06-04T11:58:00.000Z",
+    "visitedAt": "2 min ago"
+  },
+  {
+    "id": "v-1002",
+    "ip": "66.214.88.31",
+    "page": "/issues/pubg-crash-fix-patch-31-2-erangel-parachute",
+    "type": "Return",
+    "session": "sess_29A7L",
+    "location": "Dallas, US",
+    "referrer": "reddit.com",
+    "timestamp": "2026-06-04T11:49:00.000Z",
+    "visitedAt": "11 min ago"
+  },
+  {
+    "id": "v-1003",
+    "ip": "52.91.17.99",
+    "page": "/contact",
+    "type": "New",
+    "session": "sess_6NM8R",
+    "location": "London, UK",
+    "referrer": "discord.com",
+    "timestamp": "2026-06-04T11:38:00.000Z",
+    "visitedAt": "22 min ago"
+  },
+  {
+    "id": "v-1004",
+    "ip": "193.56.18.42",
+    "page": "/posts/valorant-matchmaking-queue-stalls-after-update",
+    "type": "New",
+    "session": "sess_LA91M",
+    "location": "Lahore, PK",
+    "referrer": "google.com",
+    "timestamp": "2026-06-04T11:28:00.000Z",
+    "visitedAt": "32 min ago"
+  },
+  {
+    "id": "v-1005",
+    "ip": "88.198.22.14",
+    "page": "/posts/counter-strike-2-frame-pacing-stutter-after-long-session",
+    "type": "Return",
+    "session": "sess_DE77K",
+    "location": "Frankfurt, DE",
+    "referrer": "bing.com",
+    "timestamp": "2026-06-04T11:10:00.000Z",
+    "visitedAt": "50 min ago"
+  },
+  {
+    "id": "v-1006",
+    "ip": "14.139.88.203",
+    "page": "/issues/invisible-wall-collision-bug-near-pochinki-church",
+    "type": "New",
+    "session": "sess_IN55Q",
+    "location": "Mumbai, IN",
+    "referrer": "youtube.com",
+    "timestamp": "2026-06-04T10:43:00.000Z",
+    "visitedAt": "1 hour ago"
+  },
+  {
+    "id": "v-1007",
+    "ip": "203.0.113.87",
+    "page": "/posts/fortnite-matchmaking-queue-stalls-after-update",
+    "type": "Return",
+    "session": "sess_AU12P",
+    "location": "Sydney, AU",
+    "referrer": "google.com",
+    "timestamp": "2026-06-04T09:55:00.000Z",
+    "visitedAt": "2 hours ago"
+  },
+  {
+    "id": "v-1008",
+    "ip": "45.77.14.19",
+    "page": "/community",
+    "type": "New",
+    "session": "sess_CA40R",
+    "location": "Toronto, CA",
+    "referrer": "x.com",
+    "timestamp": "2026-06-04T08:14:00.000Z",
+    "visitedAt": "4 hours ago"
+  },
+  {
+    "id": "v-1009",
+    "ip": "66.214.88.31",
+    "page": "/posts/pubg-battlegrounds-matchmaking-queue-stalls-after-update",
+    "type": "Return",
+    "session": "sess_29A7L",
+    "location": "Dallas, US",
+    "referrer": "reddit.com",
+    "timestamp": "2026-06-04T07:42:00.000Z",
+    "visitedAt": "5 hours ago"
+  },
+  {
+    "id": "v-1010",
+    "ip": "185.62.190.12",
+    "page": "/posts/cyberpunk-2077-frame-pacing-stutter-after-long-session",
+    "type": "New",
+    "session": "sess_PL91Z",
+    "location": "Warsaw, PL",
+    "referrer": "google.com",
+    "timestamp": "2026-06-04T06:05:00.000Z",
+    "visitedAt": "7 hours ago"
+  }
+]

@@ -1,5 +1,5 @@
 import { GlassPanel, SectionHeading, StatusBadge } from '@/components/ui/glass'
-import { visitors } from '@/lib/site-data'
+import { getVisitors } from '@/lib/db'
 
 type VisitorMode = 'all' | 'unique' | 'new' | 'return'
 
@@ -12,6 +12,11 @@ export default function AdminVisitorsPage({
   const ip = searchParams?.ip?.trim().toLowerCase() || ''
   const page = searchParams?.page?.trim().toLowerCase() || ''
   const date = searchParams?.date?.trim().toLowerCase() || ''
+  const visitors = [...getVisitors()].sort((a, b) => {
+    const left = new Date(b.timestamp || b.visitedAt).getTime()
+    const right = new Date(a.timestamp || a.visitedAt).getTime()
+    return left - right
+  })
 
   const filtered = visitors.filter((visitor, index, list) => {
     const matchesMode =
@@ -22,7 +27,7 @@ export default function AdminVisitorsPage({
           : visitor.type.toLowerCase() === mode
     const matchesIp = !ip || visitor.ip.toLowerCase().includes(ip)
     const matchesPage = !page || visitor.page.toLowerCase().includes(page)
-    const matchesDate = !date || visitor.visitedAt.toLowerCase().includes(date)
+    const matchesDate = !date || `${visitor.visitedAt} ${visitor.timestamp}`.toLowerCase().includes(date)
     return matchesMode && matchesIp && matchesPage && matchesDate
   })
 

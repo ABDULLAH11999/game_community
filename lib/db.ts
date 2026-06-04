@@ -10,6 +10,7 @@ import type {
   PendingSignup,
   PostRecord,
   SiteSettings,
+  VisitorRecord,
 } from '@/lib/types'
 
 const dataDir = path.join(process.cwd(), 'data')
@@ -22,6 +23,7 @@ type DataSnapshot = {
   contactMessages: ContactMessage[]
   posts: PostRecord[]
   issueComments: Record<string, IssueComment[]>
+  visitors: VisitorRecord[]
   settings: SiteSettings
 }
 
@@ -74,6 +76,7 @@ function loadLocalSnapshot(): DataSnapshot {
     contactMessages: readJson<ContactMessage[]>('contact-messages.json', []),
     posts: readJson<PostRecord[]>('post.json', []),
     issueComments: readJson<Record<string, IssueComment[]>>('issue-comments.json', {}),
+    visitors: readJson<VisitorRecord[]>('visitors.json', []),
     settings: mergeSettings(readJson<Partial<SiteSettings>>('settings.json', {})),
   }
 }
@@ -85,6 +88,7 @@ function writeLocalSnapshot(nextSnapshot: DataSnapshot) {
   writeJson('contact-messages.json', nextSnapshot.contactMessages)
   writeJson('post.json', nextSnapshot.posts)
   writeJson('issue-comments.json', nextSnapshot.issueComments)
+  writeJson('visitors.json', nextSnapshot.visitors)
   writeJson('settings.json', nextSnapshot.settings)
 }
 
@@ -125,6 +129,11 @@ async function ensureSchema() {
         );
 
         CREATE TABLE IF NOT EXISTS contact_messages (
+          id text PRIMARY KEY,
+          data jsonb NOT NULL
+        );
+
+        CREATE TABLE IF NOT EXISTS visitors (
           id text PRIMARY KEY,
           data jsonb NOT NULL
         );
@@ -203,6 +212,7 @@ async function loadSnapshotFromDb(): Promise<DataSnapshot> {
     pendingSignupsResult,
     sessionsResult,
     contactMessagesResult,
+    visitorsResult,
     postsResult,
     issueCommentsResult,
     settingsResult,
@@ -211,6 +221,7 @@ async function loadSnapshotFromDb(): Promise<DataSnapshot> {
     db.query('SELECT data FROM pending_signups ORDER BY data->>\'createdAt\' DESC, id DESC'),
     db.query('SELECT data FROM sessions ORDER BY data->>\'createdAt\' DESC, token DESC'),
     db.query('SELECT data FROM contact_messages ORDER BY data->>\'createdAt\' DESC, id DESC'),
+    db.query('SELECT data FROM visitors ORDER BY data->>\'timestamp\' DESC, id DESC'),
     db.query('SELECT data FROM posts ORDER BY data->>\'publishedAt\' DESC, id DESC'),
     db.query('SELECT issue_slug, data FROM issue_comments ORDER BY issue_slug ASC'),
     db.query("SELECT data FROM site_settings WHERE id = 'default' LIMIT 1"),
@@ -218,7 +229,8 @@ async function loadSnapshotFromDb(): Promise<DataSnapshot> {
 
   const issueComments: Record<string, IssueComment[]> = {}
   for (const row of issueCommentsResult.rows) {
-    issueComments[row.issue_slug] = row.data as IssueComment[]
+    const issueSlug = String((row as { issue_slug: string }).issue_slug)
+    issueComments[issueSlug] = row.data as IssueComment[]
   }
 
   return {
@@ -226,6 +238,7 @@ async function loadSnapshotFromDb(): Promise<DataSnapshot> {
     pendingSignups: pendingSignupsResult.rows.map((row) => row.data as PendingSignup),
     sessions: sessionsResult.rows.map((row) => row.data as AuthSession),
     contactMessages: contactMessagesResult.rows.map((row) => row.data as ContactMessage),
+    visitors: visitorsResult.rows.map((row) => row.data as VisitorRecord),
     posts: postsResult.rows.map((row) => row.data as PostRecord),
     issueComments,
     settings: mergeSettings((settingsResult.rows[0]?.data as Partial<SiteSettings>) || {}),
@@ -247,11 +260,19 @@ async function seedFromLocalIfEmpty() {
   }
 
   if ((await countRows('sessions')) === 0 && snapshot.sessions.length) {
-    await upsertRows('sessions', snapshot.sessions)
+    await upsertKeyedRows(
+      'sessions',
+      'token',
+      snapshot.sessions.map((session) => [session.token, session]),
+    )
   }
 
   if ((await countRows('contact_messages')) === 0 && snapshot.contactMessages.length) {
     await upsertRows('contact_messages', snapshot.contactMessages)
+  }
+
+  if ((await countRows('visitors')) === 0 && snapshot.visitors.length) {
+    await upsertRows('visitors', snapshot.visitors)
   }
 
   if ((await countRows('posts')) === 0 && snapshot.posts.length) {
@@ -280,8 +301,13 @@ async function mirrorSnapshotToDb() {
     await Promise.all([
       upsertRows('users', snapshot.users),
       upsertRows('pending_signups', snapshot.pendingSignups),
-      upsertRows('sessions', snapshot.sessions),
+      upsertKeyedRows(
+        'sessions',
+        'token',
+        snapshot.sessions.map((session) => [session.token, session]),
+      ),
       upsertRows('contact_messages', snapshot.contactMessages),
+      upsertRows('visitors', snapshot.visitors),
       upsertRows('posts', snapshot.posts),
       upsertKeyedRows('issue_comments', 'issue_slug', Object.entries(snapshot.issueComments)),
       upsertKeyedRows('site_settings', 'id', [['default', snapshot.settings]]),
@@ -351,6 +377,16 @@ export function getContactMessages() {
 export async function saveContactMessages(messages: ContactMessage[]) {
   snapshot.contactMessages = messages
   writeJson('contact-messages.json', messages)
+  await mirrorSnapshotToDb()
+}
+
+export function getVisitors() {
+  return snapshot.visitors
+}
+
+export async function saveVisitors(visitors: VisitorRecord[]) {
+  snapshot.visitors = visitors
+  writeJson('visitors.json', visitors)
   await mirrorSnapshotToDb()
 }
 

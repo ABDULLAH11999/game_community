@@ -69,6 +69,11 @@ async function ensureSchema(pool) {
       data jsonb NOT NULL
     );
 
+    CREATE TABLE IF NOT EXISTS visitors (
+      id text PRIMARY KEY,
+      data jsonb NOT NULL
+    );
+
     CREATE TABLE IF NOT EXISTS posts (
       id text PRIMARY KEY,
       data jsonb NOT NULL
@@ -132,12 +137,13 @@ async function main() {
   })
 
   try {
-    const [users, pendingSignups, sessions, contactMessages, posts, issueComments, settings] =
+    const [users, pendingSignups, sessions, contactMessages, visitors, posts, issueComments, settings] =
       await Promise.all([
         readJson('users.json', []),
         readJson('pending-signups.json', []),
         readJson('sessions.json', []),
         readJson('contact-messages.json', []),
+        readJson('visitors.json', []),
         readJson('post.json', []),
         readJson('issue-comments.json', {}),
         readJson('settings.json', {}),
@@ -149,6 +155,7 @@ async function main() {
       upsertRows(pool, 'pending_signups', pendingSignups, 'id'),
       upsertRows(pool, 'sessions', sessions, 'token'),
       upsertRows(pool, 'contact_messages', contactMessages, 'id'),
+      upsertRows(pool, 'visitors', visitors, 'id'),
       upsertRows(pool, 'posts', posts, 'id'),
       upsertComments(pool, issueComments),
       upsertSettings(pool, settings),

@@ -20,21 +20,21 @@ type ReportTemplate = {
 
 function buildFallbackReport(games: string[], publishNow: boolean, normalizedTime: string): ReportTemplate {
   const primaryGame = games[0] || 'Game'
-  const key = primaryGame.toLowerCase()
+  const key = slugify(primaryGame)
 
   const templates: Record<string, ReportTemplate> = {
-    takken8: {
-      title: 'Takken8 infinite loading after ranked rematch',
+    'tekken-8': {
+      title: 'Tekken 8 infinite loading after ranked rematch',
       summary:
         'Players report the rematch screen freezing at 100% after online matches. Restarting the client or clearing cache temporarily gets around the hang.',
       content: [
         publishNow
-          ? 'This bug report was published immediately after multiple live player reports for Takken8.'
-          : `This bug report is queued for ${normalizedTime} PKT after repeated player reports for Takken8.`,
+          ? 'This bug report was published immediately after multiple live player reports for Tekken 8.'
+          : `This bug report is queued for ${normalizedTime} PKT after repeated player reports for Tekken 8.`,
         'Players describe the game locking on the rematch loading screen after ranked matches, especially when re-entering a lobby without closing the client.',
         'Current workarounds include restarting the game between matches, clearing the local cache, and avoiding back-to-back rematches until the next patch lands.',
       ],
-      keywords: ['Takken8 loading bug', 'Takken8 rematch freeze', 'Takken8 ranked match bug'],
+      keywords: ['Tekken 8 loading bug', 'Tekken 8 rematch freeze', 'Tekken 8 ranked match bug'],
     },
   }
 

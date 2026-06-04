@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { Manrope, Space_Grotesk } from 'next/font/google'
 import { primeDatabaseSnapshot } from '@/lib/db'
-import { siteSettings } from '@/lib/site-data'
+import { canonicalUrl, siteSettings } from '@/lib/site-data'
 
 const display = Space_Grotesk({ subsets: ['latin'], variable: '--font-display' })
 const sans = Manrope({ subsets: ['latin'], variable: '--font-sans' })
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: siteSettings.title,
     description: siteSettings.description,
-    url: siteSettings.canonicalUrl,
+    url: canonicalUrl('/'),
     siteName: siteSettings.title,
     images: [siteSettings.ogImage],
     type: 'website',

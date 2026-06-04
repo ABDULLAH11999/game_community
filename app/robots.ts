@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next'
-import { siteSettings } from '@/lib/site-data'
+import { canonicalUrl } from '@/lib/site-data'
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/admin'],
     },
-    sitemap: `${siteSettings.canonicalUrl}/sitemap.xml`,
+    sitemap: canonicalUrl('/sitemap.xml'),
   }
 }
