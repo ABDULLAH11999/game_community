@@ -10,9 +10,9 @@ import type {
 } from '@/lib/types'
 
 export const siteSettings: SiteSettings = {
-  title: 'PatchRadar',
+  title: 'LivePatch',
   description:
-    'PatchRadar tracks live game bugs, patch changes, community fixes, and AI generated issue summaries built for long term search visibility.',
+    'LivePatch tracks live game bugs, patch changes, community fixes, and AI generated issue summaries built for long term search visibility.',
   keywords: [
     'game bugs',
     'patch notes',
@@ -24,15 +24,15 @@ export const siteSettings: SiteSettings = {
   ],
   games: ['PUBG', 'GTA 5', 'Cyberpunk 2077', 'FIFA 25', 'Fortnite', 'Valorant', 'Apex Legends'],
   scheduledSlots: [],
-  canonicalUrl: 'https://patchradar.gg',
+  canonicalUrl: 'https://livepatch.online',
   ogImage: '/og-image.jpg',
   favicon: '/favicon.ico',
   smtpEnabled: true,
   otpRequired: true,
   smtpHost: 'smtp.resend.net',
   smtpPort: '587',
-  smtpSender: 'noreply@patchradar.gg',
-  adminReceivers: ['admin@patchradar.gg', 'ops@patchradar.gg'],
+  smtpSender: 'noreply@livepatch.online',
+  adminReceivers: ['allinoneg46@gmail.com'],
 }
 
 export const gameTags: GameTag[] = [
@@ -58,7 +58,7 @@ export const issues: IssueRecord[] = [
     summary:
       'AI suggestions point to memory spikes in high density landing zones. Players are avoiding early crashes by switching shadows to medium and disabling replays before queueing.',
     content: [
-      'PatchRadar detected a spike in player reports after the latest PUBG update, especially around Erangel hot-drop locations. Reports mention the game freezing for two to four seconds before closing without a visible error.',
+      'LivePatch detected a spike in player reports after the latest PUBG update, especially around Erangel hot-drop locations. Reports mention the game freezing for two to four seconds before closing without a visible error.',
       'Our AI workflow combines player submissions, patch note diffs, and community fixes. AI suggestions summarize similar reports, emerging workarounds, and whether the issue is likely client side, server side, or asset related.',
       'Current community consensus points to replay capture and high shadow rendering causing the largest frame-time spikes. Until Krafton ships an official fix, the safest temporary path is lowering shadows, disabling replays, and verifying local files after the patch.',
     ],
@@ -69,7 +69,7 @@ export const issues: IssueRecord[] = [
     keywords: ['PUBG crash fix', 'PUBG patch 31.2 bug', 'Erangel parachute crash'],
     metaTitle: 'PUBG crash fix patch 31.2 Erangel parachute landing',
     metaDescription:
-      'Track the PUBG patch 31.2 Erangel parachute crash, current workarounds, AI summary, and community fixes on PatchRadar.',
+      'Track the PUBG patch 31.2 Erangel parachute crash, current workarounds, AI summary, and community fixes on LivePatch.',
     status: 'Live',
     comments: [
       {
@@ -131,7 +131,7 @@ export const issues: IssueRecord[] = [
       'This looks like an inventory state desync. The fastest workaround is disabling auto pickup and freeing one slot before interacting with weapons.',
     content: [
       'Community clips show the looting animation locking the character for several seconds when interacting with an M416 while the backpack inventory is already full.',
-      'PatchRadar AI notes this pattern matches older inventory desync bugs. It is disruptive but recoverable, making it lower severity than the live crash reports.',
+      'LivePatch AI notes this pattern matches older inventory desync bugs. It is disruptive but recoverable, making it lower severity than the live crash reports.',
     ],
     affected: 312,
     fixes: 21,
@@ -140,12 +140,12 @@ export const issues: IssueRecord[] = [
     keywords: ['PUBG looting bug', 'M416 inventory stuck'],
     metaTitle: 'PUBG looting animation stuck M416 backpack full bug',
     metaDescription:
-      'Follow the PUBG M416 looting animation bug, player workarounds, and AI generated fix summary on PatchRadar.',
+      'Follow the PUBG M416 looting animation bug, player workarounds, and AI generated fix summary on LivePatch.',
     status: 'Live',
     comments: [
       {
         id: 'c-4',
-        author: 'admin_patchradar',
+        author: 'admin_livepatch',
         role: 'Admin',
         message: 'We are collecting clips for the dev report. Keep posting your steps to reproduce.',
         createdAt: '1 hour ago',
@@ -235,7 +235,7 @@ export const users: UserRecord[] = [
   {
     id: 'u-1',
     name: 'Viper Knight',
-    email: 'viper@patchradar.gg',
+    email: 'viper@livepatch.online',
     role: 'User',
     joinedAt: '2026-04-12',
     status: 'Active',
@@ -244,7 +244,7 @@ export const users: UserRecord[] = [
   {
     id: 'u-2',
     name: 'Echo Moderator',
-    email: 'echo@patchradar.gg',
+    email: 'echo@livepatch.online',
     role: 'Moderator',
     joinedAt: '2026-03-19',
     status: 'Active',
@@ -253,7 +253,7 @@ export const users: UserRecord[] = [
   {
     id: 'u-3',
     name: 'Rogue Pixel',
-    email: 'rogue@patchradar.gg',
+    email: 'rogue@livepatch.online',
     role: 'User',
     joinedAt: '2026-05-28',
     status: 'Flagged',

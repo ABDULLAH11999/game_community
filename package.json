@@ -1,5 +1,5 @@
 {
-  "name": "patchradar",
+  "name": "livepatch",
   "version": "0.1.0",
   "private": true,
   "scripts": {

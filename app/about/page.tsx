@@ -4,7 +4,7 @@ import { SiteShell } from '@/components/site-shell'
 export default function AboutPage() {
   return (
     <SiteShell
-      title="About PatchRadar"
+      title="About LivePatch"
       subtitle="A free gaming resource for clear bug reports, verified workarounds, and searchable patch knowledge players can rely on."
     >
       <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
@@ -13,7 +13,7 @@ export default function AboutPage() {
             <SectionHeading
               eyebrow="Mission"
               title="Built to help players solve issues faster"
-              detail="PatchRadar gives players free access to bug reports, community workarounds, and clear issue pages so problems are easier to understand, compare, and fix."
+              detail="LivePatch gives players free access to bug reports, community workarounds, and clear issue pages so problems are easier to understand, compare, and fix."
             />
             <div className="mt-8 grid gap-3 md:grid-cols-2">
               {[

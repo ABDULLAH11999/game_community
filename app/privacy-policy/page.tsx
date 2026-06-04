@@ -10,7 +10,7 @@ export default function PrivacyPolicyPage() {
   ]
 
   return (
-    <SiteShell title="Privacy Policy" subtitle="How PatchRadar handles data for community participation, moderation, analytics, and support communication.">
+    <SiteShell title="Privacy Policy" subtitle="How LivePatch handles data for community participation, moderation, analytics, and support communication.">
       <GlassPanel>
         <SectionHeading eyebrow="Data Use" title="Plain language privacy commitments" />
         <div className="mt-6 space-y-3">

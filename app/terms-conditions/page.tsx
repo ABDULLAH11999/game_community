@@ -4,9 +4,9 @@ import { GlassPanel, SectionHeading } from '@/components/ui/glass'
 export default function TermsConditionsPage() {
   const terms = [
     'Users must not post abusive, illegal, misleading, or intentionally harmful content.',
-    'PatchRadar may moderate, hide, or remove messages that violate site standards or create safety risks for the community.',
+    'LivePatch may moderate, hide, or remove messages that violate site standards or create safety risks for the community.',
     'AI generated summaries are editorial tools and should not replace official developer statements or platform support guidance.',
-    'By submitting bug reports or comments, users grant PatchRadar permission to display and organize that content across issue pages and community sections.',
+    'By submitting bug reports or comments, users grant LivePatch permission to display and organize that content across issue pages and community sections.',
   ]
 
   return (

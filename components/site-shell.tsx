@@ -11,7 +11,7 @@ function GamingLogo() {
   return (
     <Image
       src="/header-logo.png"
-      alt="PatchRadar logo"
+      alt="LivePatch logo"
       width={40}
       height={40}
       className="h-10 w-10 object-contain"
@@ -90,7 +90,7 @@ export async function SiteShell({
                   <Link href="/signin" className="text-sm font-semibold text-muted transition hover:text-text px-3 py-1.5 rounded-lg">
                     Sign in
                   </Link>
-                  <Link href="/signup" className="rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 px-4 py-2 text-sm font-semibold text-white shadow-[0_0_12px_rgba(59,130,246,0.25)] transition-all">
+                  <Link href="/signup" className="rounded-lg bg-gradient-to-r from-sky-500 to-cyan-400 hover:from-sky-600 hover:to-cyan-500 px-4 py-2 text-sm font-semibold text-white shadow-[0_0_12px_rgba(96,165,250,0.22)] transition-all">
                     Sign up
                   </Link>
                 </>
@@ -125,7 +125,13 @@ export async function SiteShell({
               <Link
                 key={game}
                 href={`/?game=${encodeURIComponent(game)}`}
-                className="inline-flex items-center gap-2 rounded-lg border border-border bg-panel px-3 py-1.5 text-xs font-semibold text-muted transition-all hover:text-text hover:border-accent/40 hover:shadow-[0_0_10px_rgba(59,130,246,0.1)]"
+                className={`inline-flex items-center gap-2 rounded-lg border border-border bg-panel px-3 py-1.5 text-xs font-semibold text-muted transition-all hover:text-text hover:border-accent/40 hover:shadow-[0_0_10px_rgba(59,130,246,0.1)] ${
+                  settings.games.indexOf(game) < 5
+                    ? ''
+                    : settings.games.indexOf(game) < 7
+                      ? 'hidden sm:inline-flex'
+                      : 'hidden'
+                }`}
               >
                 {gameIcons[game] ?? <Gamepad2 className="h-3.5 w-3.5" />}
                 #{game}

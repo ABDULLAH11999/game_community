@@ -31,10 +31,10 @@ export default function AdminLayout({ children }: Readonly<{ children: React.Rea
         <aside className="rounded-2xl border border-border bg-panel p-4 flex flex-col gap-5 sm:p-5">
           <div className="flex items-center gap-3 border-b border-border pb-4">
             <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-blue-500/25 bg-panel p-1 shadow-[0_0_10px_rgba(59,130,246,0.2)]">
-              <Image src="/header-logo.png" alt="PatchRadar logo" width={40} height={40} className="h-full w-full rounded-lg object-contain" />
+              <Image src="/header-logo.png" alt="LivePatch logo" width={40} height={40} className="h-full w-full rounded-lg object-contain" />
             </div>
             <div>
-              <p className="font-display text-sm sm:text-base font-extrabold tracking-tight text-text">PatchRadar</p>
+              <p className="font-display text-sm sm:text-base font-extrabold tracking-tight text-text">LivePatch</p>
               <p className="text-[10px] uppercase font-bold tracking-wider text-accent">{admin?.username ?? 'Admin access'}</p>
             </div>
           </div>

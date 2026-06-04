@@ -10,7 +10,7 @@ export default function SignupPage() {
     >
       <div className="mx-auto w-full max-w-2xl">
         <GlassPanel className="p-6 sm:p-8">
-          <SectionHeading eyebrow="Player Registration" title="Create your PatchRadar account" />
+          <SectionHeading eyebrow="Player Registration" title="Create your LivePatch account" />
           <div className="mt-6">
             <AuthForm mode="signup" />
           </div>

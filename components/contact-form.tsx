@@ -22,7 +22,7 @@ export function ContactForm() {
         }),
       })
       const data = await response.json()
-      setStatus(response.ok ? 'Your message has been sent to the PatchRadar admin inbox.' : data.error || 'Could not send the message.')
+      setStatus(response.ok ? 'Your message has been sent to the LivePatch admin inbox.' : data.error || 'Could not send the message.')
     } catch {
       setStatus('Could not send the message.')
     } finally {

@@ -1,11 +1,9 @@
 {
-  "title": "PatchRadar",
-  "description": "PatchRadar tracks live game bugs, patch changes, community fixes, and AI generated issue summaries built for long term search visibility.",
+  "title": "LivePatch",
+  "description": "LivePatch tracks live game bugs, patch changes, community fixes, and AI generated issue summaries built for long term search visibility.",
   "keywords": [
     "game bugs",
     "patch notes",
-    "PUBG crash fix",
-    "GTA 5 issues",
     "gaming community",
     "game fix guides",
     "AI issue tracking"
@@ -46,16 +44,15 @@
       "title": "takken8 slot update"
     }
   ],
-  "canonicalUrl": "https://patchradar.gg",
+  "canonicalUrl": "https://livepatch.online",
   "ogImage": "/og-image.jpg",
   "favicon": "/favicon.ico",
   "smtpEnabled": true,
   "otpRequired": true,
   "smtpHost": "smtp.resend.net",
   "smtpPort": "587",
-  "smtpSender": "noreply@patchradar.gg",
+  "smtpSender": "noreply@livepatch.online",
   "adminReceivers": [
-    "admin@patchradar.gg",
-    "ops@patchradar.gg"
+    "allinoneg46@gmail.com"
   ]
 }

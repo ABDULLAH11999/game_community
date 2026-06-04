@@ -16,7 +16,7 @@ export function ChatbotButton() {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'bot',
-      text: 'I am your PatchRadar gaming assistant. Ask me about game crashes, performance, bugs, patches, or troubleshooting.',
+      text: 'I am your LivePatch gaming assistant. Ask me about game crashes, performance, bugs, patches, or troubleshooting.',
     },
   ])
 

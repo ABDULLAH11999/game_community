@@ -3,7 +3,7 @@ import bcrypt from 'bcryptjs'
 import { cookies } from 'next/headers'
 import { getSessions, getUsers, saveSessions } from '@/lib/db'
 
-const sessionCookie = 'patchradar_session'
+const sessionCookie = 'livepatch_session'
 
 export async function hashPassword(password: string) {
   return bcrypt.hash(password, 10)

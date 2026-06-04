@@ -3,7 +3,7 @@ import bcrypt from 'bcryptjs'
 import { cookies } from 'next/headers'
 import { getUsers, saveUsers } from '@/lib/db'
 
-const adminCookie = 'patchradar_admin_session'
+const adminCookie = 'livepatch_admin_session'
 const fallbackAdminUsername = 'admin'
 const fallbackAdminPassword = 'admin7940'
 
@@ -14,7 +14,7 @@ function ensureAdminUser() {
     users.push({
       id: 'u-admin',
       name: 'Admin User',
-      email: 'admin@patchradar.gg',
+      email: 'admin@livepatch.online',
       passwordHash: bcrypt.hashSync(fallbackAdminPassword, 10),
       role: 'admin',
       verified: true,

@@ -39,7 +39,7 @@ export function StatusBadge({
   tone = 'violet',
 }: Readonly<{
   label: string
-  tone?: 'violet' | 'blue' | 'emerald' | 'rose' | 'amber'
+  tone?: 'violet' | 'blue' | 'emerald' | 'rose' | 'amber' | 'yellow'
 }>) {
   const tones = {
     violet: 'border-violet-500/25 bg-violet-500/10 text-violet-600 dark:text-violet-300',
@@ -47,6 +47,7 @@ export function StatusBadge({
     emerald: 'border-emerald-500/25 bg-emerald-500/10 text-emerald-600 dark:text-emerald-300',
     rose: 'border-rose-500/25 bg-rose-500/10 text-rose-600 dark:text-rose-300',
     amber: 'border-amber-500/25 bg-amber-500/10 text-amber-600 dark:text-amber-300',
+    yellow: 'border-yellow-500/25 bg-yellow-500/10 text-yellow-600 dark:text-yellow-300',
   }
 
   return <span className={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-[10px] font-semibold tracking-wide ${tones[tone]}`}>{label}</span>

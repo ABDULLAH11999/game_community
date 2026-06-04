@@ -12,7 +12,7 @@ export default function AdminLoginPage() {
             <Gamepad2 className="h-5 w-5 text-accent" />
           </div>
           <div>
-            <p className="font-display text-lg font-bold tracking-tight text-text">PatchRadar</p>
+            <p className="font-display text-lg font-bold tracking-tight text-text">LivePatch</p>
             <p className="text-[10px] uppercase font-bold tracking-wider text-muted">Admin login</p>
           </div>
         </div>

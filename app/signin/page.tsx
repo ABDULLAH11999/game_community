@@ -6,11 +6,11 @@ export default function SigninPage() {
   return (
     <SiteShell
       title="Sign In"
-      subtitle="Return to your PatchRadar account to follow issues, post comments, and manage your gaming activity."
+      subtitle="Return to your LivePatch account to follow issues, post comments, and manage your gaming activity."
     >
       <div className="mx-auto w-full max-w-2xl">
         <GlassPanel className="p-6 sm:p-8">
-          <SectionHeading eyebrow="Account Access" title="Sign in to PatchRadar" />
+          <SectionHeading eyebrow="Account Access" title="Sign in to LivePatch" />
           <div className="mt-6">
             <AuthForm mode="signin" />
           </div>
