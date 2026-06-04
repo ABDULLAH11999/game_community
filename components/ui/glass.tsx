@@ -45,7 +45,7 @@ export function StatusBadge({
     violet:
       'border-black/20 bg-violet-500/15 text-black shadow-[0_0_0_1px_rgba(0,0,0,0.08)] dark:border-violet-500/25 dark:text-violet-300 dark:shadow-none',
     blue:
-      'border-black/20 bg-blue-500/15 text-black shadow-[0_0_0_1px_rgba(0,0,0,0.08)] dark:border-blue-500/25 dark:text-blue-300 dark:shadow-none',
+      'border-black/20 bg-blue-500/15 text-black shadow-[0_0_0_1px_rgba(0,0,0,0.08)] dark:border-blue-400/60 dark:bg-blue-400/25 dark:text-blue-100 dark:shadow-[0_0_0_1px_rgba(96,165,250,0.18)]',
     emerald:
       'border-black/20 bg-emerald-500/15 text-black shadow-[0_0_0_1px_rgba(0,0,0,0.08)] dark:border-emerald-400/60 dark:bg-emerald-400/25 dark:text-emerald-100 dark:shadow-[0_0_0_1px_rgba(74,222,128,0.18)]',
     rose:

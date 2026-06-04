@@ -66,7 +66,7 @@ export default function Home({
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                   <div className="min-w-0 flex-1">
                     <div className="flex flex-wrap items-center gap-2 text-[10px] uppercase font-bold tracking-wider text-muted">
-                      <span className="text-blue-800 dark:text-blue-300">#{issue.game}</span>
+                      <span className="text-blue-800 dark:text-blue-100">#{issue.game}</span>
                       <span>·</span>
                     <span className="badge-light-text inline-flex items-center rounded-full border border-black/20 bg-yellow-500/10 px-2.5 py-0.5 text-black dark:border-yellow-400/60 dark:bg-yellow-400/25 dark:text-yellow-100 dark:shadow-[0_0_0_1px_rgba(250,204,21,0.18)]">
                         {issue.patch}
@@ -108,7 +108,7 @@ export default function Home({
 
                 <div className="mt-4 flex flex-wrap items-center justify-between border-t border-border/60 pt-4 text-xs font-semibold text-muted">
                   <div className="flex items-center gap-4">
-                    <span className="inline-flex items-center gap-1.5 text-blue-800 dark:text-blue-300">
+                    <span className="inline-flex items-center gap-1.5 text-blue-800 dark:text-blue-100">
                       <Sparkles className="h-4 w-4" />
                       Free AI summary
                     </span>
@@ -133,7 +133,7 @@ export default function Home({
               <div className="pt-2">
                 <div className="mb-3 flex items-center justify-between border-b border-border pb-3">
                   <div>
-                    <p className="text-[10px] uppercase font-bold tracking-[0.2em] text-blue-800 dark:text-blue-300">LIVE REPORTS</p>
+                    <p className="text-[10px] uppercase font-bold tracking-[0.2em] text-blue-800 dark:text-blue-100">LIVE REPORTS</p>
                     <h4 className="text-lg font-extrabold tracking-tight text-text">
                       {selectedGame ? `#${selectedGame} live reports` : 'Published live reports'}
                     </h4>
@@ -152,7 +152,7 @@ export default function Home({
                       <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                         <div className="min-w-0 flex-1">
                           <div className="flex flex-wrap items-center gap-2 text-[10px] uppercase font-bold tracking-wider text-muted">
-                            <span className="text-blue-800 dark:text-blue-300">#Bug report</span>
+                            <span className="text-blue-800 dark:text-blue-100">#Bug report</span>
                             <span>·</span>
                             <span className="badge-light-text inline-flex items-center rounded-full border border-black/20 bg-yellow-500/10 px-2.5 py-0.5 text-black dark:border-yellow-400/60 dark:bg-yellow-400/25 dark:text-yellow-100 dark:shadow-[0_0_0_1px_rgba(250,204,21,0.18)]">
                               {post.slotTime}
@@ -174,7 +174,7 @@ export default function Home({
                         </div>
 
                         <div className="flex shrink-0 flex-wrap gap-1.5 text-xs font-medium text-muted sm:flex-col sm:items-end">
-                          <span className="badge-light-text rounded-lg bg-panel-2 px-2.5 py-1 text-black dark:text-blue-200">
+                          <span className="badge-light-text rounded-lg bg-panel-2 px-2.5 py-1 text-black dark:text-blue-100">
                             {post.games.join(', ')}
                           </span>
                           <span className="badge-light-text rounded-lg bg-panel-2 px-2.5 py-1 text-black dark:text-yellow-100">
@@ -183,13 +183,13 @@ export default function Home({
                         </div>
                       </div>
 
-                      <div className="mt-4 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-3 gap-y-2 border-t border-border/60 pt-4 text-xs font-semibold text-muted">
-                        <div className="flex min-w-0 flex-wrap items-center gap-4">
-                          <span className="badge-light-text inline-flex items-center gap-1.5 rounded-full border border-black/20 bg-emerald-500/10 px-2.5 py-0.5 text-black shadow-[0_0_0_1px_rgba(0,0,0,0.08)] dark:border-emerald-400/60 dark:bg-emerald-400/25 dark:text-emerald-100 dark:shadow-[0_0_0_1px_rgba(74,222,128,0.18)]">
+                      <div className="mt-4 flex items-center justify-between gap-2 border-t border-border/60 pt-4 text-[10px] font-semibold text-muted sm:text-xs">
+                        <div className="flex min-w-0 flex-1 flex-wrap items-center gap-x-2 gap-y-1">
+                          <span className="badge-light-text inline-flex items-center gap-1 rounded-full border border-black/20 bg-emerald-500/10 px-2 py-0.5 text-black shadow-[0_0_0_1px_rgba(0,0,0,0.08)] dark:border-emerald-400/60 dark:bg-emerald-400/25 dark:text-emerald-100 dark:shadow-[0_0_0_1px_rgba(74,222,128,0.18)]">
                             <Sparkles className="h-4 w-4" />
                             Bug report post
                           </span>
-                          <span className="badge-light-text inline-flex items-center gap-1.5 text-black dark:text-rose-100">
+                          <span className="badge-light-text inline-flex items-center gap-1 rounded-full border border-black/20 bg-rose-500/10 px-2 py-0.5 text-black dark:border-rose-400/60 dark:bg-rose-400/25 dark:text-rose-100 dark:shadow-[0_0_0_1px_rgba(251,113,133,0.18)]">
                             <Users className="h-4 w-4" />
                             Player notes
                           </span>
@@ -197,9 +197,10 @@ export default function Home({
 
                         <Link
                           href={`/posts/${post.slug}`}
-                          className="justify-self-end whitespace-nowrap inline-flex items-center gap-1 text-emerald-800 transition-colors hover:text-emerald-900 dark:text-emerald-100 dark:hover:text-emerald-50 group-hover:translate-x-1 duration-200"
+                          className="ml-auto inline-flex shrink-0 items-center gap-1 whitespace-nowrap text-emerald-800 transition-colors hover:text-emerald-900 dark:text-emerald-100 dark:hover:text-emerald-50 group-hover:translate-x-1 duration-200"
                         >
-                          Open live report
+                          <span className="sm:hidden">Open report</span>
+                          <span className="hidden sm:inline">Open live report</span>
                           <ArrowRight className="h-3.5 w-3.5" />
                         </Link>
                       </div>
@@ -229,7 +230,7 @@ export default function Home({
                   <span className="font-display text-lg font-extrabold text-muted/60">{item.rank}</span>
                   <div>
                     <p className="text-sm font-bold text-text leading-tight">{item.title}</p>
-                    <p className="badge-light-text mt-0.5 inline-flex items-center rounded-full border border-black/20 bg-emerald-500/10 px-2 py-0.5 text-xs font-semibold text-black shadow-[0_0_0_1px_rgba(0,0,0,0.08)] dark:border-emerald-400/60 dark:bg-emerald-400/25 dark:text-emerald-100 dark:shadow-[0_0_0_1px_rgba(74,222,128,0.18)]">
+                    <p className="badge-light-text mt-0.5 inline-flex items-center rounded-full border border-black/20 bg-emerald-500/10 px-2 py-0.5 text-xs font-semibold text-black shadow-[0_0_0_1px_rgba(0,0,0,0.08)] dark:border-emerald-300/70 dark:bg-emerald-400/35 dark:text-emerald-50 dark:shadow-[0_0_0_1px_rgba(74,222,128,0.24)]">
                       {item.growth}
                     </p>
                   </div>
