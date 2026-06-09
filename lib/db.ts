@@ -95,6 +95,24 @@ function writeLocalSnapshot(nextSnapshot: DataSnapshot) {
   writeJson('settings.json', nextSnapshot.settings)
 }
 
+async function replaceRows<T extends { id: string }>(table: string, rows: T[]) {
+  const db = getPool()
+  if (!db) return
+
+  await ensureSchema()
+  await db.query(`DELETE FROM ${table}`)
+  await upsertRows(table, rows)
+}
+
+async function replaceKeyedRows<T>(table: string, keyColumn: string, rows: Array<[string, T]>) {
+  const db = getPool()
+  if (!db) return
+
+  await ensureSchema()
+  await db.query(`DELETE FROM ${table}`)
+  await upsertKeyedRows(table, keyColumn, rows)
+}
+
 function getPool() {
   const connectionString = process.env.DATABASE_URL?.trim()
   if (!connectionString) return null
@@ -324,19 +342,19 @@ async function mirrorSnapshotToDb() {
   try {
     await ensureSchema()
     await Promise.all([
-      upsertRows('users', snapshot.users),
-      upsertRows('pending_signups', snapshot.pendingSignups),
-      upsertKeyedRows(
+      replaceRows('users', snapshot.users),
+      replaceRows('pending_signups', snapshot.pendingSignups),
+      replaceKeyedRows(
         'sessions',
         'token',
         snapshot.sessions.map((session) => [session.token, session]),
       ),
-      upsertRows('contact_messages', snapshot.contactMessages),
-      upsertRows('visitors', snapshot.visitors),
-      upsertRows('posts', snapshot.posts),
-      upsertKeyedRows('issue_comments', 'issue_slug', Object.entries(snapshot.issueComments)),
-      upsertKeyedRows('post_comments', 'post_slug', Object.entries(snapshot.postComments)),
-      upsertKeyedRows('site_settings', 'id', [['default', snapshot.settings]]),
+      replaceRows('contact_messages', snapshot.contactMessages),
+      replaceRows('visitors', snapshot.visitors),
+      replaceRows('posts', snapshot.posts),
+      replaceKeyedRows('issue_comments', 'issue_slug', Object.entries(snapshot.issueComments)),
+      replaceKeyedRows('post_comments', 'post_slug', Object.entries(snapshot.postComments)),
+      replaceKeyedRows('site_settings', 'id', [['default', snapshot.settings]]),
     ])
   } catch (error) {
     console.warn('LivePatch database mirror failed; using local JSON snapshot.', error)
@@ -363,6 +381,22 @@ export async function primeDatabaseSnapshot() {
   }
 
   await primePromise
+  return snapshot
+}
+
+export async function refreshDatabaseSnapshot() {
+  const db = getPool()
+  if (!db) return snapshot
+
+  try {
+    await seedFromLocalIfEmpty()
+    const nextSnapshot = await loadSnapshotFromDb()
+    snapshot = nextSnapshot
+    writeLocalSnapshot(nextSnapshot)
+  } catch (error) {
+    console.warn('LivePatch database refresh failed; keeping the current snapshot.', error)
+  }
+
   return snapshot
 }
 

@@ -1,9 +1,13 @@
+import { LiveRefresh } from '@/components/admin/live-refresh'
 import { GlassPanel, SectionHeading, StatusBadge } from '@/components/ui/glass'
-import { getVisitors } from '@/lib/db'
+import { getVisitors, refreshDatabaseSnapshot } from '@/lib/db'
+
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 type VisitorMode = 'all' | 'unique' | 'new' | 'return'
 
-export default function AdminVisitorsPage({
+export default async function AdminVisitorsPage({
   searchParams,
 }: Readonly<{
   searchParams?: { ip?: string; page?: string; mode?: VisitorMode; date?: string }
@@ -12,6 +16,9 @@ export default function AdminVisitorsPage({
   const ip = searchParams?.ip?.trim().toLowerCase() || ''
   const page = searchParams?.page?.trim().toLowerCase() || ''
   const date = searchParams?.date?.trim().toLowerCase() || ''
+
+  await refreshDatabaseSnapshot()
+
   const visitors = [...getVisitors()].sort((a, b) => {
     const left = new Date(b.timestamp || b.visitedAt).getTime()
     const right = new Date(a.timestamp || a.visitedAt).getTime()
@@ -36,6 +43,8 @@ export default function AdminVisitorsPage({
 
   return (
     <div className="space-y-6">
+      <LiveRefresh intervalMs={10000} />
+
       <GlassPanel>
         <SectionHeading
           eyebrow="Visitor Tracking"
@@ -75,7 +84,7 @@ export default function AdminVisitorsPage({
               <p className="mt-2 text-xs text-muted">{visitor.location}</p>
               <p className="mt-2 break-all text-xs font-semibold text-text">{visitor.page}</p>
               <p className="mt-2 text-[10px] text-muted">
-                {visitor.referrer} · {visitor.visitedAt}
+                {visitor.referrer} - {visitor.visitedAt}
               </p>
             </div>
           ))}

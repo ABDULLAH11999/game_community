@@ -1,6 +1,6 @@
 import crypto from 'crypto'
 import { NextResponse } from 'next/server'
-import { getVisitors, saveVisitors } from '@/lib/db'
+import { getVisitors, refreshDatabaseSnapshot, saveVisitors } from '@/lib/db'
 import type { VisitorRecord } from '@/lib/types'
 
 function firstHeaderValue(value: string | null | undefined) {
@@ -51,6 +51,8 @@ export async function POST(request: Request) {
   const referrer = String(body.referrer || headers.get('referer') || 'Direct').trim() || 'Direct'
   const userAgent = String(body.userAgent || headers.get('user-agent') || '').trim()
   const timestamp = new Date().toISOString()
+
+  await refreshDatabaseSnapshot()
   const existing = getVisitors()
   const record: VisitorRecord = {
     id: crypto.randomUUID(),
