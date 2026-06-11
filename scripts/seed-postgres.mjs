@@ -108,6 +108,11 @@ async function upsertRows(pool, table, rows, keyField) {
   }
 }
 
+async function replaceRows(pool, table, rows, keyField) {
+  await pool.query(`DELETE FROM ${table}`)
+  await upsertRows(pool, table, rows, keyField)
+}
+
 async function upsertIssueComments(pool, comments) {
   for (const [slug, rows] of Object.entries(comments)) {
     await pool.query(
@@ -117,6 +122,11 @@ async function upsertIssueComments(pool, comments) {
       [slug, JSON.stringify(rows)]
     )
   }
+}
+
+async function replaceIssueComments(pool, comments) {
+  await pool.query('DELETE FROM issue_comments')
+  await upsertIssueComments(pool, comments)
 }
 
 async function upsertPostComments(pool, comments) {
@@ -130,6 +140,11 @@ async function upsertPostComments(pool, comments) {
   }
 }
 
+async function replacePostComments(pool, comments) {
+  await pool.query('DELETE FROM post_comments')
+  await upsertPostComments(pool, comments)
+}
+
 async function upsertSettings(pool, settings) {
   await pool.query(
     `INSERT INTO site_settings (id, data)
@@ -137,6 +152,11 @@ async function upsertSettings(pool, settings) {
      ON CONFLICT (id) DO UPDATE SET data = EXCLUDED.data`,
     [JSON.stringify(settings)]
   )
+}
+
+async function replaceSettings(pool, settings) {
+  await pool.query('DELETE FROM site_settings')
+  await upsertSettings(pool, settings)
 }
 
 async function main() {
@@ -153,12 +173,13 @@ async function main() {
   })
 
   try {
-    const [users, pendingSignups, sessions, contactMessages, posts, issueComments, postComments, settings] =
+    const [users, pendingSignups, sessions, contactMessages, visitors, posts, issueComments, postComments, settings] =
       await Promise.all([
         readJson('users.json', []),
         readJson('pending-signups.json', []),
         readJson('sessions.json', []),
         readJson('contact-messages.json', []),
+        readJson('visitors.json', []),
         readJson('post.json', []),
         readJson('issue-comments.json', {}),
         readJson('post-comments.json', {}),
@@ -166,16 +187,16 @@ async function main() {
       ])
 
     await ensureSchema(pool)
-    await pool.query('DELETE FROM visitors')
     await Promise.all([
-      upsertRows(pool, 'users', users, 'id'),
-      upsertRows(pool, 'pending_signups', pendingSignups, 'id'),
-      upsertRows(pool, 'sessions', sessions, 'token'),
-      upsertRows(pool, 'contact_messages', contactMessages, 'id'),
-      upsertRows(pool, 'posts', posts, 'id'),
-      upsertIssueComments(pool, issueComments),
-      upsertPostComments(pool, postComments),
-      upsertSettings(pool, settings),
+      replaceRows(pool, 'users', users, 'id'),
+      replaceRows(pool, 'pending_signups', pendingSignups, 'id'),
+      replaceRows(pool, 'sessions', sessions, 'token'),
+      replaceRows(pool, 'contact_messages', contactMessages, 'id'),
+      replaceRows(pool, 'visitors', visitors, 'id'),
+      replaceRows(pool, 'posts', posts, 'id'),
+      replaceIssueComments(pool, issueComments),
+      replacePostComments(pool, postComments),
+      replaceSettings(pool, settings),
     ])
 
     console.log('Neon seed completed from local JSON snapshots.')

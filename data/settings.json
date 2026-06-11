@@ -1,13 +1,4 @@
 {
-  "title": "LivePatch",
-  "description": "LivePatch tracks live game bugs, patch changes, community fixes, and AI generated issue summaries built for long term search visibility.",
-  "keywords": [
-    "game bugs",
-    "patch notes",
-    "gaming community",
-    "game fix guides",
-    "AI issue tracking"
-  ],
   "games": [
     "Call of Duty: Warzone",
     "Counter-Strike 2",
@@ -69,6 +60,26 @@
     "Madden NFL 25",
     "F1 24",
     "Hunt: Showdown 1896"
+  ],
+  "title": "LivePatch",
+  "favicon": "/favicon.ico",
+  "ogImage": "/og-image.jpg",
+  "keywords": [
+    "game bugs",
+    "patch notes",
+    "gaming community",
+    "game fix guides",
+    "AI issue tracking"
+  ],
+  "smtpHost": "smtp.resend.net",
+  "smtpPort": "587",
+  "smtpSender": "noreply@livepatch.online",
+  "description": "LivePatch tracks live game bugs, patch changes, community fixes, and AI generated issue summaries built for long term search visibility.",
+  "otpRequired": true,
+  "smtpEnabled": true,
+  "canonicalUrl": "https://livepatch.online",
+  "adminReceivers": [
+    "allinoneg46@gmail.com"
   ],
   "scheduledSlots": [
     {
@@ -551,16 +562,5 @@
       ],
       "title": "Hunt: Showdown 1896 slot update"
     }
-  ],
-  "canonicalUrl": "https://livepatch.online",
-  "ogImage": "/og-image.jpg",
-  "favicon": "/favicon.ico",
-  "smtpEnabled": true,
-  "otpRequired": true,
-  "smtpHost": "smtp.resend.net",
-  "smtpPort": "587",
-  "smtpSender": "noreply@livepatch.online",
-  "adminReceivers": [
-    "allinoneg46@gmail.com"
   ]
 }
