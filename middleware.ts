@@ -1,6 +1,11 @@
 import { NextFetchEvent, NextRequest, NextResponse } from 'next/server'
 
 const adminSessionCookie = 'livepatch_admin_session'
+const visitorCookie = 'livepatch_visitor_id'
+
+function createVisitorId() {
+  return globalThis.crypto?.randomUUID?.() || `visitor_${Math.random().toString(36).slice(2, 10)}`
+}
 
 function shouldTrackVisitor(request: NextRequest) {
   const { pathname } = request.nextUrl
@@ -22,6 +27,7 @@ function shouldTrackVisitor(request: NextRequest) {
 
 export function middleware(request: NextRequest, event: NextFetchEvent) {
   const { pathname } = request.nextUrl
+  const response = NextResponse.next()
 
   if (pathname.startsWith('/admin')) {
     const adminCookie = request.cookies.get(adminSessionCookie)?.value
@@ -37,19 +43,33 @@ export function middleware(request: NextRequest, event: NextFetchEvent) {
   }
 
   if (shouldTrackVisitor(request)) {
-    const forwardedFor = request.headers.get('x-forwarded-for') || ''
-    const realIp = request.headers.get('x-real-ip') || ''
-    const cfIp = request.headers.get('cf-connecting-ip') || ''
+    const visitorId = request.cookies.get(visitorCookie)?.value || createVisitorId()
+    const resolvedIp =
+      request.ip ||
+      request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
+      request.headers.get('x-real-ip')?.trim() ||
+      request.headers.get('cf-connecting-ip')?.trim() ||
+      ''
     const trackingUrl = new URL('/api/visitors', request.url)
+
+    if (!request.cookies.get(visitorCookie)?.value) {
+      response.cookies.set(visitorCookie, visitorId, {
+        httpOnly: true,
+        sameSite: 'lax',
+        path: '/',
+        maxAge: 60 * 60 * 24 * 365,
+      })
+    }
 
     event.waitUntil(
       fetch(trackingUrl, {
         method: 'POST',
         headers: {
           'content-type': 'application/json',
-          'x-forwarded-for': forwardedFor,
-          'x-real-ip': realIp,
-          'cf-connecting-ip': cfIp,
+          'x-forwarded-for': resolvedIp,
+          'x-real-ip': resolvedIp,
+          'x-client-ip': resolvedIp,
+          'x-visitor-id': visitorId,
           referer: request.headers.get('referer') || '',
           'user-agent': request.headers.get('user-agent') || '',
           'x-visitor-path': request.nextUrl.pathname,
@@ -60,12 +80,14 @@ export function middleware(request: NextRequest, event: NextFetchEvent) {
           search: request.nextUrl.search,
           referrer: request.headers.get('referer') || 'Direct',
           userAgent: request.headers.get('user-agent') || '',
+          visitorId,
+          ip: resolvedIp,
         }),
       }).catch(() => undefined),
     )
   }
 
-  return NextResponse.next()
+  return response
 }
 
 export const config = {

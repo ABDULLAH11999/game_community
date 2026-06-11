@@ -10,12 +10,17 @@ function firstHeaderValue(value: string | null | undefined) {
 
 function resolveIp(headers: Headers) {
   return (
+    firstHeaderValue(headers.get('x-client-ip')) ||
     firstHeaderValue(headers.get('x-forwarded-for')) ||
     headers.get('x-real-ip')?.trim() ||
     headers.get('cf-connecting-ip')?.trim() ||
     headers.get('x-client-ip')?.trim() ||
     ''
   )
+}
+
+function resolveVisitorId(headers: Headers, body: Record<string, unknown>) {
+  return String(body.visitorId || headers.get('x-visitor-id') || '').trim()
 }
 
 function resolveLocation(headers: Headers) {
@@ -40,17 +45,15 @@ function buildVisitedAtLabel(timestamp: string) {
 export async function POST(request: Request) {
   const headers = request.headers
   const body = await request.json().catch(() => ({} as Record<string, unknown>))
-  const ip = String(body.ip || resolveIp(headers)).trim()
-
-  if (!ip) {
-    return NextResponse.json({ success: false, error: 'Missing visitor IP.' }, { status: 400 })
-  }
 
   const page = String(body.page || headers.get('x-visitor-path') || '/').trim() || '/'
   const search = String(body.search || headers.get('x-visitor-search') || '').trim()
   const referrer = String(body.referrer || headers.get('referer') || 'Direct').trim() || 'Direct'
   const userAgent = String(body.userAgent || headers.get('user-agent') || '').trim()
+  const visitorId = resolveVisitorId(headers, body)
   const timestamp = new Date().toISOString()
+  const ip = String(body.ip || resolveIp(headers)).trim() || (visitorId ? `visitor-${visitorId.slice(0, 8)}` : 'unknown')
+  const session = String(body.session || visitorId || `sess_${crypto.randomBytes(3).toString('hex')}`)
 
   await refreshDatabaseSnapshot()
   const existing = getVisitors()
@@ -62,8 +65,8 @@ export async function POST(request: Request) {
     referrer,
     timestamp,
     visitedAt: buildVisitedAtLabel(timestamp),
-    session: String(body.session || `sess_${crypto.randomBytes(3).toString('hex')}`),
-    type: existing.some((visitor) => visitor.ip === ip) ? 'Return' : 'New',
+    session,
+    type: existing.some((visitor) => visitor.session === session || visitor.ip === ip) ? 'Return' : 'New',
   }
 
   const nextVisitors = [record, ...existing].slice(0, 1000)
