@@ -6,7 +6,6 @@ import type {
   ScheduledSlot,
   SiteSettings,
   UserRecord,
-  VisitorRecord,
 } from '@/lib/types'
 import gameCatalog from '@/data/game-catalog.json'
 import { buildScheduledSlots } from '@/lib/schedule-utils'
@@ -203,42 +202,6 @@ export const contactMessages: ContactMessage[] = [
     message: 'My comment was hidden after I linked a workaround thread. Can someone review the moderation action?',
     createdAt: '2026-06-01 19:45',
     status: 'In Review',
-  },
-]
-
-export const visitors: VisitorRecord[] = [
-  {
-    id: 'v-1',
-    ip: '103.88.42.11',
-    location: 'Karachi, PK',
-    page: '/',
-    referrer: 'google.com',
-    timestamp: '2026-06-04T11:58:00.000Z',
-    visitedAt: '2 min ago',
-    session: 'sess_4KQ12',
-    type: 'New',
-  },
-  {
-    id: 'v-2',
-    ip: '66.214.88.31',
-    location: 'Dallas, US',
-    page: '/issues/pubg-crash-fix-patch-31-2-erangel-parachute',
-    referrer: 'reddit.com',
-    timestamp: '2026-06-04T11:49:00.000Z',
-    visitedAt: '11 min ago',
-    session: 'sess_29A7L',
-    type: 'Return',
-  },
-  {
-    id: 'v-3',
-    ip: '52.91.17.99',
-    location: 'London, UK',
-    page: '/contact',
-    referrer: 'discord.com',
-    timestamp: '2026-06-04T11:38:00.000Z',
-    visitedAt: '22 min ago',
-    session: 'sess_6NM8R',
-    type: 'New',
   },
 ]
 

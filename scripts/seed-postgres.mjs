@@ -153,13 +153,12 @@ async function main() {
   })
 
   try {
-    const [users, pendingSignups, sessions, contactMessages, visitors, posts, issueComments, postComments, settings] =
+    const [users, pendingSignups, sessions, contactMessages, posts, issueComments, postComments, settings] =
       await Promise.all([
         readJson('users.json', []),
         readJson('pending-signups.json', []),
         readJson('sessions.json', []),
         readJson('contact-messages.json', []),
-        readJson('visitors.json', []),
         readJson('post.json', []),
         readJson('issue-comments.json', {}),
         readJson('post-comments.json', {}),
@@ -167,12 +166,12 @@ async function main() {
       ])
 
     await ensureSchema(pool)
+    await pool.query('DELETE FROM visitors')
     await Promise.all([
       upsertRows(pool, 'users', users, 'id'),
       upsertRows(pool, 'pending_signups', pendingSignups, 'id'),
       upsertRows(pool, 'sessions', sessions, 'token'),
       upsertRows(pool, 'contact_messages', contactMessages, 'id'),
-      upsertRows(pool, 'visitors', visitors, 'id'),
       upsertRows(pool, 'posts', posts, 'id'),
       upsertIssueComments(pool, issueComments),
       upsertPostComments(pool, postComments),
