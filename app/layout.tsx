@@ -3,6 +3,7 @@ import './globals.css'
 import { Manrope, Space_Grotesk } from 'next/font/google'
 import { primeDatabaseSnapshot } from '@/lib/db'
 import { canonicalUrl, siteSettings } from '@/lib/site-data'
+import { VisitorTracker } from '@/components/visitor-tracker'
 
 const display = Space_Grotesk({ subsets: ['latin'], variable: '--font-display' })
 const sans = Manrope({ subsets: ['latin'], variable: '--font-sans' })
@@ -56,7 +57,10 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
           }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <VisitorTracker />
+        {children}
+      </body>
     </html>
   )
 }

@@ -140,7 +140,7 @@ export default function Home({
               <div className="pt-2">
                 <div className="mb-3 flex items-center justify-between border-b border-border pb-3">
                   <div>
-                    <p className="text-[10px] uppercase font-bold tracking-[0.2em] text-blue-800 dark:text-blue-100">LIVE REPORTS</p>
+                    <p className="text-[10px] uppercase font-bold tracking-[0.2em] text-purple-700 dark:text-purple-200">LIVE REPORTS</p>
                     <h4 className="text-lg font-extrabold tracking-tight text-text">
                       {selectedGame ? `#${selectedGame} live reports` : 'Published live reports'}
                     </h4>
@@ -159,7 +159,7 @@ export default function Home({
                       <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                         <div className="min-w-0 flex-1">
                           <div className="flex flex-wrap items-center gap-2 text-[10px] uppercase font-bold tracking-wider text-muted">
-                            <span className="text-blue-800 dark:text-blue-100">#Bug report</span>
+                            <span className="text-purple-700 dark:text-purple-200">#Bug report</span>
                             <span>·</span>
                             <span className="badge-light-text inline-flex items-center rounded-full border border-black/20 bg-yellow-500/10 px-2.5 py-0.5 text-black dark:border-yellow-400/60 dark:bg-yellow-400/25 dark:text-yellow-100 dark:shadow-[0_0_0_1px_rgba(250,204,21,0.18)]">
                               {post.slotTime}
@@ -205,9 +205,9 @@ export default function Home({
                           </span>
                         </div>
 
-                        <Link
+                          <Link
                           href={`/posts/${post.slug}`}
-                          className="ml-auto inline-flex shrink-0 items-center gap-1 whitespace-nowrap text-emerald-800 transition-colors hover:text-emerald-900 dark:text-emerald-100 dark:hover:text-emerald-50 group-hover:translate-x-1 duration-200"
+                          className="ml-auto inline-flex shrink-0 items-center gap-1 whitespace-nowrap text-purple-700 transition-colors hover:text-purple-900 dark:text-purple-200 dark:hover:text-purple-100 group-hover:translate-x-1 duration-200"
                         >
                           <span className="sm:hidden">Open report</span>
                           <span className="hidden sm:inline">Open live report</span>
