@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
-import { usePathname, useSearchParams } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 
 const visitorStorageKey = 'livepatch_visitor_id'
 
@@ -20,12 +20,11 @@ function getOrCreateVisitorId() {
 
 export function VisitorTracker() {
   const pathname = usePathname()
-  const searchParams = useSearchParams()
   const hasMounted = useRef(false)
   const lastTrackedUrl = useRef('')
 
   useEffect(() => {
-    const search = searchParams.toString()
+    const search = window.location.search.replace(/^\?/, '')
     const url = search ? `${pathname}?${search}` : pathname
 
     if (!hasMounted.current) {
@@ -55,7 +54,7 @@ export function VisitorTracker() {
       }),
       keepalive: true,
     }).catch(() => undefined)
-  }, [pathname, searchParams])
+  }, [pathname])
 
   return null
 }
