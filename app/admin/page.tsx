@@ -1,9 +1,14 @@
 import { Activity, BarChart3, Mail, Users } from 'lucide-react'
 import { GlassPanel, SectionHeading, StatusBadge } from '@/components/ui/glass'
-import { getContactMessages, getUsers, getVisitors } from '@/lib/db'
+import { getContactMessages, getUsers, getVisitors, refreshDatabaseSnapshot } from '@/lib/db'
 import { issues } from '@/lib/site-data'
 
-export default function AdminDashboardPage() {
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+
+export default async function AdminDashboardPage() {
+  await refreshDatabaseSnapshot()
+
   const users = getUsers()
   const contactMessages = getContactMessages()
   const trackedVisitors = getVisitors()

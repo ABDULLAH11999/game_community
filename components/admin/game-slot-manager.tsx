@@ -38,8 +38,7 @@ export function GameSlotManager({
       return
     }
     setTitle('')
-    setPostNow(true)
-    setStatus('Live report published to post.json')
+    setStatus(postNow ? 'Live report published to post.json' : `Live report scheduled for ${timeLabel}`)
   }
 
   return (

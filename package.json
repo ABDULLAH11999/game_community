@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "db:seed": "node scripts/seed-postgres.mjs"
+    "db:seed": "node scripts/seed-postgres.mjs",
+    "seed:schedule": "node scripts/seed-schedule-slots.mjs"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",

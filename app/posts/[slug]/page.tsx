@@ -9,6 +9,9 @@ import { getCommentTone } from '@/lib/comments'
 import { getPosts, getPostComments, getStoredSettings } from '@/lib/db'
 import { canonicalUrl } from '@/lib/site-data'
 
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+
 export function generateStaticParams() {
   return getPosts().map((post) => ({ slug: post.slug }))
 }
@@ -47,7 +50,7 @@ export default function PostPage({ params }: Readonly<{ params: { slug: string }
                 <StatusBadge key={game} label={game} tone="blue" />
               ))}
               <StatusBadge label={post.status === 'published' ? 'Published' : 'Scheduled'} tone={post.status === 'published' ? 'emerald' : 'amber'} />
-              <LiveTimestamp value={post.publishedAt} />
+              <LiveTimestamp value={post.publishedAt} label={post.status === 'published' ? 'Live' : 'Scheduled'} />
             </div>
             <SectionHeading eyebrow="Live Bug Report" title={post.title} detail={post.summary} />
             <div className="mt-6 space-y-4">

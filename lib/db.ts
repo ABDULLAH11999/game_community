@@ -32,7 +32,6 @@ const localSnapshot = loadLocalSnapshot()
 let snapshot: DataSnapshot = localSnapshot
 let pool: Pool | null = null
 let schemaReadyPromise: Promise<void> | null = null
-let primePromise: Promise<void> | null = null
 
 function ensureDir() {
   fs.mkdirSync(dataDir, { recursive: true })
@@ -362,31 +361,15 @@ async function mirrorSnapshotToDb() {
 }
 
 export async function primeDatabaseSnapshot() {
-  const db = getPool()
-  if (!db) return snapshot
-
-  if (!primePromise) {
-    primePromise = (async () => {
-      try {
-        await seedFromLocalIfEmpty()
-        const nextSnapshot = await loadSnapshotFromDb()
-        snapshot = nextSnapshot
-        writeLocalSnapshot(nextSnapshot)
-      } catch (error) {
-        console.warn('LivePatch database bootstrap failed; falling back to local JSON.', error)
-      }
-    })().catch(() => {
-      primePromise = null
-    })
-  }
-
-  await primePromise
-  return snapshot
+  return refreshDatabaseSnapshot()
 }
 
 export async function refreshDatabaseSnapshot() {
   const db = getPool()
-  if (!db) return snapshot
+  if (!db) {
+    snapshot = loadLocalSnapshot()
+    return snapshot
+  }
 
   try {
     await seedFromLocalIfEmpty()

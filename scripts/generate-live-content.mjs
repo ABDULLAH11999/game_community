@@ -32,7 +32,7 @@ const issueTypes = [
 ]
 
 const startMinutesFromMidnight = 9 * 60
-const slotGapMinutes = 30
+const slotGapMinutes = 15
 
 function formatSlotTime(index) {
   const totalMinutes = startMinutesFromMidnight + index * slotGapMinutes

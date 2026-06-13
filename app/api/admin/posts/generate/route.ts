@@ -61,6 +61,23 @@ function buildFallbackReport(games: string[], publishNow: boolean, normalizedTim
   }
 }
 
+function buildScheduledPublishAt(normalizedTime: string) {
+  const match = normalizedTime.match(/^(\d{1,2}):(\d{2})\s*PKT$/i)
+  if (!match) {
+    return new Date().toISOString()
+  }
+
+  const hour = Number(match[1])
+  const minute = Number(match[2])
+  const now = new Date()
+  const pktNow = new Date(now.getTime() + 5 * 60 * 60 * 1000)
+  const scheduledUtc =
+    Date.UTC(pktNow.getUTCFullYear(), pktNow.getUTCMonth(), pktNow.getUTCDate(), hour, minute, 0, 0) -
+    5 * 60 * 60 * 1000
+
+  return new Date(scheduledUtc > now.getTime() ? scheduledUtc : scheduledUtc + 24 * 60 * 60 * 1000).toISOString()
+}
+
 export async function POST(request: Request) {
   const { time, games, title, postNow } = await request.json()
   const selectedGames = Array.isArray(games) ? games.map((item) => String(item).trim()).filter(Boolean) : []
@@ -75,6 +92,7 @@ export async function POST(request: Request) {
   const fallbackReport = buildFallbackReport(selectedGames, publishNow, normalizedTime)
   const summary = matchedIssues[0]?.summary || fallbackReport.summary
   const slotTime = publishNow ? 'Published now' : normalizedTime
+  const publishedAt = publishNow ? new Date().toISOString() : buildScheduledPublishAt(normalizedTime)
   const postTitle = String(title || matchedIssues[0]?.title || fallbackReport.title)
   const content = matchedIssues.length
     ? [
@@ -103,8 +121,8 @@ export async function POST(request: Request) {
     ),
     metaTitle: postTitle,
     metaDescription: summary,
-    publishedAt: new Date().toISOString(),
-    status: 'published',
+    publishedAt,
+    status: publishNow ? 'published' : 'scheduled',
   }
 
   const posts = getPosts()

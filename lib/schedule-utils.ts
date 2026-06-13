@@ -1,7 +1,7 @@
 import type { ScheduledSlot } from '@/lib/types'
 
 const startMinutesFromMidnight = 9 * 60
-const slotGapMinutes = 30
+const slotGapMinutes = 15
 
 export function formatPktTime(totalMinutes: number) {
   const wrappedMinutes = ((totalMinutes % (24 * 60)) + 24 * 60) % (24 * 60)

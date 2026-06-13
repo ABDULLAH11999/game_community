@@ -5,6 +5,9 @@ import { StatusBadge } from '@/components/ui/glass'
 import { communityPosts, issues, trendingSearches } from '@/lib/site-data'
 import { getPosts, getStoredSettings } from '@/lib/db'
 
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+
 export default function Home({
   searchParams,
 }: Readonly<{
@@ -22,6 +25,10 @@ export default function Home({
   })
 
   const filteredPosts = posts.filter((post) => {
+    if (post.status !== 'published') {
+      return false
+    }
+
     const matchesGame =
       !selectedGame || post.games.some((game) => game.toLowerCase() === selectedGame.toLowerCase())
     const haystack = `${post.title} ${post.summary} ${post.keywords.join(' ')} ${post.content.join(' ')} ${post.games.join(' ')}`.toLowerCase()
@@ -158,7 +165,10 @@ export default function Home({
                               {post.slotTime}
                             </span>
                             <span>·</span>
-                            <StatusBadge label="Published" tone="emerald" />
+                            <StatusBadge
+                              label={post.status === 'published' ? 'Published' : 'Scheduled'}
+                              tone={post.status === 'published' ? 'emerald' : 'amber'}
+                            />
                           </div>
 
                           <Link
